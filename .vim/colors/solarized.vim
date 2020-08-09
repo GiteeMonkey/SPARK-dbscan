@@ -215,3 +215,134 @@
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
 " base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
 " base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
+" base01    #586e75 10/7 brgreen  240 #4e4e4e 45 -07 -07  88 110 117 194  25  46
+" base00    #657b83 11/7 bryellow 241 #585858 50 -07 -07 101 123 131 195  23  51
+" base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
+" base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
+" base2     #eee8d5  7/7 white    254 #d7d7af 92 -00  10 238 232 213  44  11  93
+" base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
+" yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
+" orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
+" red       #dc322f  1/1 red      160 #d70000 50  65  45 220  50  47   1  79  86
+" magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
+" violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
+" blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
+" cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
+" green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+"
+" ---------------------------------------------------------------------
+" COLORSCHEME HACKING
+" ---------------------------------------------------------------------
+"
+" Useful commands for testing colorschemes:
+" :source $VIMRUNTIME/syntax/hitest.vim
+" :help highlight-groups
+" :help cterm-colors
+" :help group-name
+"
+" Useful links for developing colorschemes:
+" http://www.vim.org/scripts/script.php?script_id=2937
+" http://vimcasts.org/episodes/creating-colorschemes-for-vim/
+" http://www.frexx.de/xterm-256-notes/"
+"
+"
+" }}}
+" Default option values"{{{
+" ---------------------------------------------------------------------
+if !exists("g:solarized_termtrans")
+    if ($TERM_PROGRAM ==? "apple_terminal" && &t_Co < 256)
+        let g:solarized_termtrans = 1
+    else
+        let g:solarized_termtrans = 0
+    endif
+endif
+if !exists("g:solarized_degrade")
+    let g:solarized_degrade = 0
+endif
+if !exists("g:solarized_bold")
+    let g:solarized_bold = 1
+endif
+if !exists("g:solarized_underline")
+    let g:solarized_underline = 1
+endif
+if !exists("g:solarized_italic")
+    let g:solarized_italic = 1
+endif
+if !exists("g:solarized_termcolors")
+    let g:solarized_termcolors = 16
+endif
+if !exists("g:solarized_contrast")
+    let g:solarized_contrast = "normal"
+endif
+if !exists("g:solarized_visibility")
+    let g:solarized_visibility = "normal"
+endif
+"}}}
+" Colorscheme initialization "{{{
+" ---------------------------------------------------------------------
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+let colors_name = "solarized"
+
+"}}}
+" GUI & CSApprox hexadecimal palettes"{{{
+" ---------------------------------------------------------------------
+"
+" Set both gui and terminal color values in separate conditional statements
+" Due to possibility that CSApprox is running (though I suppose we could just
+" leave the hex values out entirely in that case and include only cterm colors)
+" We also check to see if user has set solarized (force use of the
+" neutral gray monotone palette component)
+if (has("gui_running") && g:solarized_degrade == 0)
+    let s:vmode       = "gui"
+    let s:base03      = "#002b36"
+    let s:base02      = "#073642"
+    let s:base01      = "#586e75"
+    let s:base00      = "#657b83"
+    let s:base0       = "#839496"
+    let s:base1       = "#93a1a1"
+    let s:base2       = "#eee8d5"
+    let s:base3       = "#fdf6e3"
+    let s:yellow      = "#b58900"
+    let s:orange      = "#cb4b16"
+    let s:red         = "#dc322f"
+    let s:magenta     = "#d33682"
+    let s:violet      = "#6c71c4"
+    let s:blue        = "#268bd2"
+    let s:cyan        = "#2aa198"
+    let s:green       = "#859900"
+elseif (has("gui_running") && g:solarized_degrade == 1)
+    " These colors are identical to the 256 color mode. They may be viewed
+    " while in gui mode via "let g:solarized_degrade=1", though this is not
+    " recommened and is for testing only.
+    let s:vmode       = "gui"
+    let s:base03      = "#1c1c1c"
+    let s:base02      = "#262626"
+    let s:base01      = "#4e4e4e"
+    let s:base00      = "#585858"
+    let s:base0       = "#808080"
+    let s:base1       = "#8a8a8a"
+    let s:base2       = "#d7d7af"
+    let s:base3       = "#ffffd7"
+    let s:yellow      = "#af8700"
+    let s:orange      = "#d75f00"
+    let s:red         = "#af0000"
+    let s:magenta     = "#af005f"
+    let s:violet      = "#5f5faf"
+    let s:blue        = "#0087ff"
+    let s:cyan        = "#00afaf"
+    let s:green       = "#5f8700"
+elseif g:solarized_termcolors != 256 && &t_Co >= 16
+    let s:vmode       = "cterm"
+    let s:base03      = "8"
+    let s:base02      = "0"
+    let s:base01      = "10"
+    let s:base00      = "11"
+    let s:base0       = "12"
+    let s:base1       = "14"
+    let s:base2       = "7"
+    let s:base3       = "15"
+    let s:yellow      = "3"
+    let s:orange      = "9"
