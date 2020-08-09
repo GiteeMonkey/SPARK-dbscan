@@ -346,3 +346,114 @@ elseif g:solarized_termcolors != 256 && &t_Co >= 16
     let s:base3       = "15"
     let s:yellow      = "3"
     let s:orange      = "9"
+    let s:red         = "1"
+    let s:magenta     = "5"
+    let s:violet      = "13"
+    let s:blue        = "4"
+    let s:cyan        = "6"
+    let s:green       = "2"
+elseif g:solarized_termcolors == 256
+    let s:vmode       = "cterm"
+    let s:base03      = "234"
+    let s:base02      = "235"
+    let s:base01      = "239"
+    let s:base00      = "240"
+    let s:base0       = "244"
+    let s:base1       = "245"
+    let s:base2       = "187"
+    let s:base3       = "230"
+    let s:yellow      = "136"
+    let s:orange      = "166"
+    let s:red         = "124"
+    let s:magenta     = "125"
+    let s:violet      = "61"
+    let s:blue        = "33"
+    let s:cyan        = "37"
+    let s:green       = "64"
+else
+    let s:vmode       = "cterm"
+    let s:bright      = "* term=bold cterm=bold"
+    let s:base03      = "0".s:bright
+    let s:base02      = "0"
+    let s:base01      = "2".s:bright
+    let s:base00      = "3".s:bright
+    let s:base0       = "4".s:bright
+    let s:base1       = "6".s:bright
+    let s:base2       = "7"
+    let s:base3       = "7".s:bright
+    let s:yellow      = "3"
+    let s:orange      = "1".s:bright
+    let s:red         = "1"
+    let s:magenta     = "5"
+    let s:violet      = "13"
+    let s:blue        = "4"
+    let s:cyan        = "6"
+    let s:green       = "2"
+endif
+"}}}
+" Formatting options and null values for passthrough effect "{{{
+" ---------------------------------------------------------------------
+    let s:none            = "NONE"
+    let s:none            = "NONE"
+    let s:t_none          = "NONE"
+    let s:n               = "NONE"
+    let s:c               = ",undercurl"
+    let s:r               = ",reverse"
+    let s:s               = ",standout"
+    let s:ou              = ""
+    let s:ob              = ""
+"}}}
+" Background value based on termtrans setting "{{{
+" ---------------------------------------------------------------------
+if (has("gui_running") || g:solarized_termtrans == 0)
+    let s:back        = s:base03
+else
+    let s:back        = "NONE"
+endif
+"}}}
+" Alternate light scheme "{{{
+" ---------------------------------------------------------------------
+if &background == "light"
+    let s:temp03      = s:base03
+    let s:temp02      = s:base02
+    let s:temp01      = s:base01
+    let s:temp00      = s:base00
+    let s:base03      = s:base3
+    let s:base02      = s:base2
+    let s:base01      = s:base1
+    let s:base00      = s:base0
+    let s:base0       = s:temp00
+    let s:base1       = s:temp01
+    let s:base2       = s:temp02
+    let s:base3       = s:temp03
+    if (s:back != "NONE")
+        let s:back    = s:base03
+    endif
+endif
+"}}}
+" Optional contrast schemes "{{{
+" ---------------------------------------------------------------------
+if g:solarized_contrast == "high"
+    let s:base01      = s:base00
+    let s:base00      = s:base0
+    let s:base0       = s:base1
+    let s:base1       = s:base2
+    let s:base2       = s:base3
+    let s:back        = s:back
+endif
+if g:solarized_contrast == "low"
+    let s:back        = s:base02
+    let s:ou          = ",underline"
+endif
+"}}}
+" Overrides dependent on user specified values"{{{
+" ---------------------------------------------------------------------
+if g:solarized_bold == 1
+    let s:b           = ",bold"
+else
+    let s:b           = ""
+endif
+
+if g:solarized_underline == 1
+    let s:u           = ",underline"
+else
