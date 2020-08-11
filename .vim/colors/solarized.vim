@@ -457,3 +457,125 @@ endif
 if g:solarized_underline == 1
     let s:u           = ",underline"
 else
+    let s:u           = ""
+endif
+
+if g:solarized_italic == 1
+    let s:i           = ",italic"
+else
+    let s:i           = ""
+endif
+"}}}
+" Highlighting primitives"{{{
+" ---------------------------------------------------------------------
+
+exe "let s:bg_none      = ' ".s:vmode."bg=".s:none   ."'"
+exe "let s:bg_back      = ' ".s:vmode."bg=".s:back   ."'"
+exe "let s:bg_base03    = ' ".s:vmode."bg=".s:base03 ."'"
+exe "let s:bg_base02    = ' ".s:vmode."bg=".s:base02 ."'"
+exe "let s:bg_base01    = ' ".s:vmode."bg=".s:base01 ."'"
+exe "let s:bg_base00    = ' ".s:vmode."bg=".s:base00 ."'"
+exe "let s:bg_base0     = ' ".s:vmode."bg=".s:base0  ."'"
+exe "let s:bg_base1     = ' ".s:vmode."bg=".s:base1  ."'"
+exe "let s:bg_base2     = ' ".s:vmode."bg=".s:base2  ."'"
+exe "let s:bg_base3     = ' ".s:vmode."bg=".s:base3  ."'"
+exe "let s:bg_green     = ' ".s:vmode."bg=".s:green  ."'"
+exe "let s:bg_yellow    = ' ".s:vmode."bg=".s:yellow ."'"
+exe "let s:bg_orange    = ' ".s:vmode."bg=".s:orange ."'"
+exe "let s:bg_red       = ' ".s:vmode."bg=".s:red    ."'"
+exe "let s:bg_magenta   = ' ".s:vmode."bg=".s:magenta."'"
+exe "let s:bg_violet    = ' ".s:vmode."bg=".s:violet ."'"
+exe "let s:bg_blue      = ' ".s:vmode."bg=".s:blue   ."'"
+exe "let s:bg_cyan      = ' ".s:vmode."bg=".s:cyan   ."'"
+
+exe "let s:fg_none      = ' ".s:vmode."fg=".s:none   ."'"
+exe "let s:fg_back      = ' ".s:vmode."fg=".s:back   ."'"
+exe "let s:fg_base03    = ' ".s:vmode."fg=".s:base03 ."'"
+exe "let s:fg_base02    = ' ".s:vmode."fg=".s:base02 ."'"
+exe "let s:fg_base01    = ' ".s:vmode."fg=".s:base01 ."'"
+exe "let s:fg_base00    = ' ".s:vmode."fg=".s:base00 ."'"
+exe "let s:fg_base0     = ' ".s:vmode."fg=".s:base0  ."'"
+exe "let s:fg_base1     = ' ".s:vmode."fg=".s:base1  ."'"
+exe "let s:fg_base2     = ' ".s:vmode."fg=".s:base2  ."'"
+exe "let s:fg_base3     = ' ".s:vmode."fg=".s:base3  ."'"
+exe "let s:fg_green     = ' ".s:vmode."fg=".s:green  ."'"
+exe "let s:fg_yellow    = ' ".s:vmode."fg=".s:yellow ."'"
+exe "let s:fg_orange    = ' ".s:vmode."fg=".s:orange ."'"
+exe "let s:fg_red       = ' ".s:vmode."fg=".s:red    ."'"
+exe "let s:fg_magenta   = ' ".s:vmode."fg=".s:magenta."'"
+exe "let s:fg_violet    = ' ".s:vmode."fg=".s:violet ."'"
+exe "let s:fg_blue      = ' ".s:vmode."fg=".s:blue   ."'"
+exe "let s:fg_cyan      = ' ".s:vmode."fg=".s:cyan   ."'"
+
+exe "let s:fmt_none     = ' ".s:vmode."=NONE".          " term=NONE".    "'"
+exe "let s:fmt_bold     = ' ".s:vmode."=NONE".s:b.      " term=NONE".s:b."'"
+exe "let s:fmt_bldi     = ' ".s:vmode."=NONE".s:b.      " term=NONE".s:b."'"
+exe "let s:fmt_undr     = ' ".s:vmode."=NONE".s:u.      " term=NONE".s:u."'"
+exe "let s:fmt_undb     = ' ".s:vmode."=NONE".s:u.s:b.  " term=NONE".s:u.s:b."'"
+exe "let s:fmt_undi     = ' ".s:vmode."=NONE".s:u.      " term=NONE".s:u."'"
+exe "let s:fmt_uopt     = ' ".s:vmode."=NONE".s:ou.     " term=NONE".s:ou."'"
+exe "let s:fmt_curl     = ' ".s:vmode."=NONE".s:c.      " term=NONE".s:c."'"
+exe "let s:fmt_ital     = ' ".s:vmode."=NONE".          " term=NONE".    "'"
+exe "let s:fmt_revr     = ' ".s:vmode."=NONE".s:r.      " term=NONE".s:r."'"
+exe "let s:fmt_stnd     = ' ".s:vmode."=NONE".s:s.      " term=NONE".s:s."'"
+
+if has("gui_running")
+    exe "let s:sp_none      = ' guisp=".s:none   ."'"
+    exe "let s:sp_back      = ' guisp=".s:back   ."'"
+    exe "let s:sp_base03    = ' guisp=".s:base03 ."'"
+    exe "let s:sp_base02    = ' guisp=".s:base02 ."'"
+    exe "let s:sp_base01    = ' guisp=".s:base01 ."'"
+    exe "let s:sp_base00    = ' guisp=".s:base00 ."'"
+    exe "let s:sp_base0     = ' guisp=".s:base0  ."'"
+    exe "let s:sp_base1     = ' guisp=".s:base1  ."'"
+    exe "let s:sp_base2     = ' guisp=".s:base2  ."'"
+    exe "let s:sp_base3     = ' guisp=".s:base3  ."'"
+    exe "let s:sp_green     = ' guisp=".s:green  ."'"
+    exe "let s:sp_yellow    = ' guisp=".s:yellow ."'"
+    exe "let s:sp_orange    = ' guisp=".s:orange ."'"
+    exe "let s:sp_red       = ' guisp=".s:red    ."'"
+    exe "let s:sp_magenta   = ' guisp=".s:magenta."'"
+    exe "let s:sp_violet    = ' guisp=".s:violet ."'"
+    exe "let s:sp_blue      = ' guisp=".s:blue   ."'"
+    exe "let s:sp_cyan      = ' guisp=".s:cyan   ."'"
+else
+    let s:sp_none      = ""
+    let s:sp_back      = ""
+    let s:sp_base03    = ""
+    let s:sp_base02    = ""
+    let s:sp_base01    = ""
+    let s:sp_base00    = ""
+    let s:sp_base0     = ""
+    let s:sp_base1     = ""
+    let s:sp_base2     = ""
+    let s:sp_base3     = ""
+    let s:sp_green     = ""
+    let s:sp_yellow    = ""
+    let s:sp_orange    = ""
+    let s:sp_red       = ""
+    let s:sp_magenta   = ""
+    let s:sp_violet    = ""
+    let s:sp_blue      = ""
+    let s:sp_cyan      = ""
+endif
+
+"}}}
+" Basic highlighting"{{{
+" ---------------------------------------------------------------------
+" note that link syntax to avoid duplicate configuration doesn't work with the
+" exe compiled formats
+
+exe "hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back
+
+exe "hi! Comment"        .s:fmt_ital   .s:fg_base01 .s:bg_none
+"       *Comment         any comment
+
+exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
+"       *Constant        any constant
+"        String          a string constant: "this is a string"
+"        Character       a character constant: 'c', '\n'
+"        Number          a number constant: 234, 0xff
+"        Boolean         a boolean constant: TRUE, false
+"        Float           a floating point constant: 2.3e10
+
+exe "hi! Identifier"     .s:fmt_none   .s:fg_blue   .s:bg_none
