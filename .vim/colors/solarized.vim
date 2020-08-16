@@ -827,3 +827,109 @@ exe "hi! pandocListReference"            .s:fg_magenta.s:bg_none   .s:fmt_undr
 " Definitions
 " ---------------------------------------------------------------------
 let s:fg_pdef = s:fg_violet
+exe "hi! pandocDefinitionBlock"              .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocDefinitionTerm"               .s:fg_pdef  .s:bg_none  .s:fmt_stnd
+exe "hi! pandocDefinitionIndctr"             .s:fg_pdef  .s:bg_none  .s:fmt_bold
+exe "hi! pandocEmphasisDefinition"           .s:fg_pdef  .s:bg_none  .s:fmt_ital
+exe "hi! pandocEmphasisNestedDefinition"     .s:fg_pdef  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisDefinition"     .s:fg_pdef  .s:bg_none  .s:fmt_bold
+exe "hi! pandocStrongEmphasisNestedDefinition"   .s:fg_pdef.s:bg_none.s:fmt_bldi
+exe "hi! pandocStrongEmphasisEmphasisDefinition" .s:fg_pdef.s:bg_none.s:fmt_bldi
+exe "hi! pandocStrikeoutDefinition"          .s:fg_pdef  .s:bg_none  .s:fmt_revr
+exe "hi! pandocVerbatimInlineDefinition"     .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocSuperscriptDefinition"        .s:fg_pdef  .s:bg_none  .s:fmt_none
+exe "hi! pandocSubscriptDefinition"          .s:fg_pdef  .s:bg_none  .s:fmt_none
+
+" Tables
+" ---------------------------------------------------------------------
+let s:fg_ptable = s:fg_blue
+exe "hi! pandocTable"                        .s:fg_ptable.s:bg_none  .s:fmt_none
+exe "hi! pandocTableStructure"               .s:fg_ptable.s:bg_none  .s:fmt_none
+hi! link pandocTableStructureTop             pandocTableStructre
+hi! link pandocTableStructureEnd             pandocTableStructre
+exe "hi! pandocTableZebraLight"              .s:fg_ptable.s:bg_base03.s:fmt_none
+exe "hi! pandocTableZebraDark"               .s:fg_ptable.s:bg_base02.s:fmt_none
+exe "hi! pandocEmphasisTable"                .s:fg_ptable.s:bg_none  .s:fmt_ital
+exe "hi! pandocEmphasisNestedTable"          .s:fg_ptable.s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisTable"          .s:fg_ptable.s:bg_none  .s:fmt_bold
+exe "hi! pandocStrongEmphasisNestedTable"    .s:fg_ptable.s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisEmphasisTable"  .s:fg_ptable.s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrikeoutTable"               .s:fg_ptable.s:bg_none  .s:fmt_revr
+exe "hi! pandocVerbatimInlineTable"          .s:fg_ptable.s:bg_none  .s:fmt_none
+exe "hi! pandocSuperscriptTable"             .s:fg_ptable.s:bg_none  .s:fmt_none
+exe "hi! pandocSubscriptTable"               .s:fg_ptable.s:bg_none  .s:fmt_none
+
+" Headings
+" ---------------------------------------------------------------------
+let s:fg_phead = s:fg_orange
+exe "hi! pandocHeading"                      .s:fg_phead .s:bg_none.s:fmt_bold
+exe "hi! pandocHeadingMarker"                .s:fg_yellow.s:bg_none.s:fmt_bold
+exe "hi! pandocEmphasisHeading"              .s:fg_phead .s:bg_none.s:fmt_bldi
+exe "hi! pandocEmphasisNestedHeading"        .s:fg_phead .s:bg_none.s:fmt_bldi
+exe "hi! pandocStrongEmphasisHeading"        .s:fg_phead .s:bg_none.s:fmt_bold
+exe "hi! pandocStrongEmphasisNestedHeading"  .s:fg_phead .s:bg_none.s:fmt_bldi
+exe "hi! pandocStrongEmphasisEmphasisHeading".s:fg_phead .s:bg_none.s:fmt_bldi
+exe "hi! pandocStrikeoutHeading"             .s:fg_phead .s:bg_none.s:fmt_revr
+exe "hi! pandocVerbatimInlineHeading"        .s:fg_phead .s:bg_none.s:fmt_bold
+exe "hi! pandocSuperscriptHeading"           .s:fg_phead .s:bg_none.s:fmt_bold
+exe "hi! pandocSubscriptHeading"             .s:fg_phead .s:bg_none.s:fmt_bold
+
+" Links
+" ---------------------------------------------------------------------
+exe "hi! pandocLinkDelim"                .s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi! pandocLinkLabel"                .s:fg_blue   .s:bg_none   .s:fmt_undr
+exe "hi! pandocLinkText"                 .s:fg_blue   .s:bg_none   .s:fmt_undb
+exe "hi! pandocLinkURL"                  .s:fg_base00 .s:bg_none   .s:fmt_undr
+exe "hi! pandocLinkTitle"                .s:fg_base00 .s:bg_none   .s:fmt_undi
+exe "hi! pandocLinkTitleDelim"           .s:fg_base01 .s:bg_none   .s:fmt_undi   .s:sp_base00
+exe "hi! pandocLinkDefinition"           .s:fg_cyan   .s:bg_none   .s:fmt_undr   .s:sp_base00
+exe "hi! pandocLinkDefinitionID"         .s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi! pandocImageCaption"             .s:fg_violet .s:bg_none   .s:fmt_undb
+exe "hi! pandocFootnoteLink"             .s:fg_green  .s:bg_none   .s:fmt_undr
+exe "hi! pandocFootnoteDefLink"          .s:fg_green  .s:bg_none   .s:fmt_bold
+exe "hi! pandocFootnoteInline"           .s:fg_green  .s:bg_none   .s:fmt_undb
+exe "hi! pandocFootnote"                 .s:fg_green  .s:bg_none   .s:fmt_none
+exe "hi! pandocCitationDelim"            .s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! pandocCitation"                 .s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! pandocCitationID"               .s:fg_magenta.s:bg_none   .s:fmt_undr
+exe "hi! pandocCitationRef"              .s:fg_magenta.s:bg_none   .s:fmt_none
+
+" Main Styles
+" ---------------------------------------------------------------------
+exe "hi! pandocStyleDelim"               .s:fg_base01 .s:bg_none  .s:fmt_none
+exe "hi! pandocEmphasis"                 .s:fg_base0  .s:bg_none  .s:fmt_ital
+exe "hi! pandocEmphasisNested"           .s:fg_base0  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasis"           .s:fg_base0  .s:bg_none  .s:fmt_bold
+exe "hi! pandocStrongEmphasisNested"     .s:fg_base0  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrongEmphasisEmphasis"   .s:fg_base0  .s:bg_none  .s:fmt_bldi
+exe "hi! pandocStrikeout"                .s:fg_base01 .s:bg_none  .s:fmt_revr
+exe "hi! pandocVerbatimInline"           .s:fg_yellow .s:bg_none  .s:fmt_none
+exe "hi! pandocSuperscript"              .s:fg_violet .s:bg_none  .s:fmt_none
+exe "hi! pandocSubscript"                .s:fg_violet .s:bg_none  .s:fmt_none
+
+exe "hi! pandocRule"                     .s:fg_blue   .s:bg_none  .s:fmt_bold
+exe "hi! pandocRuleLine"                 .s:fg_blue   .s:bg_none  .s:fmt_bold
+exe "hi! pandocEscapePair"               .s:fg_red    .s:bg_none  .s:fmt_bold
+exe "hi! pandocCitationRef"              .s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! pandocNonBreakingSpace"         . s:fg_red   .s:bg_none  .s:fmt_revr
+hi! link pandocEscapedCharacter          pandocEscapePair
+hi! link pandocLineBreak                 pandocEscapePair
+
+" Embedded Code
+" ---------------------------------------------------------------------
+exe "hi! pandocMetadataDelim"            .s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
+hi! link pandocMetadataTitle             pandocMetadata
+
+"}}}
+" Utility autocommand "{{{
+" ---------------------------------------------------------------------
+" In cases where Solarized is initialized inside a terminal vim session and
+" then transferred to a gui session via the command `:gui`, the gui vim process
+" does not re-read the colorscheme (or .vimrc for that matter) so any `has_gui`
+" related code that sets gui specific values isn't executed.
+"
+" Currently, Solarized sets only the cterm or gui values for the colorscheme
+" depending on gui or terminal mode. It's possible that, if the following
