@@ -708,3 +708,122 @@ exe "hi! vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
 exe "hi! vimSynMtchOpt"  . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi! vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi! vimHiLink"      . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! vimHiGroup"     . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! vimGroup"       . s:fg_blue   .s:bg_none   .s:fmt_undb
+"}}}
+" html highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! htmlTag"        . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi! htmlEndTag"     . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi! htmlTagN"       . s:fg_base1  .s:bg_none   .s:fmt_bold
+exe "hi! htmlTagName"    . s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi! htmlSpecialTagName". s:fg_blue  .s:bg_none .s:fmt_ital
+exe "hi! htmlArg"        . s:fg_base00 .s:bg_none   .s:fmt_none
+exe "hi! javaScript"     . s:fg_yellow .s:bg_none   .s:fmt_none
+"}}}
+" perl highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
+exe "hi! perlVarPlain"   . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi! perlStatementFileDesc". s:fg_cyan.s:bg_back.s:fmt_none
+
+"}}}
+" tex highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! texStatement"   . s:fg_cyan   .s:bg_back   .s:fmt_none
+exe "hi! texMathZoneX"   . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi! texMathMatcher" . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi! texMathMatcher" . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi! texRefLabel"    . s:fg_yellow .s:bg_back   .s:fmt_none
+"}}}
+" ruby highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
+"rubyInclude
+"rubySharpBang
+"rubyAccess
+"rubyPredefinedVariable
+"rubyBoolean
+"rubyClassVariable
+"rubyBeginEnd
+"rubyRepeatModifier
+"hi! link rubyArrayDelimiter    Special  " [ , , ]
+"rubyCurlyBlock  { , , }
+
+"hi! link rubyClass             Keyword
+"hi! link rubyModule            Keyword
+"hi! link rubyKeyword           Keyword
+"hi! link rubyOperator          Operator
+"hi! link rubyIdentifier        Identifier
+"hi! link rubyInstanceVariable  Identifier
+"hi! link rubyGlobalVariable    Identifier
+"hi! link rubyClassVariable     Identifier
+"hi! link rubyConstant          Type
+"}}}
+" haskell syntax highlighting"{{{
+" ---------------------------------------------------------------------
+" For use with syntax/haskell.vim : Haskell Syntax File
+" http://www.vim.org/scripts/script.php?script_id=3034
+" See also Steffen Siering's github repository:
+" http://github.com/urso/dotrc/blob/master/vim/syntax/haskell.vim
+" ---------------------------------------------------------------------
+"
+" Treat True and False specially, see the plugin referenced above
+let hs_highlight_boolean=1
+" highlight delims, see the plugin referenced above
+let hs_highlight_delimiters=1
+
+exe "hi! cPreCondit". s:fg_orange.s:bg_none   .s:fmt_none
+
+exe "hi! VarId"    . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! ConId"    . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! hsImport" . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! hsString" . s:fg_base00 .s:bg_none   .s:fmt_none
+
+exe "hi! hsStructure"        . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hs_hlFunctionName"  . s:fg_blue   .s:bg_none
+exe "hi! hsStatement"        . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hsImportLabel"      . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hs_OpFunctionName"  . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! hs_DeclareFunction" . s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi! hsVarSym"           . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hsType"             . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! hsTypedef"          . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hsModuleName"       . s:fg_green  .s:bg_none   .s:fmt_undr
+exe "hi! hsModuleStartLabel" . s:fg_magenta.s:bg_none   .s:fmt_none
+hi! link hsImportParams      Delimiter
+hi! link hsDelimTypeExport   Delimiter
+hi! link hsModuleStartLabel  hsStructure
+hi! link hsModuleWhereLabel  hsModuleStartLabel
+
+" following is for the haskell-conceal plugin
+" the first two items don't have an impact, but better safe
+exe "hi! hsNiceOperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! hsniceoperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+
+"}}}
+" pandoc markdown syntax highlighting "{{{
+" ---------------------------------------------------------------------
+
+"PandocHiLink pandocNormalBlock
+exe "hi! pandocTitleBlock"               .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! pandocTitleBlockTitle"          .s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi! pandocTitleComment"             .s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi! pandocComment"                  .s:fg_base01 .s:bg_none   .s:fmt_ital
+exe "hi! pandocVerbatimBlock"            .s:fg_yellow .s:bg_none   .s:fmt_none
+hi! link pandocVerbatimBlockDeep         pandocVerbatimBlock
+hi! link pandocCodeBlock                 pandocVerbatimBlock
+hi! link pandocCodeBlockDelim            pandocVerbatimBlock
+exe "hi! pandocBlockQuote"               .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader1"        .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader2"        .s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader3"        .s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader4"        .s:fg_red    .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader5"        .s:fg_base0  .s:bg_none   .s:fmt_none
+exe "hi! pandocBlockQuoteLeader6"        .s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi! pandocListMarker"               .s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! pandocListReference"            .s:fg_magenta.s:bg_none   .s:fmt_undr
+
+" Definitions
+" ---------------------------------------------------------------------
+let s:fg_pdef = s:fg_violet
