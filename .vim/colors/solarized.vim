@@ -579,3 +579,132 @@ exe "hi! Constant"       .s:fmt_none   .s:fg_cyan   .s:bg_none
 "        Float           a floating point constant: 2.3e10
 
 exe "hi! Identifier"     .s:fmt_none   .s:fg_blue   .s:bg_none
+"       *Identifier      any variable name
+"        Function        function name (also: methods for classes)
+"
+exe "hi! Statement"      .s:fmt_none   .s:fg_green  .s:bg_none
+"       *Statement       any statement
+"        Conditional     if, then, else, endif, switch, etc.
+"        Repeat          for, do, while, etc.
+"        Label           case, default, etc.
+"        Operator        "sizeof", "+", "*", etc.
+"        Keyword         any other keyword
+"        Exception       try, catch, throw
+
+exe "hi! PreProc"        .s:fmt_none   .s:fg_orange .s:bg_none
+"       *PreProc         generic Preprocessor
+"        Include         preprocessor #include
+"        Define          preprocessor #define
+"        Macro           same as Define
+"        PreCondit       preprocessor #if, #else, #endif, etc.
+
+exe "hi! Type"           .s:fmt_none   .s:fg_yellow .s:bg_none
+"       *Type            int, long, char, etc.
+"        StorageClass    static, register, volatile, etc.
+"        Structure       struct, union, enum, etc.
+"        Typedef         A typedef
+
+exe "hi! Special"        .s:fmt_none   .s:fg_red    .s:bg_none
+"       *Special         any special symbol
+"        SpecialChar     special character in a constant
+"        Tag             you can use CTRL-] on this
+"        Delimiter       character that needs attention
+"        SpecialComment  special things inside a comment
+"        Debug           debugging statements
+
+exe "hi! Underlined"     .s:fmt_none   .s:fg_violet .s:bg_none
+"       *Underlined      text that stands out, HTML links
+
+exe "hi! Ignore"         .s:fmt_none   .s:fg_none   .s:bg_none
+"       *Ignore          left blank, hidden  |hl-Ignore|
+
+exe "hi! Error"          .s:fmt_bold   .s:fg_red    .s:bg_none
+"       *Error           any erroneous construct
+
+exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
+"       *Todo            anything that needs extra attention; mostly the
+"                        keywords TODO FIXME and XXX
+"
+"}}}
+" Extended highlighting "{{{
+" ---------------------------------------------------------------------
+if      (g:solarized_visibility=="high")
+    exe "hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none
+    exe "hi! NonText"        .s:fmt_bold   .s:fg_base1  .s:bg_none
+elseif  (g:solarized_visibility=="low")
+    exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_base02 .s:bg_none
+    exe "hi! NonText"        .s:fmt_bold   .s:fg_base02 .s:bg_none
+else
+    exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_red    .s:bg_none
+    exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
+endif
+if (has("gui_running")) || &t_Co > 8
+    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_base1
+    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02 .s:bg_base00
+    "exe "hi! Visual"         .s:fmt_stnd   .s:fg_none   .s:bg_base02
+    exe "hi! Visual"         .s:fmt_none   .s:fg_base03 .s:bg_base01
+else
+    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_base2
+    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02 .s:bg_base2
+    exe "hi! Visual"         .s:fmt_none   .s:fg_none   .s:bg_base2
+endif
+exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
+exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
+exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
+exe "hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none
+exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
+exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
+exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
+exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
+exe "hi! VertSplit"      .s:fmt_bold   .s:fg_base00 .s:bg_base00
+exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
+exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02
+exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
+exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02
+exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
+exe "hi! FoldColumn"     .s:fmt_bold   .s:fg_base0  .s:bg_base02
+exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
+exe "hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none
+exe "hi! DiffDelete"     .s:fmt_revr   .s:fg_red    .s:bg_none
+exe "hi! DiffText"       .s:fmt_revr   .s:fg_blue   .s:bg_none
+exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
+exe "hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none
+exe "hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red
+exe "hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet
+exe "hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan
+exe "hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow
+exe "hi! Pmenu"          .s:fmt_none   .s:fg_base0  .s:bg_base02
+exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base2  .s:bg_base01
+exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base0  .s:bg_base2
+exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base03 .s:bg_base0
+exe "hi! TabLine"        .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
+exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base2  .s:bg_base01  .s:sp_base0
+exe "hi! TabLineFill"    .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
+exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02
+exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
+exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02
+exe "hi! Cursor"         .s:fmt_none   .s:fg_base03 .s:bg_base0
+hi! link lCursor Cursor
+exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base01
+
+"}}}
+" vim syntax highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
+exe "hi! vimCommentString".s:fg_violet .s:bg_none   .s:fmt_none
+hi! link vimVar Identifier
+hi! link vimFunc Function
+hi! link vimUserFunc Function
+exe "hi! vimCommand"     . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! vimCmdSep"      . s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi! helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
+hi! link helpSpecial Special
+exe "hi! helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! helpVim"        . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi! helpHyperTextJump" .s:fg_blue  .s:bg_none   .s:fmt_undr
+exe "hi! helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
+exe "hi! vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
+exe "hi! vimSynMtchOpt"  . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi! vimHiLink"      . s:fg_blue   .s:bg_none   .s:fmt_none
