@@ -169,3 +169,121 @@ Run all:
     $ ./.dots all
 
 Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
+
+    $ ./.dots bootstrap osxprep brew osx
+
+Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`, `pydata.sh`, `aws.sh`, and `datastores.sh`:
+
+    $ ./.dots bootstrap osxprep brew osx pydata aws datastores
+
+#### Running without Git
+
+    $ curl -O https://raw.githubusercontent.com/donnemartin/dev-setup/master/.dots && ./.dots [Add ARGS Here]
+
+#### Scripts
+
+* [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots)
+    * Runs specified scripts
+* [bootstrap.sh](https://github.com/donnemartin/dev-setup/blob/master/bootstrap.sh)
+    * Syncs dev-setup to your local home directory `~`
+* [osxprep.sh](https://github.com/donnemartin/dev-setup/blob/master/osxprep.sh)
+    * Updates OS X and installs Xcode command line tools
+* [brew.sh](https://github.com/donnemartin/dev-setup/blob/master/brew.sh)
+    * Installs common Homebrew formulae and apps
+* [osx.sh](https://github.com/donnemartin/dev-setup/blob/master/osx.sh)
+    * Sets up OS X defaults geared towards developers
+* [pydata.sh](https://github.com/donnemartin/dev-setup/blob/master/pydata.sh)
+    * Sets up python for data analysis
+* [aws.sh](https://github.com/donnemartin/dev-setup/blob/master/aws.sh)
+    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
+* [datastores.sh](https://github.com/donnemartin/dev-setup/blob/master/datastores.sh)
+    * Sets up common data stores
+* [web.sh](https://github.com/donnemartin/dev-setup/blob/master/web.sh)
+    * Sets up JavaScript web development
+* [android.sh](https://github.com/donnemartin/dev-setup/blob/master/android.sh)
+    * Sets up Android development
+
+**Notes:**
+
+* `.dots` will initially prompt you to enter your password.
+* `.dots` might ask you to re-enter your password at certain stages of the installation.
+* If OS X updates require a restart, simply run `.dots` again to resume where you left off.
+* When installing the Xcode command line tools, a dialog box will confirm installation.
+    * Once Xcode is installed, follow the instructions on the terminal to continue.
+* `.dots` runs `brew.sh`, which takes awhile to complete as some formulae need to be installed from source.
+* **When `.dots` completes, be sure to restart your computer for all updates to take effect.**
+
+I encourage you to read through Section 1 so you have a better idea of what each installation script does.  The following discussions describe in greater detail what is executed when running the [.dots](https://github.com/donnemartin/dev-setup/blob/master/.dots) script.
+
+### bootstrap.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/commands.png">
+  <br/>
+</p>
+
+The `bootstrap.sh` script will sync the dev-setup repo to your local home directory.  This will include customizations for Vim, bash, curl, git, tab completion, aliases, a number of utility functions, etc.  Section 2 of this repo describes some of the customizations.
+
+#### Running with Git
+
+First, fork or [clone the repo](#clone-the-repo).  The `bootstrap.sh` script will pull in the latest version and copy the files to your home folder `~`:
+
+    $ source bootstrap.sh
+
+To update later on, just run that command again.
+
+Alternatively, to update while avoiding the confirmation prompt:
+
+    $ set -- -f; source bootstrap.sh
+
+#### Running without Git
+
+To sync dev-setup to your local home directory without Git, run the following:
+
+    $ cd ~; curl -#L https://github.com/donnemartin/dev-setup/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,LICENSE}
+
+To update later on, just run that command again.
+
+#### Optional: Specify PATH
+
+If `~/.path` exists, it will be sourced along with the other files before any feature testing (such as detecting which version of `ls` is being used takes place.
+
+Here’s an example `~/.path` file that adds `/usr/local/bin` to the `$PATH`:
+
+```bash
+export PATH="/usr/local/bin:$PATH"
+```
+
+#### Optional: Add Custom Commands
+
+If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+
+My `~/.extra` looks something like this:
+
+```bash
+# Git credentials
+GIT_AUTHOR_NAME="Donne Martin"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="donne.martin@gmail.com"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+# Pip should only run if there is a virtualenv currently activated
+export PIP_REQUIRE_VIRTUALENV=true
+
+# Install or upgrade a global package
+# Usage: gpip install –upgrade pip setuptools virtualenv
+gpip(){
+   PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+```
+
+You could also use `~/.extra` to override settings, functions, and aliases from the dev-setup repository, although it’s probably better to [fork the dev-setup repository](https://github.com/donnemartin/dev-setup/fork).
+
+### osxprep.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
+  <br/>
+</p>
