@@ -50,3 +50,122 @@ This repo takes a more **light-weight** approach to automation using a combinati
 ## Section 1: Installation
 
 **Scripts tested on OS X 10.10 Yosemite and 10.11 El Capitan.**
+
+* [Single Setup Script](#single-setup-script)
+* [bootstrap.sh script](#bootstrapsh-script)
+    * Syncs dev-setup to your local home directory `~`
+* [osxprep.sh script](#osxprepsh-script)
+    * Updates OS X and installs Xcode command line tools
+* [brew.sh script](#brewsh-script)
+    * Installs common Homebrew formulae and apps
+* [osx.sh script](#osxsh-script)
+    * Sets up OS X defaults geared towards developers
+* [pydata.sh script](#pydatash-script)
+    * Sets up python for data analysis
+* [aws.sh script](#awssh-script)
+    * Sets up Spark, Hadoop MapReduce, and Amazon Web Services
+* [datastores.sh script](#datastoressh-script)
+    * Sets up common data stores
+* [web.sh script](#websh-script)
+    * Sets up JavaScript web development
+* [android.sh script](#androidsh-script)
+    * Sets up Android development
+
+## Section 2: General Apps and Tools
+
+* [Sublime Text](#sublime-text)
+* [Atom](#atom)
+* [Terminal Customization](#terminal-customization)
+* [iTerm2](#iterm2)
+* [Vim](#vim)
+* [Git](#git)
+* [VirtualBox](#virtualbox)
+* [Vagrant](#vagrant)
+* [Docker](#docker)
+* [Homebrew](#homebrew)
+* [Ruby and rbenv](#ruby-and-rbenv)
+* [Python](#python)
+* [Pip](#pip)
+* [Virtualenv](#virtualenv)
+* [Virtualenvwrapper](#virtualenvwrapper)
+
+## Section 3: Python Data Analysis
+
+* [Anaconda](#anaconda)
+* [IPython Notebook](#ipython-notebook)
+* [NumPy](#numpy)
+* [Pandas](#pandas)
+* [Matplotlib](#matplotlib)
+* [Seaborn](#seaborn)
+* [Scikit-learn](#scikit-learn)
+* [SciPy](#scipy)
+* [Flask](#flask)
+* [Bokeh](#bokeh)
+
+## Section 4: Big Data, AWS, and Heroku
+
+* [Spark](#spark)
+* [MapReduce](#mapreduce)
+* [Awesome AWS](#awesome-aws-)
+* [AWS Account](#aws-account)
+* [AWS CLI](#aws-cli)
+* [SAWS](#saws)
+* [Boto](#boto)
+* [S3cmd](#s3cmd)
+* [S3DistCp](#s3distcp)
+* [S3-parallel-put](#s3-parallel-put)
+* [Redshift](#redshift)
+* [Kinesis](#kinesis)
+* [Lambda](#lambda)
+* [AWS Machine Learning](#aws-machine-learning)
+* [Heroku](#heroku)
+
+## Section 5: Data Stores
+
+* [MySQL](#mysql)
+* [MySQL Workbench](#mysql-workbench)
+* [MongoDB](#mongodb)
+* [Redis](#redis)
+* [Elasticsearch](#elasticsearch)
+
+## Section 6: JavaScript Web Development
+
+* [Node.js](#nodejs)
+* [JSHint](#jshint)
+* [Less](#less)
+
+## Section 7: Android Development
+
+* [Java](#java)
+* [Android SDK](#android-sdk)
+* [Android Studio](#android-studio)
+* [IntelliJ IDEA](#intellij-idea)
+
+## Section 8: Misc
+
+* [Contributions](#contributions)
+* [Credits](#credits)
+* [Contact Info](#contact-info)
+* [License](#license)
+
+## Section 1: Installation
+
+### Single Setup Script
+
+#### Running with Git
+
+##### Clone the Repo
+
+    $ git clone https://github.com/donnemartin/dev-setup.git && cd dev-setup
+
+##### Run the .dots Script with Command Line Arguments
+
+**Since you probably don't want to install every section**, the `.dots` script supports command line arguments to run only specified sections.  Simply pass in the [scripts](#scripts) that you want to install.  Below are some examples.
+
+**For more customization, you can [clone](#clone-the-repo) or [fork](https://github.com/donnemartin/dev-setup/fork) the repo and tweak the `.dots` script and its associated components to suit your needs.**
+
+Run all:
+
+    $ ./.dots all
+
+Run `bootstrap.sh`, `osxprep.sh`, `brew.sh`, and `osx.sh`:
