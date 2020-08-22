@@ -287,3 +287,97 @@ You could also use `~/.extra` to override settings, functions, and aliases from 
   <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/xcode.jpg">
   <br/>
 </p>
+
+Run the `osxprep.sh` script:
+
+    $ ./osxprep.sh
+
+`osxprep.sh` will first install all updates.  If a restart is required, simply run the script again.  Once all updates are installed, `osxprep.sh` will then [Install Xcode Command Line Tools](#install-xcode-command-line-tools).
+
+If you want to go the manual route, you can also install all updates by running "App Store", selecting the "Updates" icon, then updating both the OS and installed apps.
+
+#### Install Xcode Command Line Tools
+
+An important dependency before many tools such as Homebrew can work is the **Command Line Tools for Xcode**. These include compilers like gcc that will allow you to build from source.
+
+If you are running **OS X 10.9 Mavericks or later**, then you can install the Xcode Command Line Tools directly from the command line with:
+
+    $ xcode-select --install
+
+**Note**: the `osxprep.sh` script executes this command.
+
+Running the command above will display a dialog where you can either:
+* Install Xcode and the command line tools
+* Install the command line tools only
+* Cancel the install
+
+##### OS X 10.8 and Older
+
+If you're running 10.8 or older, you'll need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
+
+Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
+
+### brew.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/homebrew2.png">
+  <br/>
+</p>
+
+When setting up a new Mac, you may want to install [Homebrew](http://brew.sh/), a package manager that simplifies installing and updating applications or libraries.
+
+Some of the apps installed by the `brew.sh` script include: Chrome, Firefox, Sublime Text, Atom, Dropbox, Evernote, Skype, Slack, Alfred, VirtualBox, Vagrant, Docker, etc.  **For a full listing of installed formulae and apps, refer to the commented [brew.sh source file](https://github.com/donnemartin/dev-setup/blob/master/brew.sh) directly and tweak it to suit your needs.**
+
+Run the `brew.sh` script:
+
+    $ ./brew.sh
+
+The `brew.sh` script takes awhile to complete, as some formulae need to be installed from source.
+
+**For your terminal customization to take full effect, quit and re-start the terminal**
+
+### osx.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/osx.png">
+  <br/>
+</p>
+
+When setting up a new Mac, you may want to set OS X defaults geared towards developers.  The `osx.sh` script also configures common third-party apps such Sublime Text and Chrome.
+
+**Note**: **I strongly encourage you read through the commented [osx.sh source file](https://github.com/donnemartin/dev-setup/blob/master/osx.sh) and tweak any settings based on your personal preferences.  The script defaults are intended for you to customize.**  For example, if you are not running an SSD you might want to change some of the settings listed in the SSD section.
+
+Run the `osx.sh` script:
+
+    $ ./osx.sh
+
+**For your terminal customization to take full effect, quit and re-start the terminal.**
+
+### pydata.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pydata.png">
+  <br/>
+</p>
+
+To set up a development environment to work with Python and data analysis without relying on the more heavyweight [Anaconda](#anaconda) distribution, run the `pydata.sh` script:
+
+    $ ./pydata.sh
+
+This will install [Virtualenv](#virtualenv) and [Virtualenvwrapper](#virtualenvwrapper).  It will then set up two virtual environments loaded with the packages you will need to work with data in Python 2 and Python 3.
+
+To switch to the Python 2 virtual environment, run the following Virtualenvwrapper command:
+
+    $ workon py2-data
+
+To switch to the Python 3 virtual environment, run the following Virtualenvwrapper command:
+
+    $ workon py3-data
+
+Then start working with the installed packages, for example:
+
+    $ ipython notebook
+
+[Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
+
+### aws.sh script
