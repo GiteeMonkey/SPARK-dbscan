@@ -489,3 +489,97 @@ While inside the `Packages` directory, clone the theme repository using the comm
 ##### Activating the Theme on Sublime Text 3
 
 * Open your User Settings Preferences file `Sublime Text -> Preferences -> Settings - User`
+* Add (or update) your theme entry to be `"theme": "Soda Light 3.sublime-theme"` or `"theme": "Soda Dark 3.sublime-theme"`
+
+**Example Sublime Text 3 User Settings**
+
+    {
+        "theme": "Soda Light 3.sublime-theme"
+    }
+
+##### Changing Monokai Comment Color
+
+Although Monokai is a great color scheme, I find that comments can be difficult to see.  You can follow these [instructions](http://stackoverflow.com/a/32686509) to change the color of the default theme.
+
+I set my comments color to `#E6DB74`.
+
+```
+<dict>
+    ...
+    <dict>
+        <key>foreground</key>
+        <string>#E6DB74</string>
+    </dict>
+    ...
+</dict>
+```
+
+### Atom
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/atom.png">
+  <br/>
+</p>
+
+[Atom](https://github.com/atom/atom) is a great open-source editor from GitHub that is rapidly gaining contributors and popularity.
+
+#### Installation
+
+The [brew.sh script](#brewsh-script) installs Atom.
+
+If you prefer to install it separately, [download](https://atom.io/) it, open the **.dmg** file, drag-and-drop in the **Applications** folder.
+
+#### Configuration
+
+Atom has a great package manager that allows you to easily install both core and community packages.
+
+### Terminal Customization
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/terminal.png">
+  <br/>
+</p>
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place.
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) and [osx.sh script](#osxsh-script) contain terminal customizations.
+
+### iTerm2
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/iterm2.png">
+  <br/>
+</p>
+
+I prefer iTerm2 over the stock Terminal, as it has some additional [great features](https://www.iterm2.com/features.html). Download and install iTerm2 (the newest version, even if it says "beta release").
+
+In Finder, drag and drop the iTerm Application file into the Applications folder.
+
+You can now launch iTerm, through the Launchpad for instance.
+
+Let's just quickly change some preferences. In iTerm > Preferences..., in the tab Profiles, create a new one with the "+" icon, and rename it to your first name for example. Then, select Other Actions... > Set as Default. Under the section Window, change the size to something better, like Columns: 125 and Rows: 35.  I also like to set General > Working Directory > Reuse previous session's directory.  Finally, I change the way the option key works so that I can quickly jump between words as described [here](https://coderwall.com/p/h6yfda/use-and-to-jump-forwards-backwards-words-in-iterm-2-on-os-x).
+
+When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
+
+#### Configuration
+
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. What follows might seem like a lot of work, but trust me, it'll make the development experience so much better.
+
+Now let's add some color. I'm a big fan of the [Solarized](http://ethanschoonover.com/solarized) color scheme. It is supposed to be scientifically optimal for the eyes. I just find it pretty.
+
+- In **iTerm2 Preferences**, under **Profiles** and **Colors**, go to **Load Presets...** and select **Solarized Dark** to activate it. Voila!
+
+At this point you can also change your computer's name, which shows up in this terminal prompt. If you want to do so, go to **System Preferences** > **Sharing**. For example, I changed mine from "Donne's MacBook Pro" to just "MacBook Pro", so it shows up as `MacBook-Pro` in the terminal.
+
+Now we have a terminal we can work with!
+
+### Vim
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vim.png">
+  <br/>
+</p>
+
+Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
