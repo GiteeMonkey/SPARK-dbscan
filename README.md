@@ -381,3 +381,111 @@ Then start working with the installed packages, for example:
 [Section 3: Python Data Analysis](#section-3-python-data-analysis) describes the installed packages and usage.
 
 ### aws.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws.png">
+  <br/>
+</p>
+
+To set up a development environment to work with Spark, Hadoop MapReduce, and Amazon Web Services, run the `aws.sh` script:
+
+    $ ./aws.sh
+
+[Section 4: Big Data, AWS, and Heroku](#section-4-big-data-aws-and-heroku) describes the installed packages and usage.
+
+### datastores.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/datastores.png">
+  <br/>
+</p>
+
+To set up common data stores, run the `datastores.sh` script:
+
+    $ ./datastores.sh
+
+[Section 5: Data Stores](#section-5-data-stores) describes the installed packages and usage.
+
+### web.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/webdev.png">
+  <br/>
+</p>
+
+To set up a JavaScript web development environment, Run the `web.sh` script:
+
+    $ ./web.sh
+
+[Section 6: Web Development](#section-6-web-development) describes the installed packages and usage.
+
+### android.sh script
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/android.png">
+  <br/>
+</p>
+
+To set up an Android development environment, run the `android.sh` script:
+
+    $ ./android.sh
+
+[Section 7: Android Development](#section-7-android-development) describes the installed packages and usage.
+
+## Section 2: General Apps and Tools
+
+### Sublime Text
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/sublime.png">
+  <br/>
+</p>
+
+With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
+
+#### Installation
+
+The [brew.sh script](#brewsh-script) installs Sublime Text.
+
+If you prefer to install it separately, go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder.
+
+**Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text. To do so, right-click on the running application and select **Options > Keep in Dock**.
+
+Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool.
+
+#### Configuration
+
+The [osx.sh script](#osxsh-script) contains Sublime Text configurations.
+
+#### Soda Theme
+
+The [Soda Theme](https://github.com/buymeasoda/soda-theme) is a great UI theme for Sublime Text, especially if you use a dark theme and think the side bar sticks out like a sore thumb.
+
+##### Installation with Sublime Package Control
+
+If you are using Will Bond's excellent [Sublime Package Control](http://wbond.net/sublime_packages/package_control), you can easily install Soda Theme via the `Package Control: Install Package` menu item. The Soda Theme package is listed as `Theme - Soda` in the packages list.
+
+##### Installation with Git
+
+Alternatively, if you are a git user, you can install the theme and keep up to date by cloning the repo directly into your `Packages` directory in the Sublime Text application settings area.
+
+You can locate your Sublime Text `Packages` directory by using the menu item `Preferences -> Browse Packages...`.
+
+While inside the `Packages` directory, clone the theme repository using the command below:
+
+    $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+
+##### Activating the Theme on Sublime Text 2
+
+* Open your User Settings Preferences file `Sublime Text 2 -> Preferences -> Settings - User`
+* Add (or update) your theme entry to be `"theme": "Soda Light.sublime-theme"` or `"theme": "Soda Dark.sublime-theme"`
+
+**Example Sublime Text 2 User Settings**
+
+    {
+        "theme": "Soda Light.sublime-theme"
+    }
+
+##### Activating the Theme on Sublime Text 3
+
+* Open your User Settings Preferences file `Sublime Text -> Preferences -> Settings - User`
