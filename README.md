@@ -583,3 +583,93 @@ Now we have a terminal we can work with!
 </p>
 
 Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
+
+For example, when you run a Git commit, it will open Vim to allow you to type the commit message.
+
+I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
+
+#### Configuration
+
+The [bootstrap.sh script](#bootstrapsh-script) contains Vim customizations.
+
+### VirtualBox
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/virtualbox.png">
+  <br/>
+</p>
+
+VirtualBox creates and manages virtual machines.  It's a solid free solution to its commercial rival VMware.
+
+#### Installation
+
+The [brew.sh script](#brewsh-script) installs VirtualBox
+
+If you prefer to install it separately, you can download it [here](https://www.virtualbox.org/wiki/Downloads) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="/Applications" virtualbox
+
+### Vagrant
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/vagrant.jpeg">
+  <br/>
+</p>
+
+Vagrant creates and configures development environments.  You can think of it as a higher-level wrapper around VirtualBox and configuration management tools like Ansible, Chef, Puppet, and Salt.  Vagrant also supports Docker containers and server environments like Amazon EC2.
+
+#### Installation
+
+The [brew.sh script](#brewsh-script) installs Vagrant.
+
+If you prefer to install it separately, you can download it [here](https://www.vagrantup.com/) or run:
+
+    $ brew update
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="/Applications" vagrant
+
+### Docker
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/docker.png">
+  <br/>
+</p>
+
+Docker automates the deployment of applications inside software containers.  I think the following [quote](http://www.linux.com/news/enterprise/cloud-computing/731454-docker-a-shipping-container-for-linux-code) explains docker nicely: "Docker is a tool that can package an application and its dependencies in a virtual container that can run on any Linux server. This helps enable flexibility and portability on where the application can run, whether on premise, public cloud, private cloud, bare metal, etc".
+
+#### Installation
+
+The [brew.sh script](#brewsh-script) installs Docker.
+
+If you prefer to install it separately, you can download it [here](https://www.docker.com/) or run:
+
+    $ brew update
+    $ brew install docker
+    $ brew install boot2docker
+
+#### Configuration
+
+Initialize and start `boot2docker` (only need to do this once):
+
+    $ boot2docker init
+
+Start the VM:
+
+    $ boot2docker up
+
+Set the `DOCKER_HOST` environment variable and fill in IP and PORT based on the output from the `boot2coker up` command:
+
+    $ export DOCKER_HOST=tcp://IP:PORT
+
+### Git
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/git.png">
+  <br/>
+</p>
+
+What's a developer without [Git](http://git-scm.com/)?
+
+#### Installation
