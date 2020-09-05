@@ -938,3 +938,128 @@ IPython Notebook is a web-based interactive computational environment where you 
 The [pydata.sh script](#pydatash-script) installs IPython Notebook.  If you prefer to install it separately, run:
 
     $ pip install "ipython[notebook]"
+
+If you run into an issue about pyzmq, refer to the following [Stack Overflow post](http://stackoverflow.com/questions/24995438/pyzmq-missing-when-running-ipython-notebook) and run:
+
+    $ pip uninstall ipython
+    $ pip install "ipython[all]"
+
+#### Usage
+
+    $ ipython notebook
+
+If you'd like to see some examples here are a couple of my repos that use IPython Notebooks heavily:
+* [data-science-ipython-notebooks](https://github.com/donnemartin/data-science-ipython-notebooks)
+* [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges)
+
+### NumPy
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/numpy.png">
+  <br/>
+</p>
+
+NumPy adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs NumPy.  If you prefer to install it separately, run:
+
+    $ pip install numpy
+
+#### Usage
+
+Refer to the following [Numpy IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#numpy).
+
+### Pandas
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/pandas.png">
+  <br/>
+</p>
+
+Pandas is a software library written for data manipulation and analysis in Python. Offers data structures and operations for manipulating numerical tables and time series.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs Pandas.  If you prefer to install it separately, run:
+
+    $ pip install pandas
+
+#### Usage
+
+Refer to the following [pandas IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#pandas).
+
+### Matplotlib
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/matplotlib.png">
+  <br/>
+</p>
+
+Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs matplotlib.  If you prefer to install it separately, run:
+
+    $ pip install matplotlib
+
+#### Usage
+
+Refer to the following [matplotlib IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+
+### Seaborn
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/seaborn.png">
+  <br/>
+</p>
+
+Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs matplotlib.  If you prefer to install it separately, run:
+
+    $ pip install seaborn
+
+#### Usage
+
+Refer to the following [matplotlib with Seaborn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#matplotlib).
+
+### Scikit-learn
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/scikitlearn.png">
+  <br/>
+</p>
+
+Scikit-learn adds Python support for large, multi-dimensional arrays and matrices, along with a large library of high-level mathematical functions to operate on these arrays.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs Scikit-learn.  If you prefer to install it separately, run:
+
+    $ pip install scikit-learn
+
+#### Usage
+
+Refer to the following [scikit-learn IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#scikit-learn).
+
+### SciPy
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/scipy.png">
+  <br/>
+</p>
+
+SciPy is a collection of mathematical algorithms and convenience functions built on the Numpy extension of Python. It adds significant power to the interactive Python session by providing the user with high-level commands and classes for manipulating and visualizing data.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to install it separately, run:
+
+    $ pip install scipy
+
+#### Usage
