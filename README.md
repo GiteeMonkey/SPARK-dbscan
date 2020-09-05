@@ -819,3 +819,122 @@ The [brew.sh script](#brewsh-script) installs the latest versions of Python 2 an
 [Pip](https://pypi.python.org/pypi/pip) is the Python package manager.
 
 #### Installation
+
+The [pydata.sh script](#pydatash-script) installs pip.
+
+#### Usage
+
+Here are a couple Pip commands to get you started. To install a Python package:
+
+    $ pip install <package>
+
+To upgrade a package:
+
+    $ pip install --upgrade <package>
+
+To see what's installed:
+
+    $ pip freeze
+
+To uninstall a package:
+
+    $ pip uninstall <package>
+
+### Virtualenv
+
+[Virtualenv](http://www.virtualenv.org/) is a tool that creates an isolated Python environment for each of your projects. For a particular project, instead of installing required packages globally, it is best to install them in an isolated folder in the project (say a folder named `venv`), that will be managed by virtualenv.
+
+The advantage is that different projects might require different versions of packages, and it would be hard to manage that if you install packages globally. It also allows you to keep your global `/usr/local/lib/python2.7/site-packages` folder clean.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs Virtualenv.
+
+#### Usage
+
+Let's say you have a project in a directory called `myproject`. To set up virtualenv for that project:
+
+    $ cd myproject/
+    $ virtualenv venv --distribute
+
+If you want your virtualenv to also inherit globally installed packages (like IPython or Numpy mentioned above), use:
+
+    $ virtualenv venv --distribute --system-site-packages
+
+These commands create a `venv` subdirectory in your project where everything is installed. You need to **activate** it first though (in every terminal where you are working on your project):
+
+    $ source venv/bin/activate
+
+You should see a `(venv)` appear at the beginning of your terminal prompt indicating that you are working inside the virtualenv. Now when you install something:
+
+    $ pip install <package>
+
+It will get installed in the `venv` folder, and not conflict with other projects.
+
+**Important**: Remember to add `venv` to your project's `.gitignore` file so you don't include all of that in your source code!
+
+### Virtualenvwrapper
+
+[Virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/) is a set of extensions that includes wrappers for creating and deleting virtual environments and otherwise managing your development workflow, making it easier to work on more than one project at a time without introducing conflicts in their dependencies.
+
+Main features include:
+
+* Organizes all of your virtual environments in one place.
+* Wrappers for managing your virtual environments (create, delete, copy).
+* Use a single command to switch between environments.
+* Tab completion for commands that take a virtual environment as argument.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs Virtualenvwrapper.
+
+#### Usage
+
+Create a new virtual environment. When you create a new environment it automatically becomes the active environment:
+
+    $ mkvirtualenv [env name]
+
+Remove an existing virtual environment. The environment must be deactivated (see below) before it can be removed:
+
+    $ rmvirtualenv [env name]
+
+Activate a virtual environment. Will also list all existing virtual environments if no argument is passed:
+
+    $ workon [env name]
+
+Deactivate the currently active virtual environment. Note that workonwill automatically deactivate the current environment before activating a new one:
+
+    $ deactivate
+
+## Section 3: Python Data Analysis
+
+### Anaconda
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/anaconda.png">
+  <br/>
+</p>
+
+Anaconda is a free distribution of the Python programming language for large-scale data processing, predictive analytics, and scientific computing that aims to simplify package management and deployment.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs packages you need to run Python data applications.  Alternatively, you can install the more heavy-weight Anaconda instead.
+
+Follow instructions to install [Anaconda](http://docs.continuum.io/anaconda/install.html) or the more lightweight [miniconda](http://conda.pydata.org/miniconda.html).
+
+### IPython Notebook
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/README_1200x800.gif">
+</p>
+
+[IPython](http://ipython.org/) is an awesome project which provides a much better Python shell than the one you get from running `$ python` in the command-line. It has many cool functions (running Unix commands from the Python shell, easy copy & paste, creating Matplotlib charts in-line, etc.) and I'll let you refer to the [documentation](http://ipython.org/ipython-doc/stable/index.html) to discover them.
+
+IPython Notebook is a web-based interactive computational environment where you can combine code execution, text, mathematics, plots and rich media into a single document.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs IPython Notebook.  If you prefer to install it separately, run:
+
+    $ pip install "ipython[notebook]"
