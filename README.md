@@ -1063,3 +1063,132 @@ The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to insta
     $ pip install scipy
 
 #### Usage
+
+Refer to the following [SciPy IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#statistical-inference-scipy).
+
+### Flask
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/flask.png">
+  <br/>
+</p>
+
+Flask is a micro web application framework written in Python.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs SciPy.  If you prefer to install it separately, run:
+
+    $ pip install Flask
+
+#### Usage
+
+[Coming Soon] Refer to the following [Flask IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+
+### Bokeh
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/bokeh.png">
+  <br/>
+</p>
+
+Bokeh is a Python interactive visualization library that targets modern web browsers for presentation. Its goal is to provide elegant, concise construction of novel graphics in the style of D3.js, but also deliver this capability with high-performance interactivity over very large or streaming datasets. Bokeh can help anyone who would like to quickly and easily create interactive plots, dashboards, and data applications.
+
+#### Installation
+
+The [pydata.sh script](#pydatash-script) installs Bokeh.  If you prefer to install it separately, run:
+
+    $ pip install bokeh
+
+#### Usage
+
+[Coming Soon] Refer to the following [Bokeh IPython Notebooks](https://github.com/donnemartin/data-science-ipython-notebooks#).
+
+## Section 4: Big Data, AWS, and Heroku
+
+### Spark
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/spark.png">
+  <br/>
+</p>
+
+Spark is an in-memory cluster computing framework, up to 100 times faster for certain applications and is well suited for machine learning algorithms.
+
+#### Installation
+
+The [aws.sh script](#aws-script) installs Spark locally.  It also hooks up Spark to run within the IPython Notebook by configuring your `.bash_profile` and adding the repo's `profile_pyspark/` to `.ipython`.
+
+If you prefer to install it separately, run:
+
+    $ brew install apache-spark
+
+#### Usage
+
+Run Spark locally:
+
+    $ pyspark
+
+Run Spark within IPython Notebook:
+
+    $ ipython notebook --profile=pyspark
+
+Refer to the following [Spark IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#spark).
+
+Spark is also supported on AWS Elastic MapReduce as described [here](https://aws.amazon.com/blogs/aws/new-apache-spark-on-amazon-emr/).  To create a cluster, run the following command with the [AWS CLI](#aws-cli), replacing ```myKeyPair``` with the name of your keypair to SSH into your cluster:
+
+    $ aws emr create-cluster --name "Spark cluster" --ami-version 3.8 --applications Name=Spark --ec2-attributes KeyName=myKeyPair --instance-type m3.xlarge --instance-count 3 --use-default-roles
+
+### MapReduce
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mrjob.png">
+  <br/>
+</p>
+
+Mrjob supports MapReduce jobs in Python, running them locally or on Hadoop clusters such as AWS Elastic MapReduce (EMR).
+
+#### Installation
+
+**Mrjob is Python 2 only.**
+
+The [aws.sh script](#aws-script) installs mrjob locally.  If you prefer to install it separately, run:
+
+    $ pip install mrjob
+
+The aws.sh script also syncs the template ```.mrjob.conf``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.mrjob.conf``` file.  Update the config file with your credentials, keypair, region, and S3 bucket paths:
+
+```
+runners:
+  emr:
+    aws_access_key_id: YOURACCESSKEY
+    aws_secret_access_key: YOURSECRETKEY
+    aws_region: us-east-1
+    ec2_key_pair: YOURKEYPAIR
+    ec2_key_pair_file: ~/.ssh/YOURKEYPAIR.pem
+    ...
+    s3_scratch_uri: s3://YOURBUCKETSCRATCH
+    s3_log_uri: s3://YOURBUCKETLOG
+    ...
+```
+
+#### Usage
+
+Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#mapreduce-python).
+
+### Awesome AWS [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/data-science-ipython-notebooks/master/images/aws.png">
+</p>
+<br/>
+
+[Awesome AWS](https://github.com/donnemartin/awesome-aws) is a curated list of awesome AWS libraries, open source repos, guides, blogs, and other resources.  It's a great way to stay up-to-date with the various aws-backed and community-led efforts geared towards AWS.
+
+#### The Fiery Meter of AWSome
+
+'Hot' repos in Awesome AWS are visually tagged based on their popularity:
+
+* Repo with 0100+ Stars: :fire:
+* Repo with 0200+ Stars: :fire::fire:
+* Repo with 0500+ Stars: :fire::fire::fire:
