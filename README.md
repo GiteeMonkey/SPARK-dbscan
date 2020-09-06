@@ -1192,3 +1192,108 @@ Refer to the following [mrjob IPython Notebook](https://github.com/donnemartin/d
 * Repo with 0100+ Stars: :fire:
 * Repo with 0200+ Stars: :fire::fire:
 * Repo with 0500+ Stars: :fire::fire::fire:
+* Repo with 1000+ Stars: :fire::fire::fire::fire:
+* Repo with 2000+ Stars: :fire::fire::fire::fire::fire:
+
+*Repos not on `The Fiery Meter of AWSome` can still be awesome, see [A Note on Repo AWSomeness](https://github.com/donnemartin/awesome-aws/blob/master/CONTRIBUTING.md#a-note-on-repo-awsomeness).*
+
+### AWS Account
+
+To start using AWS, you first need to sign up for an account.
+
+#### Sign up for AWS
+
+When you sign up for Amazon Web Services (AWS), your AWS account is automatically signed up for all services in AWS. You are charged only for the services that you use.  New users are eligible for 12 months of usage through the [AWS Free Tier](http://aws.amazon.com/free/).
+
+To create an AWS account, open http://aws.amazon.com/, and then click Sign Up.  Follow the on-screen instructions.  Part of the sign-up procedure involves receiving a phone call and entering a PIN using the phone keypad.  Note your AWS account ID.
+
+### AWS CLI
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_cli.png">
+  <br/>
+</p>
+
+The AWS Command Line Interface is a unified tool to manage AWS services, allowing you to control multiple AWS services from the command line and to automate them through scripts.
+
+#### Installation
+
+The [aws.sh script](#aws-script) installs the AWS CLI.  If you prefer to install it separately, run:
+
+    $ pip install awscli
+
+Run the following command to configure the AWS CLI:
+
+    $ aws configure
+
+Alternatively, the aws.sh script also syncs the template ```.aws/``` folder to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.aws/``` folder.  Update the config file with your credentials and location:
+
+```
+[default]
+region = us-east-1
+```
+
+```
+[default]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+```
+
+**Be careful you do not accidentally check in your credentials.**  The .gitignore file is set to ignore files with credentials.
+
+#### Usage
+
+Refer to the following [AWS CLI IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### SAWS
+
+![](http://i.imgur.com/vzC5zmA.gif)
+
+Although the [AWS CLI](https://github.com/aws/aws-cli) is a great resource to manage your AWS-powered services, it's **tough to remember usage** of:
+
+* 50+ top-level commands
+* 1400+ subcommands
+* Countless command-specific options
+* Resources such as instance tags and buckets
+
+#### SAWS: A Supercharged AWS CLI
+
+`SAWS` aims to **supercharge** the AWS CLI with features focusing on:
+
+* **Improving ease-of-use**
+* **Increasing productivity**
+
+Under the hood, `SAWS` is **powered by the AWS CLI** and supports the **same commands** and **command structure**.
+
+`SAWS` and `AWS CLI` Usage:
+
+    aws <command> <subcommand> [parameters] [options]
+
+`SAWS` features:
+
+* Auto-completion of:
+    * Commands
+    * Subcommands
+    * Options
+* Auto-completion of resources:
+    * Bucket names
+    * Instance ids
+    * Instance tags
+    * [More coming soon!]((#todo-add-more-resources))
+* Customizable shortcuts
+* Fuzzy completion of resources and shortcuts
+* Syntax and output highlighting
+* Execution of shell commands
+* Command history
+* Contextual help
+* Toolbar options
+
+`SAWS` is available for Mac, Linux, Unix, and [Windows](#windows-support).
+
+![](http://i.imgur.com/Eo12q9T.png)
+
+#### Installation and Usage.
+
+Refer to the [repo link](https://github.com/donnemartin/saws).
+
+### Boto
