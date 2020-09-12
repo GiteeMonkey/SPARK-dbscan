@@ -1404,3 +1404,121 @@ Refer to the following [s3-parallel-put IPython Notebook](https://github.com/don
 Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
 
 #### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-prereq.html).
+
+#### Usage
+
+Refer to the following [Redshift IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### Kinesis
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_kinesis.png">
+  <br/>
+</p>
+
+Kinesis streams data in real time with the ability to process thousands of data streams per second.
+
+#### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/kinesis/latest/dev/before-you-begin.html).
+
+#### Usage
+
+Refer to the following [Kinesis IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### Lambda
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_lambda.png">
+  <br/>
+</p>
+
+Lambda runs code in response to events, automatically managing compute resources.
+
+#### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/lambda/latest/dg/setting-up.html).
+
+#### Usage
+
+Refer to the following [Lambda IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### AWS Machine Learning
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_ml.png">
+  <br/>
+</p>
+
+Amazon Machine Learning is a service that makes it easy for developers of all skill levels to use machine learning technology. Amazon Machine Learning provides visualization tools and wizards that guide you through the process of creating machine learning (ML) models without having to learn complex ML algorithms and technology. Once your models are ready, Amazon Machine Learning makes it easy to obtain predictions for your application using simple APIs, without having to implement custom prediction generation code, or manage any infrastructure.
+
+#### Setup
+
+Follow these [instructions](http://docs.aws.amazon.com/machine-learning/latest/dg/setting_up.html).
+
+#### Usage
+
+[Coming Soon] Refer to the following [AWS Machine Learning IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### Heroku
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/heroku.jpg">
+  <br/>
+</p>
+
+[Heroku](http://www.heroku.com/), if you're not already familiar with it, is a [Platform-as-a-Service](http://en.wikipedia.org/wiki/Platform_as_a_service) (PaaS) that makes it really easy to deploy your apps online. There are other similar solutions out there, but Heroku was among the first and is currently the most popular. Not only does it make a developer's life easier, but I find that having Heroku deployment in mind when building an app forces you to follow modern app development [best practices](http://www.12factor.net/).
+
+#### Installation
+
+Assuming that you have an account (sign up if you don't), let's install the [Heroku Client](https://devcenter.heroku.com/articles/using-the-cli) for the command-line. Heroku offers a Mac OS X installer, the [Heroku Toolbelt](https://toolbelt.heroku.com/), that includes the client. But for these kind of tools, I prefer using Homebrew. It allows us to keep better track of what we have installed. Luckily for us, Homebrew includes a `heroku-toolbelt` formula:
+
+    $ brew install heroku-toolbelt
+
+The formula might not have the latest version of the Heroku Client, which is updated pretty often. Let's update it now:
+
+    $ brew upgrade heroku-toolbelt
+
+Don't be afraid to run `heroku update` every now and then to always have the most recent version.
+
+#### Usage
+
+Login to your Heroku account using your email and password:
+
+    $ heroku login
+
+If this is a new account, and since you don't already have a public **SSH key** in your `~/.ssh` directory, it will offer to create one for you. Say yes! It will also upload the key to your Heroku account, which will allow you to deploy apps from this computer.
+
+If it didn't offer create the SSH key for you (i.e. your Heroku account already has SSH keys associated with it), you can do so manually by running:
+
+     $ mkdir ~/.ssh
+     $ ssh-keygen -t rsa
+
+Keep the default file name and skip the passphrase by just hitting Enter both times. Then, add the key to your Heroku account:
+
+    $ heroku keys:add
+
+Once the key business is done, you're ready to deploy apps! Heroku has a great [Getting Started](https://devcenter.heroku.com/articles/python) guide, so I'll let you refer to that (the one linked here is for Python, but there is one for every popular language). Heroku uses Git to push code for deployment, so make sure your app is under Git version control. A quick cheat sheet (if you've used Heroku before):
+
+    $ cd myapp/
+    $ heroku create myapp
+    $ git push heroku master
+    $ heroku ps
+    $ heroku logs -t
+
+The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
+
+## Section 5: Data Stores
+
+### MySQL
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql.png">
+  <br/>
+</p>
+
+#### Installation
+
+The [datastores.sh script](#datastoressh-script) installs MySQL.  If you prefer to install it separately, run:
