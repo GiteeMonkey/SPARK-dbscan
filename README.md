@@ -1297,3 +1297,110 @@ Under the hood, `SAWS` is **powered by the AWS CLI** and supports the **same com
 Refer to the [repo link](https://github.com/donnemartin/saws).
 
 ### Boto
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/boto.png">
+  <br/>
+</p>
+
+Boto is the official AWS SDK for Python.
+
+#### Installation
+
+The [aws.sh script](#aws-script) installs boto.  If you prefer to install it separately, run:
+
+    $ pip install boto
+
+Boto uses the same configuration as described in the [AWS CLI](#aws-cli) section.
+
+#### Usage
+
+Refer to the following [Boto IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### S3cmd
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3cmd.png">
+  <br/>
+</p>
+
+Before I discovered [S3cmd](http://s3tools.org/s3cmd), I had been using the [S3 console](http://aws.amazon.com/console/) to do basic operations and [boto](https://boto.readthedocs.org/en/latest/) to do more of the heavy lifting.  However, sometimes I just want to hack away at a command line to do my work.
+
+I've found S3cmd to be a great command line tool for interacting with S3 on AWS.  S3cmd is written in Python, is open source, and is free even for commercial use.  It offers more advanced features than those found in the [AWS CLI](http://aws.amazon.com/cli/).
+
+#### Installation
+
+**S3cmd is Python 2 only.**
+
+The [aws.sh script](#aws-script) installs s3cmd.  If you prefer to install it separately, run:
+
+    $ pip install s3cmd
+
+Running the following command will prompt you to enter your AWS access and AWS secret keys. To follow security best practices, make sure you are using an IAM account as opposed to using the root account.
+
+I also suggest enabling GPG encryption which will encrypt your data at rest, and enabling HTTPS to encrypt your data in transit. Note this might impact performance.
+
+    $ s3cmd --configure
+
+Alternatively, the aws.sh script also syncs the template ```.s3cfg``` file to your home folder.  Note running the aws.sh script will overwrite any existing ```~/.s3cfg``` file.  Update the config file with your credentials and location:
+
+```
+[Credentials]
+aws_access_key_id = YOURACCESSKEY
+aws_secret_access_key = YOURSECRETKEY
+...
+bucket_location = US
+...
+gpg_passphrase = YOURPASSPHRASE
+```
+
+**Be careful you do not accidentally check in your credentials.**  The .gitignore file is set to ignore files with credentials.
+
+#### Usage
+
+Refer to the following [s3cmd IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### S3DistCp
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3distcp.png">
+  <br/>
+</p>
+
+[S3DistCp](http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/UsingEMR_s3distcp.html) is an extension of DistCp that is optimized to work with Amazon S3.  S3DistCp is useful for combining smaller files and aggregate them together, taking in a pattern and target file to combine smaller input files to larger ones.  S3DistCp can also be used to transfer large volumes of data from S3 to your Hadoop cluster.
+
+#### Installation
+
+S3DistCp comes bundled with the AWS CLI.
+
+#### Usage
+
+Refer to the following [S3DistCp IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### S3-parallel-put
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/s3-parallel-put.png">
+  <br/>
+</p>
+
+[s3-parallel-put](https://github.com/twpayne/s3-parallel-put.git) is a great tool for uploading multiple files to S3 in parallel.
+
+#### Installation
+
+    $ git clone https://github.com/twpayne/s3-parallel-put.git
+
+#### Usage
+
+Refer to the following [s3-parallel-put IPython Notebook](https://github.com/donnemartin/data-science-ipython-notebooks#aws).
+
+### Redshift
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/aws_redshift.png">
+  <br/>
+</p>
+
+Redshift is a fast data warehouse built on top of technology from massive parallel processing (MPP).
+
+#### Setup
