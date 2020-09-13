@@ -1522,3 +1522,276 @@ The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resource
 #### Installation
 
 The [datastores.sh script](#datastoressh-script) installs MySQL.  If you prefer to install it separately, run:
+
+    $ brew update # Always good to do
+    $ brew install mysql
+
+As you can see in the ouput from Homebrew, before we can use MySQL we first need to set it up with:
+
+    $ unset TMPDIR
+    $ mkdir /usr/local/var
+    $ mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+#### Usage
+
+To start the MySQL server, use the `mysql.server` tool:
+
+    $ mysql.server start
+
+To stop it when you are done, run:
+
+    $ mysql.server stop
+
+You can see the different commands available for `mysql.server` with:
+
+    $ mysql.server --help
+
+To connect with the command-line client, run:
+
+    $ mysql -uroot
+
+(Use `exit` to quit the MySQL shell.)
+
+**Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
+
+### MySQL Workbench
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mysql_workbench.png">
+  <br/>
+</p>
+
+In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
+
+#### Installation
+
+The [datastores.sh script](#datastoressh-script) installs MySQL Workbench.  If you prefer to install it separately, run:
+
+    $ brew install caskroom/cask/brew-cask
+    $ brew cask install --appdir="/Applications" mysqlworkbench
+
+You can also find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
+
+### MongoDB
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/mongodb.jpeg">
+  <br/>
+</p>
+
+[MongoDB](http://www.mongodb.org/) is a popular [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database.
+
+#### Installation
+
+The [datastores.sh script](#datastoressh-script) installs MongoDB. If you prefer to install it separately, run:
+
+    $ brew update
+    $ brew install mongo
+
+#### Usage
+
+In a terminal, start the MongoDB server:
+
+    $ mongod
+
+In another terminal, connect to the database with the Mongo shell using:
+
+    $ mongo
+
+I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual/tutorial/getting-started/) guide for more!
+
+### Redis
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/redis.png">
+  <br/>
+</p>
+
+[Redis](http://redis.io/) is a blazing fast, in-memory, key-value store, that uses the disk for persistence. It's kind of like a NoSQL database, but there are a lot of [cool things](http://oldblog.antirez.com/post/take-advantage-of-redis-adding-it-to-your-stack.html) that you can do with it that would be hard or inefficient with other database solutions. For example, it's often used as session management or caching by web apps, but it has many other uses.
+
+#### Installation
+
+The [datastores.sh script](#datastoressh-script) installs Redis. If you prefer to install it separately, run:
+
+    $ brew update
+    $ brew install redis
+
+#### Usage
+
+Start a local Redis server using the default configuration settings with:
+
+    $ redis-server
+
+For advanced usage, you can tweak the configuration file at `/usr/local/etc/redis.conf` (I suggest making a backup first), and use those settings with:
+
+    $ redis-server /usr/local/etc/redis.conf
+
+In another terminal, connect to the server with the Redis command-line interface using:
+
+    $ redis-cli
+
+I'll let you refer to Redis' [documentation](http://redis.io/documentation) or other tutorials for more information.
+
+### Elasticsearch
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/elasticsearch.png">
+  <br/>
+</p>
+
+As it says on the box, [Elasticsearch](http://www.elasticsearch.org/) is a "powerful open source, distributed real-time search and analytics engine". It uses an HTTP REST API, making it really easy to work with from any programming language.
+
+You can use elasticsearch for such cool things as real-time search results, autocomplete, recommendations, machine learning, and more.
+
+#### Installation
+
+The [datastores.sh script](#datastoressh-script) installs Elasticsearch.  If you prefer to install it separately, check out the following discussion.
+
+Elasticsearch runs on Java, so check if you have it installed by running:
+
+    $ java -version
+
+If Java isn't installed yet, a window will appear prompting you to install it. Go ahead and click "Install".
+
+Next, install elasticsearch with:
+
+    $ brew install elasticsearch
+
+**Note**: Elasticsearch also has a `plugin` program that gets moved to your `PATH`. I find that too generic of a name, so I rename it to `elasticsearch-plugin` by running (will need to do that again if you update elasticsearch):
+
+    $ mv /usr/local/bin/plugin /usr/local/bin/elasticsearch-plugin
+
+Below I will use `elasticsearch-plugin`, just replace it with `plugin` if you haven't followed this step.
+
+As you guessed, you can add plugins to elasticsearch. A popular one is [elasticsearch-head](http://mobz.github.io/elasticsearch-head/), which gives you a web interface to the REST API. Install it with:
+
+    $ elasticsearch-plugin --install mobz/elasticsearch-head
+
+### Usage
+
+Start a local elasticsearch server with:
+
+    $ elasticsearch
+
+Test that the server is working correctly by running:
+
+    $ curl -XGET 'http://localhost:9200/'
+
+If you installed the elasticsearch-head plugin, you can visit its interface at `http://localhost:9200/_plugin/head/`.
+
+Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of a reference. To get started, I suggest reading some of the blog posts linked on this [StackOverflow answer](http://stackoverflow.com/questions/11593035/beginners-guide-to-elasticsearch/11767610#11767610).
+
+## Section 6: Web Development
+
+### Node.js
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/nodejs.png">
+  <br/>
+</p>
+
+#### Installation
+
+The [web.sh script](#websh-script) installs [Node.js](http://nodejs.org/).  You can also install it manually with Homebrew:
+
+    $ brew update
+    $ brew install node
+
+The formula also installs the [npm](https://npmjs.org/) package manager. However, as suggested by the Homebrew output, we need to add `/usr/local/share/npm/bin` to our path so that npm-installed modules with executables will have them picked up.
+
+To do so, add this line to your `~/.path` file, before the `export PATH` line:
+
+```bash
+PATH=/usr/local/share/npm/bin:$PATH
+```
+
+Open a new terminal for the `$PATH` changes to take effect.
+
+We also need to tell npm where to find the Xcode Command Line Tools, by running:
+
+    $ sudo xcode-select -switch /usr/bin
+
+(If Xcode Command Line Tools were installed by Xcode, try instead:)
+
+    $ sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+
+Node modules are installed locally in the `node_modules` folder of each project by default, but there are at least two that are worth installing globally. Those are [CoffeeScript](http://coffeescript.org/) and [Grunt](http://gruntjs.com/):
+
+    $ npm install -g coffee-script
+    $ npm install -g grunt-cli
+
+#### Npm usage
+
+To install a package:
+
+    $ npm install <package> # Install locally
+    $ npm install -g <package> # Install globally
+
+To install a package and save it in your project's `package.json` file:
+
+    $ npm install <package> --save
+
+To see what's installed:
+
+    $ npm list # Local
+    $ npm list -g # Global
+
+To find outdated packages (locally or globally):
+
+    $ npm outdated [-g]
+
+To upgrade all or a particular package:
+
+    $ npm update [<package>]
+
+To uninstall a package:
+
+    $ npm uninstall <package>
+
+### JSHint
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/jshint.png">
+  <br/>
+</p>
+
+JSHint is a JavaScript developer's best friend.
+
+If the extra credit assignment to install Sublime Package Manager was completed, JSHint can be run as part of Sublime Text.
+
+#### Installation
+
+The [web.sh script](#websh-script) installs JSHint.  You can also install it manually via via npm:
+
+    $ npm install -g jshint
+
+Follow additional instructions on the [JSHint Package Manager page](https://sublime.wbond.net/packages/JSHint) or [build it manually](https://github.com/jshint/jshint).
+
+### LESS
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/donnemartin/dev-setup-resources/master/res/less.png">
+  <br/>
+</p>
+
+CSS preprocessors are becoming quite popular, the most popular processors are [LESS](http://lesscss.org/) and [SASS](http://sass-lang.com). Preprocessing is a lot like compiling code for CSS. It allows you to reuse CSS in many different ways. Let's start out with using LESS as a basic preprocessor, it's used by a lot of popular CSS frameworks like [Bootstrap](http://getbootstrap.com/).
+
+#### Installation
+
+The [web.sh script](#websh-script) installs LESS.  To install LESS manually you have to use NPM / Node, which you installed earlier using Homebrew. In the terminal use:
+
+    $ npm install -g less
+
+Note: the `-g` flag is optional but it prevents having to mess around with file paths. You can install without the flag, just know what you're doing.
+
+You can check that it installed properly by using:
+
+    $ lessc --version
+
+This should output some information about the compiler:
+
+    lessc 1.5.1 (LESS Compiler) [JavaScript]
+
+Okay, LESS is installed and running. Great!
+
+#### Usage
