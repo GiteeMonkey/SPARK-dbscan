@@ -8,4 +8,7 @@ sudo -K
 
 echo "------------------------------"
 echo "Setting up AWS."
-echo "This script re
+echo "This script requires pip and virtualenvwrapper to be installed."
+echo "See the pydata.sh script."
+
+echo "------------------------
