@@ -11,4 +11,8 @@ echo "Setting up AWS."
 echo "This script requires pip and virtualenvwrapper to be installed."
 echo "See the pydata.sh script."
 
-echo "------------------------
+echo "------------------------------"
+echo "Source virtualenvwrapper from ~/.extra"
+source ~/.extra
+
+###############################################################
