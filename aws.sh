@@ -20,4 +20,7 @@ source ~/.extra
 ###############################################################################
 
 echo "------------------------------"
-echo "Updating
+echo "Updating py2-data virtual environment with AWS modules."
+
+# Create a Python2 data environment
+# If this environment already exists from running py
