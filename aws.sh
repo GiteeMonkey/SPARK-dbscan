@@ -29,4 +29,10 @@ mkvirtualenv py2-data
 workon py2-data
 
 pip install boto
-pip install aws
+pip install awscli
+pip install mrjob
+pip install s3cmd
+
+EXTRA_PATH=~/.extra
+echo $EXTRA_PATH
+echo "" >> $EXTRA_
