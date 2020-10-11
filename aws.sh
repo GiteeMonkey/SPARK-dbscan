@@ -38,4 +38,7 @@ echo $EXTRA_PATH
 echo "" >> $EXTRA_PATH
 echo "" >> $EXTRA_PATH
 echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
-echo "complete -C
+echo "complete -C '~/.virtualenvs/py2-data/bin/aws_completer' aws" >> $EXTRA_PATH
+source $EXTRA_PATH
+
+##############################
