@@ -35,4 +35,7 @@ pip install s3cmd
 
 EXTRA_PATH=~/.extra
 echo $EXTRA_PATH
-echo "" >> $EXTRA_
+echo "" >> $EXTRA_PATH
+echo "" >> $EXTRA_PATH
+echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
+echo "complete -C
