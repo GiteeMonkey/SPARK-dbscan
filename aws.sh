@@ -48,4 +48,7 @@ source $EXTRA_PATH
 echo "------------------------------"
 echo "Updating py3-data virtual environment with AWS modules."
 
-# Create a Python3 data environm
+# Create a Python3 data environment
+# If this environment already exists from running pydata.sh,
+# it will not be overwritten
+mkvirt
