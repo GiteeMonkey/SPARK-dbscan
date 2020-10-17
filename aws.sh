@@ -51,4 +51,9 @@ echo "Updating py3-data virtual environment with AWS modules."
 # Create a Python3 data environment
 # If this environment already exists from running pydata.sh,
 # it will not be overwritten
-mkvirt
+mkvirtualenv --python=/usr/local/bin/python3 py3-data
+workon py3-data
+
+pip install boto
+pip install awscli
+#pip install mrj
