@@ -45,4 +45,7 @@ source $EXTRA_PATH
 # Python 3 Virtual Enviroment                                                 #
 ###############################################################################
 
-echo "----------
+echo "------------------------------"
+echo "Updating py3-data virtual environment with AWS modules."
+
+# Create a Python3 data environm
