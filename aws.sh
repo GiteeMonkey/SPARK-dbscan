@@ -42,4 +42,7 @@ echo "complete -C '~/.virtualenvs/py2-data/bin/aws_completer' aws" >> $EXTRA_PAT
 source $EXTRA_PATH
 
 ###############################################################################
-# Python 3 Virtual Enviroment                                             
+# Python 3 Virtual Enviroment                                                 #
+###############################################################################
+
+echo "----------
