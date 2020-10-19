@@ -64,4 +64,5 @@ pip install awscli
 #echo $EXTRA_PATH
 #echo "" >> $EXTRA_PATH
 #echo "" >> $EXTRA_PATH
-#echo "# Configure aw
+#echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
+#echo "complete -C '~/.virtualenvs/py3-data/bin/aws_completer
