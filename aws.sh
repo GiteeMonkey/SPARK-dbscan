@@ -59,4 +59,9 @@ pip install awscli
 #pip install mrjob  # Python 2 only
 #pip install s3cmd  # Python 2 only
 
-# Uncomment if you want to hook up the aws cli autocomplete
+# Uncomment if you want to hook up the aws cli autocomplete for Python 3
+#EXTRA_PATH=~/.extra
+#echo $EXTRA_PATH
+#echo "" >> $EXTRA_PATH
+#echo "" >> $EXTRA_PATH
+#echo "# Configure aw
