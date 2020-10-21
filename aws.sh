@@ -68,4 +68,6 @@ pip install awscli
 #echo "complete -C '~/.virtualenvs/py3-data/bin/aws_completer' aws" >> $EXTRA_PATH
 #source $EXTRA_PATH
 
-############################################################################
+###############################################################################
+# System-Wide Packages                                                        #
+###########
