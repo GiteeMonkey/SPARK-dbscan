@@ -82,4 +82,7 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-brew insta
+brew install apache-spark
+
+###############################################################################
+# Install IPython No
