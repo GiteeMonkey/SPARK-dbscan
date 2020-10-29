@@ -85,4 +85,7 @@ brew update
 brew install apache-spark
 
 ###############################################################################
-# Install IPython No
+# Install IPython Notebook Spark Integration
+###############################################################################
+
+echo "-----------
