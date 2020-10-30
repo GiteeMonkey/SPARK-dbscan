@@ -91,4 +91,8 @@ brew install apache-spark
 echo "------------------------------"
 echo "Installing IPython Notebook Spark integration"
 
-# Add the pyspark IPython profi
+# Add the pyspark IPython profile
+cp -r init/profile_pyspark/ ~/.ipython/profile_pyspark
+
+BASH_PROFILE_PATH=~/.bash_profile
+echo $BASH_P
