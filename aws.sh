@@ -88,4 +88,7 @@ brew install apache-spark
 # Install IPython Notebook Spark Integration
 ###############################################################################
 
-echo "-----------
+echo "------------------------------"
+echo "Installing IPython Notebook Spark integration"
+
+# Add the pyspark IPython profi
