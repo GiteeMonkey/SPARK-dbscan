@@ -98,4 +98,6 @@ BASH_PROFILE_PATH=~/.bash_profile
 echo $BASH_PROFILE_PATH
 echo "" >> $BASH_PROFILE_PATH
 echo "" >> $BASH_PROFILE_PATH
-echo "# IPython Notebook Spark integration, 
+echo "# IPython Notebook Spark integration, added by aws.sh" >> $BASH_PROFILE_PATH
+# Run $ brew info apache-spark to determine the Spark install location
+ec
