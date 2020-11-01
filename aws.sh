@@ -100,4 +100,5 @@ echo "" >> $BASH_PROFILE_PATH
 echo "" >> $BASH_PROFILE_PATH
 echo "# IPython Notebook Spark integration, added by aws.sh" >> $BASH_PROFILE_PATH
 # Run $ brew info apache-spark to determine the Spark install location
-ec
+echo "export SPARK_HOME='/usr/local/Cellar/apache-spark/1.4.1'" >> $BASH_PROFILE_PATH
+echo "# Appending pyspark-shell is 
