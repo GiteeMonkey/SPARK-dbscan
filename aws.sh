@@ -103,4 +103,8 @@ echo "# IPython Notebook Spark integration, added by aws.sh" >> $BASH_PROFILE_PA
 echo "export SPARK_HOME='/usr/local/Cellar/apache-spark/1.4.1'" >> $BASH_PROFILE_PATH
 echo "# Appending pyspark-shell is needed for Spark 1.4+" >> $BASH_PROFILE_PATH
 echo "export PYSPARK_SUBMIT_ARGS='--master local[2] pyspark-shell'" >> $BASH_PROFILE_PATH
-echo
+echo "" >> $BASH_PROFILE_PATH
+source $BASH_PROFILE_PATH
+
+echo "------------------------------"
+echo "TODO: Update .aws/ with your 
