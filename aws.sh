@@ -107,4 +107,5 @@ echo "" >> $BASH_PROFILE_PATH
 source $BASH_PROFILE_PATH
 
 echo "------------------------------"
-echo "TODO: Update .aws/ with your 
+echo "TODO: Update .aws/ with your AWS credentials and region, or run aws --configure."
+echo "TODO: Update .mrjob.conf with your credentials, keypair
