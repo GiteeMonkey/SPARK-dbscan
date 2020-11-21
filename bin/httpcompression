@@ -2,4 +2,13 @@
 
 # DESCRIPTION:
 #
-#   Provides the content encoding
+#   Provides the content encoding the specified
+#   resources are served with.
+#
+# USAGE:
+#
+#   httpcompression URL ...
+#
+# USEFUL LINKS:
+#
+#   * HTTP/1.1 (
