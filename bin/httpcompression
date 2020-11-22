@@ -17,4 +17,7 @@
 #   * SDCH Specification:
 #     https://lists.w3.org/Archives/Public/ietf-http-wg/2008JulSep/att-0441/Shared_Dictionary_Compression_over_HTTP.pdf
 
-# - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+declare -r -a CURL_DEFAULT_OPTIONS=(
+    
