@@ -14,4 +14,7 @@
 #   * HTTP/1.1 (RFC 2616) - Content-Encoding
 #     https://tools.ietf.org/html/rfc2616#section-14.11
 #
-#   * SDCH Specific
+#   * SDCH Specification:
+#     https://lists.w3.org/Archives/Public/ietf-http-wg/2008JulSep/att-0441/Shared_Dictionary_Compression_over_HTTP.pdf
+
+# - 
