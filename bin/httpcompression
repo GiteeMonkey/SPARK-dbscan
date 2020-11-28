@@ -25,4 +25,6 @@ declare -r -a CURL_DEFAULT_OPTIONS=(
     --header "Cache-Control: no-cache" # Prevent intermediate proxies
                                        # from caching the response
 
-    --location                         # If
+    --location                         # If the page was moved to a
+                                       # different location, redo the
+                        
