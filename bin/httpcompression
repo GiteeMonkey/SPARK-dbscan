@@ -31,4 +31,6 @@ declare -r -a CURL_DEFAULT_OPTIONS=(
     --max-time 150
     --show-error
     --silent
-    --user-agent "Mozilla/5.0 Gecko"   #
+    --user-agent "Mozilla/5.0 Gecko"   # Send a fake UA string for sites
+                                       # that sniff it instead of using
+                       
