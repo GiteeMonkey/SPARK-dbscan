@@ -27,4 +27,8 @@ declare -r -a CURL_DEFAULT_OPTIONS=(
 
     --location                         # If the page was moved to a
                                        # different location, redo the
-                        
+                                       # request
+    --max-time 150
+    --show-error
+    --silent
+    --user-agent "Mozilla/5.0 Gecko"   #
