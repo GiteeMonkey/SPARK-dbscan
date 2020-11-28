@@ -20,4 +20,6 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 declare -r -a CURL_DEFAULT_OPTIONS=(
-    
+    --connect-timeout 30
+    --header "Accept-Encoding: gzip, deflate, sdch"
+    --header "Cache-Control: no-cache" # Prevent int
