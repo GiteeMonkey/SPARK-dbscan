@@ -33,4 +33,7 @@ declare -r -a CURL_DEFAULT_OPTIONS=(
     --silent
     --user-agent "Mozilla/5.0 Gecko"   # Send a fake UA string for sites
                                        # that sniff it instead of using
-                       
+                                       # the Accept-Encoding header
+)
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - 
