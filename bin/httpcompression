@@ -51,4 +51,8 @@ check_for_sdch() {
     # Check if the server advertised any dictionaries
     dicts="$( printf "%s" "$currentHeaders" |
               grep -i 'Get-Dictionary:' |
-              cut -d
+              cut -d':' -f2 |
+              sed s/,/\ /g )"
+
+    # If it does, check to see if it really supports SDCH
+    if [ -n "$dicts" ]; the
