@@ -43,4 +43,10 @@ check_for_sdch() {
     declare availDicts=""
     declare currentHeaders="$1"
     declare dict=""
-    
+    declare dictClientID=""
+    declare dicts=""
+    declare i=""
+    declare url="$2"
+
+    # Check if the server advertised any dictionaries
+  
