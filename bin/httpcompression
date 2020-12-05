@@ -49,4 +49,6 @@ check_for_sdch() {
     declare url="$2"
 
     # Check if the server advertised any dictionaries
-  
+    dicts="$( printf "%s" "$currentHeaders" |
+              grep -i 'Get-Dictionary:' |
+              cut -d
