@@ -36,4 +36,11 @@ declare -r -a CURL_DEFAULT_OPTIONS=(
                                        # the Accept-Encoding header
 )
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+check_for_sdch() {
+
+    declare availDicts=""
+    declare currentHeaders="$1"
+    declare dict=""
+    
