@@ -64,4 +64,6 @@ check_for_sdch() {
             # and if it is, construct it's URL from the host name of the
             # referrer URL
 
-  
+            [[ "$i" != http* ]] \
+                && dict="$( printf "%s" "$url" |
+                            sed -En 's/([^/]*\/\/)?([
