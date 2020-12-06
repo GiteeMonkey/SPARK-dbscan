@@ -66,4 +66,9 @@ check_for_sdch() {
 
             [[ "$i" != http* ]] \
                 && dict="$( printf "%s" "$url" |
-                            sed -En 's/([^/]*\/\/)?([
+                            sed -En 's/([^/]*\/\/)?([^/]*)\/?.*/\1\2/p' )"
+
+            dict="$dict$i"
+
+            # Request the dictionaries from the server and
+            # constru
