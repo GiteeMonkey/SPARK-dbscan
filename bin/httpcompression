@@ -60,4 +60,8 @@ check_for_sdch() {
 
             dict=""
 
-            # Check if the dictionary location is specified as a pat
+            # Check if the dictionary location is specified as a path,
+            # and if it is, construct it's URL from the host name of the
+            # referrer URL
+
+  
