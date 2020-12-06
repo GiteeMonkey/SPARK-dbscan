@@ -55,4 +55,9 @@ check_for_sdch() {
               sed s/,/\ /g )"
 
     # If it does, check to see if it really supports SDCH
-    if [ -n "$dicts" ]; the
+    if [ -n "$dicts" ]; then
+        for i in $dicts; do
+
+            dict=""
+
+            # Check if the dictionary location is specified as a pat
