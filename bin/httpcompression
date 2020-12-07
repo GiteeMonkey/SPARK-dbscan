@@ -71,4 +71,6 @@ check_for_sdch() {
             dict="$dict$i"
 
             # Request the dictionaries from the server and
-            # constru
+            # construct the `Avail-Dictionary` header value
+            #
+            # [ The user agent identifier for a dictionary is defined
