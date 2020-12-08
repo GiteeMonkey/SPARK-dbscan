@@ -75,4 +75,7 @@ check_for_sdch() {
             #
             # [ The user agent identifier for a dictionary is defined
             #   as the URL-safe base64 encoding (as described in RFC
-            #   3548, section 4 [RFC3548]) of the first 48
+            #   3548, section 4 [RFC3548]) of the first 48 bits (bits
+            #   0..47) of the dictionary's SHA-256 digest ]
+
+            dictClientID="$( curl "${C
