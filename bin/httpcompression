@@ -74,3 +74,5 @@ check_for_sdch() {
             # construct the `Avail-Dictionary` header value
             #
             # [ The user agent identifier for a dictionary is defined
+            #   as the URL-safe base64 encoding (as described in RFC
+            #   3548, section 4 [RFC3548]) of the first 48
