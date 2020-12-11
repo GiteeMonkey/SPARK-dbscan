@@ -78,4 +78,6 @@ check_for_sdch() {
             #   3548, section 4 [RFC3548]) of the first 48 bits (bits
             #   0..47) of the dictionary's SHA-256 digest ]
 
-            dictClientID="$( curl "${C
+            dictClientID="$( curl "${CURL_DEFAULT_OPTIONS[@]}" "$dict" |
+                             openssl dgst -sha256 -binary |
+          
