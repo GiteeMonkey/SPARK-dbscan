@@ -80,4 +80,6 @@ check_for_sdch() {
 
             dictClientID="$( curl "${CURL_DEFAULT_OPTIONS[@]}" "$dict" |
                              openssl dgst -sha256 -binary |
-          
+                             openssl base64 |
+                             cut -c 1-8 |
+                             sed -e 's/\+/-/' -e 's/\//_/' 
