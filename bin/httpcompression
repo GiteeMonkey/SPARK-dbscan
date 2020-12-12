@@ -82,4 +82,7 @@ check_for_sdch() {
                              openssl dgst -sha256 -binary |
                              openssl base64 |
                              cut -c 1-8 |
-                             sed -e 's/\+/-/' -e 's/\//_/' 
+                             sed -e 's/\+/-/' -e 's/\//_/' )"
+
+            [ -n "$availDicts" ] && availDicts="$availDicts,$dictClientID" \
+                     
