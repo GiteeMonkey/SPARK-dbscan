@@ -85,4 +85,8 @@ check_for_sdch() {
                              sed -e 's/\+/-/' -e 's/\//_/' )"
 
             [ -n "$availDicts" ] && availDicts="$availDicts,$dictClientID" \
-                     
+                                 || availDicts="$dictClientID"
+
+        done
+
+        # Redo the request (advertising the available dictio
