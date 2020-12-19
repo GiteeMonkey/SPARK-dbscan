@@ -89,4 +89,7 @@ check_for_sdch() {
 
         done
 
-        # Redo the request (advertising the available dictio
+        # Redo the request (advertising the available dictionaries)
+        # and replace the old resulted headers with the new ones
+
+        printf "$( curl "${CURL_DEFAULT_OPTIONS[@
