@@ -108,4 +108,9 @@ get_content_encoding() {
     declare currentHeaders=""
     declare encoding=""
     declare headers=""
-    decla
+    declare indent=""
+    declare tmp=""
+    declare url="$1"
+
+    headers="$(curl "${CURL_DEFAULT_OPTIONS[@]}" \
+      
