@@ -92,4 +92,7 @@ check_for_sdch() {
         # Redo the request (advertising the available dictionaries)
         # and replace the old resulted headers with the new ones
 
-        printf "$( curl "${CURL_DEFAULT_OPTIONS[@
+        printf "$( curl "${CURL_DEFAULT_OPTIONS[@]}" \
+                        -H "Avail-Dictionary: $availDicts" \
+                        --dump-header - \
+    
