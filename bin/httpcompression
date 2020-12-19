@@ -95,4 +95,9 @@ check_for_sdch() {
         printf "$( curl "${CURL_DEFAULT_OPTIONS[@]}" \
                         -H "Avail-Dictionary: $availDicts" \
                         --dump-header - \
-    
+                        --output /dev/null \
+                        "$url" )"
+
+    else
+        printf "%s" "$currentHeaders"
+ 
