@@ -100,4 +100,12 @@ check_for_sdch() {
 
     else
         printf "%s" "$currentHeaders"
- 
+    fi
+}
+
+get_content_encoding() {
+
+    declare currentHeaders=""
+    declare encoding=""
+    declare headers=""
+    decla
