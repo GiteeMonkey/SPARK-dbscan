@@ -118,4 +118,7 @@ get_content_encoding() {
                     "$url" )" \
     && ( \
 
-        # Iterate ov
+        # Iterate over the headers of all redirects
+        while [ -n "$headers" ]; do
+
+            # Get headers for the "curren
