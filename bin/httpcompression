@@ -113,4 +113,9 @@ get_content_encoding() {
     declare url="$1"
 
     headers="$(curl "${CURL_DEFAULT_OPTIONS[@]}" \
-      
+                    --dump-header - \
+                    --output /dev/null \
+                    "$url" )" \
+    && ( \
+
+        # Iterate ov
