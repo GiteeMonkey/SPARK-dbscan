@@ -121,4 +121,7 @@ get_content_encoding() {
         # Iterate over the headers of all redirects
         while [ -n "$headers" ]; do
 
-            # Get headers for the "curren
+            # Get headers for the "current" URL
+            currentHeaders="$( printf "%s" "$headers" | sed -n '1,/^HTTP/p' )"
+
+            # Remove the header
