@@ -127,4 +127,7 @@ get_content_encoding() {
             # Remove the headers for the "current" URL
             headers="${headers/"$currentHeaders"/}"
 
-            currentHeaders="$(check_for_sdch "$cu
+            currentHeaders="$(check_for_sdch "$currentHeaders" "$url")"
+
+            # Get the value of the `Content-Encoding` header
+            encoding="
