@@ -124,4 +124,7 @@ get_content_encoding() {
             # Get headers for the "current" URL
             currentHeaders="$( printf "%s" "$headers" | sed -n '1,/^HTTP/p' )"
 
-            # Remove the header
+            # Remove the headers for the "current" URL
+            headers="${headers/"$currentHeaders"/}"
+
+            currentHeaders="$(check_for_sdch "$cu
