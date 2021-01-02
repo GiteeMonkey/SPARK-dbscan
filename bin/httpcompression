@@ -130,4 +130,6 @@ get_content_encoding() {
             currentHeaders="$(check_for_sdch "$currentHeaders" "$url")"
 
             # Get the value of the `Content-Encoding` header
-            encoding="
+            encoding="$( printf "%s" "$currentHeaders" |
+                         grep -i 'Content-Encoding:' |
+                         cut -d' ' -f
