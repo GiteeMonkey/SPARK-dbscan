@@ -132,4 +132,7 @@ get_content_encoding() {
             # Get the value of the `Content-Encoding` header
             encoding="$( printf "%s" "$currentHeaders" |
                          grep -i 'Content-Encoding:' |
-                         cut -d' ' -f
+                         cut -d' ' -f2 |
+                         tr "\r" "," |
+                         tr -d "\n" |
+                         sed '
