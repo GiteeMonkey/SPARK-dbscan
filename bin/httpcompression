@@ -135,4 +135,7 @@ get_content_encoding() {
                          cut -d' ' -f2 |
                          tr "\r" "," |
                          tr -d "\n" |
-                         sed '
+                         sed 's/,$//' )"
+
+            # Print the output for the "current" URL
+            [ -n "$encoding" ] && encoding="[$encod
