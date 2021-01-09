@@ -138,4 +138,8 @@ get_content_encoding() {
                          sed 's/,$//' )"
 
             # Print the output for the "current" URL
-            [ -n "$encoding" ] && encoding="[$encod
+            [ -n "$encoding" ] && encoding="[$encoding]"
+
+            if [ "$url" != "$1" ]; then
+                printf "$indent$url $encoding\n"
+               
