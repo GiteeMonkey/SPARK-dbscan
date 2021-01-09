@@ -142,4 +142,7 @@ get_content_encoding() {
 
             if [ "$url" != "$1" ]; then
                 printf "$indent$url $encoding\n"
-               
+                indent="  $indent"
+            else
+                printf "\n  * $1 $encoding\n"
+                indent="    
