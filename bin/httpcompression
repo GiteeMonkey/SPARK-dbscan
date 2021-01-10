@@ -145,4 +145,9 @@ get_content_encoding() {
                 indent="  $indent"
             else
                 printf "\n  * $1 $encoding\n"
-                indent="    
+                indent="    ↳ "
+            fi
+
+            # Get the next URL from the series of redirects
+            tmp="$url"
+      
