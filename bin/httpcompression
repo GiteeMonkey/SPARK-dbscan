@@ -150,4 +150,6 @@ get_content_encoding() {
 
             # Get the next URL from the series of redirects
             tmp="$url"
-      
+            url="$( printf "%s" "$currentHeaders" |
+                    grep -i 'Location' |
+                    sed -e 's/Location://' 
