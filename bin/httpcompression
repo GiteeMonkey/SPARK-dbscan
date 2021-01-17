@@ -152,4 +152,8 @@ get_content_encoding() {
             tmp="$url"
             url="$( printf "%s" "$currentHeaders" |
                     grep -i 'Location' |
-                    sed -e 's/Location://' 
+                    sed -e 's/Location://' |
+                    sed 's/^ *//' |
+                    tr -d '\r' )"
+
+            # In case the `Location`
