@@ -156,4 +156,11 @@ get_content_encoding() {
                     sed 's/^ *//' |
                     tr -d '\r' )"
 
-            # In case the `Location`
+            # In case the `Location` header is specified as a path
+            [[ "$url" != http* ]] && url="$tmp$url"
+
+        done
+    )
+}
+
+# - - - - - - 
