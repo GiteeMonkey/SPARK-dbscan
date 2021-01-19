@@ -163,4 +163,9 @@ get_content_encoding() {
     )
 }
 
-# - - - - - - 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+main() {
+
+    # Check if cURL is installed
+    if [ -x "$(comm
