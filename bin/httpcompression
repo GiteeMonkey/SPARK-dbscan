@@ -168,4 +168,8 @@ get_content_encoding() {
 main() {
 
     # Check if cURL is installed
-    if [ -x "$(comm
+    if [ -x "$(command -v "curl")" ]; then
+        while [ $# -ne 0 ]; do
+            get_content_encoding "$1"
+            shift
+        d
