@@ -18,4 +18,11 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-# Install da
+# Install data stores
+brew install mysql
+brew install postgresql
+brew install mongo
+brew install redis
+brew install elasticsearch
+
+# Install mys
