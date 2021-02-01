@@ -25,4 +25,7 @@ brew install mongo
 brew install redis
 brew install elasticsearch
 
-# Install mys
+# Install mysql workbench
+# Install Cask
+brew install caskroom/cask/brew-cask
+brew cask install --appdir="/Applications
