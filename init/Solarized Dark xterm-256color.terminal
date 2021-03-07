@@ -32,4 +32,9 @@
     AAAAAAAAAAAAAM4=
     </data>
     <key>FontAntialias</key>
-    <tr
+    <true/>
+    <key>FontHeightSpacing</key>
+    <real>1.1000000000000001</real>
+    <key>FontWidthSpacing</key>
+    <integer>1</integer>
+    <key>ProfileCurrentV
