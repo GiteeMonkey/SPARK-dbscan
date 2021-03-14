@@ -51,4 +51,7 @@
     <key>ShowWindowSettingsNameInTitle</key>
     <true/>
     <key>TerminalType</key>
-    <stri
+    <string>xterm-256color</string>
+    <key>TextBoldColor</key>
+    <data>
+    YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZ
