@@ -376,3 +376,104 @@ c = get_config()
 # c.HistoryManager.hist_file = u''
 
 # Options for configuring the SQLite connection
+# 
+# These options are passed as keyword args to sqlite3.connect when establishing
+# database conenctions.
+# c.HistoryManager.connection_options = {}
+
+# enable the SQLite history
+# 
+# set enabled=False to disable the SQLite history, in which case there will be
+# no stored history, no SQLite connection, and no background saving thread.
+# This may be necessary in some threaded environments where IPython is embedded.
+# c.HistoryManager.enabled = True
+
+#------------------------------------------------------------------------------
+# ProfileDir configuration
+#------------------------------------------------------------------------------
+
+# An object to manage the profile directory and its resources.
+# 
+# The profile directory is used by all IPython applications, to manage
+# configuration, logging and security.
+# 
+# This object knows how to find, create and manage these directories. This
+# should be used by any code that wants to handle profiles.
+
+# Set the profile location directly. This overrides the logic used by the
+# `profile` option.
+# c.ProfileDir.location = u''
+
+#------------------------------------------------------------------------------
+# PlainTextFormatter configuration
+#------------------------------------------------------------------------------
+
+# The default pretty-printer.
+# 
+# This uses :mod:`IPython.lib.pretty` to compute the format data of the object.
+# If the object cannot be pretty printed, :func:`repr` is used. See the
+# documentation of :mod:`IPython.lib.pretty` for details on how to write pretty
+# printers.  Here is a simple example::
+# 
+#     def dtype_pprinter(obj, p, cycle):
+#         if cycle:
+#             return p.text('dtype(...)')
+#         if hasattr(obj, 'fields'):
+#             if obj.fields is None:
+#                 p.text(repr(obj))
+#             else:
+#                 p.begin_group(7, 'dtype([')
+#                 for i, field in enumerate(obj.descr):
+#                     if i > 0:
+#                         p.text(',')
+#                         p.breakable()
+#                     p.pretty(field)
+#                 p.end_group(7, '])')
+
+# PlainTextFormatter will inherit config from: BaseFormatter
+
+# 
+# c.PlainTextFormatter.type_printers = {}
+
+# 
+# c.PlainTextFormatter.newline = '\n'
+
+# 
+# c.PlainTextFormatter.float_precision = ''
+
+# 
+# c.PlainTextFormatter.verbose = False
+
+# 
+# c.PlainTextFormatter.deferred_printers = {}
+
+# 
+# c.PlainTextFormatter.pprint = True
+
+# 
+# c.PlainTextFormatter.max_width = 79
+
+# 
+# c.PlainTextFormatter.singleton_printers = {}
+
+#------------------------------------------------------------------------------
+# IPCompleter configuration
+#------------------------------------------------------------------------------
+
+# Extension of the completer class with IPython-specific features
+
+# IPCompleter will inherit config from: Completer
+
+# Instruct the completer to omit private method names
+# 
+# Specifically, when completing on ``object.<tab>``.
+# 
+# When 2 [default]: all names that start with '_' will be excluded.
+# 
+# When 1: all 'magic' names (``__foo__``) will be excluded.
+# 
+# When 0: nothing will be excluded.
+# c.IPCompleter.omit__names = 2
+
+# Whether to merge completion results into a single list
+# 
