@@ -255,3 +255,124 @@ c = get_config()
 
 # 
 # c.TerminalInteractiveShell.debug = False
+
+# Set to confirm when you try to exit IPython with an EOF (Control-D in Unix,
+# Control-Z/Enter in Windows). By typing 'exit' or 'quit', you can force a
+# direct exit without any confirmation.
+# c.TerminalInteractiveShell.confirm_exit = True
+
+# 
+# c.TerminalInteractiveShell.ipython_dir = ''
+
+# 
+# c.TerminalInteractiveShell.readline_remove_delims = '-/~'
+
+# Start logging to the default log file.
+# c.TerminalInteractiveShell.logstart = False
+
+# The name of the logfile to use.
+# c.TerminalInteractiveShell.logfile = ''
+
+# The shell program to be used for paging.
+# c.TerminalInteractiveShell.pager = 'less'
+
+# Enable magic commands to be called without the leading %.
+# c.TerminalInteractiveShell.automagic = True
+
+# Save multi-line entries as one entry in readline history
+# c.TerminalInteractiveShell.multiline_history = True
+
+# 
+# c.TerminalInteractiveShell.readline_use = True
+
+# Enable deep (recursive) reloading by default. IPython can use the deep_reload
+# module which reloads changes in modules recursively (it replaces the reload()
+# function, so you don't need to change anything to use it). deep_reload()
+# forces a full reload of modules whose code may have changed, which the default
+# reload() function does not.  When deep_reload is off, IPython will use the
+# normal reload(), but deep_reload will still be available as dreload().
+# c.TerminalInteractiveShell.deep_reload = False
+
+# Start logging to the given file in append mode.
+# c.TerminalInteractiveShell.logappend = ''
+
+# 
+# c.TerminalInteractiveShell.xmode = 'Context'
+
+# 
+# c.TerminalInteractiveShell.quiet = False
+
+# Enable auto setting the terminal title.
+# c.TerminalInteractiveShell.term_title = False
+
+# 
+# c.TerminalInteractiveShell.object_info_string_level = 0
+
+# Deprecated, use PromptManager.out_template
+# c.TerminalInteractiveShell.prompt_out = 'Out[\\#]: '
+
+# Set the size of the output cache.  The default is 1000, you can change it
+# permanently in your config file.  Setting it to 0 completely disables the
+# caching system, and the minimum value accepted is 20 (if you provide a value
+# less than 20, it is reset to 0 and a warning is issued).  This limit is
+# defined because otherwise you'll spend more time re-flushing a too small cache
+# than working
+# c.TerminalInteractiveShell.cache_size = 1000
+
+# 'all', 'last', 'last_expr' or 'none', specifying which nodes should be run
+# interactively (displaying output from expressions).
+# c.TerminalInteractiveShell.ast_node_interactivity = 'last_expr'
+
+# Automatically call the pdb debugger after every exception.
+# c.TerminalInteractiveShell.pdb = False
+
+#------------------------------------------------------------------------------
+# PromptManager configuration
+#------------------------------------------------------------------------------
+
+# This is the primary interface for producing IPython's prompts.
+
+# Output prompt. '\#' will be transformed to the prompt number
+# c.PromptManager.out_template = 'Out[\\#]: '
+
+# Continuation prompt.
+# c.PromptManager.in2_template = '   .\\D.: '
+
+# If True (default), each prompt will be right-aligned with the preceding one.
+# c.PromptManager.justify = True
+
+# Input prompt.  '\#' will be transformed to the prompt number
+# c.PromptManager.in_template = 'In [\\#]: '
+
+# 
+# c.PromptManager.color_scheme = 'Linux'
+
+#------------------------------------------------------------------------------
+# HistoryManager configuration
+#------------------------------------------------------------------------------
+
+# A class to organize all history-related functionality in one place.
+
+# HistoryManager will inherit config from: HistoryAccessor
+
+# Should the history database include output? (default: no)
+# c.HistoryManager.db_log_output = False
+
+# Write to database every x commands (higher values save disk access & power).
+# Values of 1 or less effectively disable caching.
+# c.HistoryManager.db_cache_size = 0
+
+# Path to file to use for SQLite history database.
+# 
+# By default, IPython will put the history database in the IPython profile
+# directory.  If you would rather share one history among profiles, you can set
+# this value in each, so that they are consistent.
+# 
+# Due to an issue with fcntl, SQLite is known to misbehave on some NFS mounts.
+# If you see IPython hanging, try setting this to something on a local disk,
+# e.g::
+# 
+#     ipython --HistoryManager.hist_file=/tmp/ipython_hist.sqlite
+# c.HistoryManager.hist_file = u''
+
+# Options for configuring the SQLite connection
