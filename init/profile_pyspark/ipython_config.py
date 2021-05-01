@@ -477,3 +477,57 @@ c = get_config()
 
 # Whether to merge completion results into a single list
 # 
+# If False, only the completion results from the first non-empty completer will
+# be returned.
+# c.IPCompleter.merge_completions = True
+
+# Instruct the completer to use __all__ for the completion
+# 
+# Specifically, when completing on ``object.<tab>``.
+# 
+# When True: only those names in obj.__all__ will be included.
+# 
+# When False [default]: the __all__ attribute is ignored
+# c.IPCompleter.limit_to__all__ = False
+
+# Activate greedy completion
+# 
+# This will enable completion on elements of lists, results of function calls,
+# etc., but can be unsafe because the code is actually evaluated on TAB.
+# c.IPCompleter.greedy = False
+
+#------------------------------------------------------------------------------
+# ScriptMagics configuration
+#------------------------------------------------------------------------------
+
+# Magics for talking to scripts
+# 
+# This defines a base `%%script` cell magic for running a cell with a program in
+# a subprocess, and registers a few top-level magics that call %%script with
+# common interpreters.
+
+# Extra script cell magics to define
+# 
+# This generates simple wrappers of `%%script foo` as `%%foo`.
+# 
+# If you want to add script magics that aren't on your path, specify them in
+# script_paths
+# c.ScriptMagics.script_magics = []
+
+# Dict mapping short 'ruby' names to full paths, such as '/opt/secret/bin/ruby'
+# 
+# Only necessary for items in script_magics where the default path will not find
+# the right interpreter.
+# c.ScriptMagics.script_paths = {}
+
+#------------------------------------------------------------------------------
+# StoreMagics configuration
+#------------------------------------------------------------------------------
+
+# Lightweight persistence for python variables.
+# 
+# Provides the %store magic.
+
+# If True, any %store-d variables will be automatically restored when IPython
+# starts.
+# c.StoreMagics.autorestore = False
