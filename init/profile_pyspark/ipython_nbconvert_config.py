@@ -283,3 +283,105 @@ c = get_config()
 #------------------------------------------------------------------------------
 # PythonExporter configuration
 #------------------------------------------------------------------------------
+
+# Exports a Python code file.
+
+# PythonExporter will inherit config from: TemplateExporter, Exporter
+
+# 
+# c.PythonExporter.jinja_variable_block_start = ''
+
+# 
+# c.PythonExporter.jinja_variable_block_end = ''
+
+# formats of raw cells to be included in this Exporter's output.
+# c.PythonExporter.raw_mimetypes = []
+
+# Name of the template file to use
+# c.PythonExporter.template_file = u'default'
+
+# List of preprocessors available by default, by name, namespace,  instance, or
+# type.
+# c.PythonExporter.default_preprocessors = ['IPython.nbconvert.preprocessors.coalesce_streams', 'IPython.nbconvert.preprocessors.SVG2PDFPreprocessor', 'IPython.nbconvert.preprocessors.ExtractOutputPreprocessor', 'IPython.nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'IPython.nbconvert.preprocessors.RevealHelpPreprocessor', 'IPython.nbconvert.preprocessors.LatexPreprocessor', 'IPython.nbconvert.preprocessors.HighlightMagicsPreprocessor']
+
+# 
+# c.PythonExporter.template_path = ['.']
+
+# Extension of the file that should be written to disk
+# c.PythonExporter.file_extension = 'txt'
+
+# 
+# c.PythonExporter.jinja_comment_block_end = ''
+
+# Dictionary of filters, by name and namespace, to add to the Jinja environment.
+# c.PythonExporter.filters = {}
+
+# 
+# c.PythonExporter.jinja_comment_block_start = ''
+
+# 
+# c.PythonExporter.jinja_logic_block_end = ''
+
+# 
+# c.PythonExporter.jinja_logic_block_start = ''
+
+# 
+# c.PythonExporter.template_extension = '.tpl'
+
+# List of preprocessors, by name or namespace, to enable.
+# c.PythonExporter.preprocessors = []
+
+#------------------------------------------------------------------------------
+# RSTExporter configuration
+#------------------------------------------------------------------------------
+
+# Exports restructured text documents.
+
+# RSTExporter will inherit config from: TemplateExporter, Exporter
+
+# 
+# c.RSTExporter.jinja_variable_block_start = ''
+
+# 
+# c.RSTExporter.jinja_variable_block_end = ''
+
+# formats of raw cells to be included in this Exporter's output.
+# c.RSTExporter.raw_mimetypes = []
+
+# Name of the template file to use
+# c.RSTExporter.template_file = u'default'
+
+# List of preprocessors available by default, by name, namespace,  instance, or
+# type.
+# c.RSTExporter.default_preprocessors = ['IPython.nbconvert.preprocessors.coalesce_streams', 'IPython.nbconvert.preprocessors.SVG2PDFPreprocessor', 'IPython.nbconvert.preprocessors.ExtractOutputPreprocessor', 'IPython.nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'IPython.nbconvert.preprocessors.RevealHelpPreprocessor', 'IPython.nbconvert.preprocessors.LatexPreprocessor', 'IPython.nbconvert.preprocessors.HighlightMagicsPreprocessor']
+
+# 
+# c.RSTExporter.template_path = ['.']
+
+# Extension of the file that should be written to disk
+# c.RSTExporter.file_extension = 'txt'
+
+# 
+# c.RSTExporter.jinja_comment_block_end = ''
+
+# Dictionary of filters, by name and namespace, to add to the Jinja environment.
+# c.RSTExporter.filters = {}
+
+# 
+# c.RSTExporter.jinja_comment_block_start = ''
+
+# 
+# c.RSTExporter.jinja_logic_block_end = ''
+
+# 
+# c.RSTExporter.jinja_logic_block_start = ''
+
+# 
+# c.RSTExporter.template_extension = '.tpl'
+
+# List of preprocessors, by name or namespace, to enable.
+# c.RSTExporter.preprocessors = []
+
+#------------------------------------------------------------------------------
+# SlidesExporter configuration
+#------------------------------------------------------------------------------
