@@ -511,3 +511,107 @@ c = get_config()
 
 # CSS highlight class identifier
 # c.CSSHTMLHeaderPreprocessor.highlight_class = '.highlight'
+
+# 
+# c.CSSHTMLHeaderPreprocessor.enabled = False
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.CSSHTMLHeaderPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
+# ConvertFiguresPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# Converts all of the outputs in a notebook from one format to another.
+
+# ConvertFiguresPreprocessor will inherit config from: Preprocessor,
+# NbConvertBase
+
+# default highlight language
+# c.ConvertFiguresPreprocessor.default_language = 'ipython'
+
+# Format the converter writes
+# c.ConvertFiguresPreprocessor.to_format = u''
+
+# 
+# c.ConvertFiguresPreprocessor.enabled = False
+
+# Format the converter accepts
+# c.ConvertFiguresPreprocessor.from_format = u''
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.ConvertFiguresPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
+# ExtractOutputPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# Extracts all of the outputs from the notebook file.  The extracted  outputs
+# are returned in the 'resources' dictionary.
+
+# ExtractOutputPreprocessor will inherit config from: Preprocessor,
+# NbConvertBase
+
+# default highlight language
+# c.ExtractOutputPreprocessor.default_language = 'ipython'
+
+# 
+# c.ExtractOutputPreprocessor.output_filename_template = '{unique_key}_{cell_index}_{index}{extension}'
+
+# 
+# c.ExtractOutputPreprocessor.extract_output_types = set(['svg', 'application/pdf', 'jpeg', 'png'])
+
+# 
+# c.ExtractOutputPreprocessor.enabled = False
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.ExtractOutputPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
+# HighlightMagicsPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# Detects and tags code cells that use a different languages than Python.
+
+# HighlightMagicsPreprocessor will inherit config from: Preprocessor,
+# NbConvertBase
+
+# Syntax highlighting for magic's extension languages. Each item associates a
+# language magic extension such as %%R, with a pygments lexer such as r.
+# c.HighlightMagicsPreprocessor.languages = {}
+
+# 
+# c.HighlightMagicsPreprocessor.enabled = False
+
+# default highlight language
+# c.HighlightMagicsPreprocessor.default_language = 'ipython'
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.HighlightMagicsPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
+# LatexPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# Preprocessor for latex destined documents.
+# 
+# Mainly populates the `latex` key in the resources dict, adding definitions for
+# pygments highlight styles.
+
+# LatexPreprocessor will inherit config from: Preprocessor, NbConvertBase
+
+# default highlight language
+# c.LatexPreprocessor.default_language = 'ipython'
+
+# 
+# c.LatexPreprocessor.enabled = False
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.LatexPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
