@@ -385,3 +385,129 @@ c = get_config()
 #------------------------------------------------------------------------------
 # SlidesExporter configuration
 #------------------------------------------------------------------------------
+
+# Exports HTML slides with reveal.js
+
+# SlidesExporter will inherit config from: HTMLExporter, TemplateExporter,
+# Exporter
+
+# 
+# c.SlidesExporter.jinja_variable_block_start = ''
+
+# 
+# c.SlidesExporter.jinja_variable_block_end = ''
+
+# formats of raw cells to be included in this Exporter's output.
+# c.SlidesExporter.raw_mimetypes = []
+
+# Name of the template file to use
+# c.SlidesExporter.template_file = u'default'
+
+# List of preprocessors available by default, by name, namespace,  instance, or
+# type.
+# c.SlidesExporter.default_preprocessors = ['IPython.nbconvert.preprocessors.coalesce_streams', 'IPython.nbconvert.preprocessors.SVG2PDFPreprocessor', 'IPython.nbconvert.preprocessors.ExtractOutputPreprocessor', 'IPython.nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'IPython.nbconvert.preprocessors.RevealHelpPreprocessor', 'IPython.nbconvert.preprocessors.LatexPreprocessor', 'IPython.nbconvert.preprocessors.HighlightMagicsPreprocessor']
+
+# 
+# c.SlidesExporter.template_path = ['.']
+
+# Extension of the file that should be written to disk
+# c.SlidesExporter.file_extension = 'txt'
+
+# 
+# c.SlidesExporter.jinja_comment_block_end = ''
+
+# Dictionary of filters, by name and namespace, to add to the Jinja environment.
+# c.SlidesExporter.filters = {}
+
+# 
+# c.SlidesExporter.jinja_comment_block_start = ''
+
+# 
+# c.SlidesExporter.jinja_logic_block_end = ''
+
+# 
+# c.SlidesExporter.jinja_logic_block_start = ''
+
+# 
+# c.SlidesExporter.template_extension = '.tpl'
+
+# List of preprocessors, by name or namespace, to enable.
+# c.SlidesExporter.preprocessors = []
+
+#------------------------------------------------------------------------------
+# TemplateExporter configuration
+#------------------------------------------------------------------------------
+
+# Exports notebooks into other file formats.  Uses Jinja 2 templating engine to
+# output new formats.  Inherit from this class if you are creating a new
+# template type along with new filters/preprocessors.  If the filters/
+# preprocessors provided by default suffice, there is no need to inherit from
+# this class.  Instead, override the template_file and file_extension traits via
+# a config file.
+# 
+# - citation2latex - highlight2html - filter_data_type - markdown2html -
+# markdown2rst - get_lines - ansi2latex - strip_ansi - add_prompts -
+# comment_lines - ascii_only - markdown2latex - escape_latex - add_anchor -
+# ipython2python - posix_path - highlight2latex - path2url - ansi2html -
+# wrap_text - indent - strip_dollars - html2text - strip_files_prefix
+
+# TemplateExporter will inherit config from: Exporter
+
+# 
+# c.TemplateExporter.jinja_variable_block_start = ''
+
+# 
+# c.TemplateExporter.jinja_variable_block_end = ''
+
+# formats of raw cells to be included in this Exporter's output.
+# c.TemplateExporter.raw_mimetypes = []
+
+# Name of the template file to use
+# c.TemplateExporter.template_file = u'default'
+
+# List of preprocessors available by default, by name, namespace,  instance, or
+# type.
+# c.TemplateExporter.default_preprocessors = ['IPython.nbconvert.preprocessors.coalesce_streams', 'IPython.nbconvert.preprocessors.SVG2PDFPreprocessor', 'IPython.nbconvert.preprocessors.ExtractOutputPreprocessor', 'IPython.nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'IPython.nbconvert.preprocessors.RevealHelpPreprocessor', 'IPython.nbconvert.preprocessors.LatexPreprocessor', 'IPython.nbconvert.preprocessors.HighlightMagicsPreprocessor']
+
+# 
+# c.TemplateExporter.template_path = ['.']
+
+# Extension of the file that should be written to disk
+# c.TemplateExporter.file_extension = 'txt'
+
+# 
+# c.TemplateExporter.jinja_comment_block_end = ''
+
+# Dictionary of filters, by name and namespace, to add to the Jinja environment.
+# c.TemplateExporter.filters = {}
+
+# 
+# c.TemplateExporter.jinja_comment_block_start = ''
+
+# 
+# c.TemplateExporter.jinja_logic_block_end = ''
+
+# 
+# c.TemplateExporter.jinja_logic_block_start = ''
+
+# 
+# c.TemplateExporter.template_extension = '.tpl'
+
+# List of preprocessors, by name or namespace, to enable.
+# c.TemplateExporter.preprocessors = []
+
+#------------------------------------------------------------------------------
+# CSSHTMLHeaderPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# Preprocessor used to pre-process notebook for HTML output.  Adds IPython
+# notebook front-end CSS and Pygments CSS to HTML output.
+
+# CSSHTMLHeaderPreprocessor will inherit config from: Preprocessor,
+# NbConvertBase
+
+# default highlight language
+# c.CSSHTMLHeaderPreprocessor.default_language = 'ipython'
+
+# CSS highlight class identifier
+# c.CSSHTMLHeaderPreprocessor.highlight_class = '.highlight'
