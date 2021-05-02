@@ -174,3 +174,112 @@ c = get_config()
 # c.HTMLExporter.preprocessors = []
 
 #------------------------------------------------------------------------------
+# LatexExporter configuration
+#------------------------------------------------------------------------------
+
+# Exports to a Latex template.  Inherit from this class if your template is
+# LaTeX based and you need custom tranformers/filters.  Inherit from it if  you
+# are writing your own HTML template and need custom tranformers/filters.   If
+# you don't need custom tranformers/filters, just change the  'template_file'
+# config option.  Place your template in the special "/latex"  subfolder of the
+# "../templates" folder.
+
+# LatexExporter will inherit config from: TemplateExporter, Exporter
+
+# 
+# c.LatexExporter.jinja_variable_block_start = '((('
+
+# 
+# c.LatexExporter.jinja_variable_block_end = ')))'
+
+# formats of raw cells to be included in this Exporter's output.
+# c.LatexExporter.raw_mimetypes = []
+
+# Name of the template file to use
+# c.LatexExporter.template_file = u'default'
+
+# List of preprocessors available by default, by name, namespace,  instance, or
+# type.
+# c.LatexExporter.default_preprocessors = ['IPython.nbconvert.preprocessors.coalesce_streams', 'IPython.nbconvert.preprocessors.SVG2PDFPreprocessor', 'IPython.nbconvert.preprocessors.ExtractOutputPreprocessor', 'IPython.nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'IPython.nbconvert.preprocessors.RevealHelpPreprocessor', 'IPython.nbconvert.preprocessors.LatexPreprocessor', 'IPython.nbconvert.preprocessors.HighlightMagicsPreprocessor']
+
+# 
+# c.LatexExporter.template_path = ['.']
+
+# Extension of the file that should be written to disk
+# c.LatexExporter.file_extension = 'txt'
+
+# 
+# c.LatexExporter.jinja_comment_block_end = '=))'
+
+# Dictionary of filters, by name and namespace, to add to the Jinja environment.
+# c.LatexExporter.filters = {}
+
+# 
+# c.LatexExporter.jinja_comment_block_start = '((='
+
+# 
+# c.LatexExporter.jinja_logic_block_end = '*))'
+
+# 
+# c.LatexExporter.jinja_logic_block_start = '((*'
+
+# 
+# c.LatexExporter.template_extension = '.tplx'
+
+# List of preprocessors, by name or namespace, to enable.
+# c.LatexExporter.preprocessors = []
+
+#------------------------------------------------------------------------------
+# MarkdownExporter configuration
+#------------------------------------------------------------------------------
+
+# Exports to a markdown document (.md)
+
+# MarkdownExporter will inherit config from: TemplateExporter, Exporter
+
+# 
+# c.MarkdownExporter.jinja_variable_block_start = ''
+
+# 
+# c.MarkdownExporter.jinja_variable_block_end = ''
+
+# formats of raw cells to be included in this Exporter's output.
+# c.MarkdownExporter.raw_mimetypes = []
+
+# Name of the template file to use
+# c.MarkdownExporter.template_file = u'default'
+
+# List of preprocessors available by default, by name, namespace,  instance, or
+# type.
+# c.MarkdownExporter.default_preprocessors = ['IPython.nbconvert.preprocessors.coalesce_streams', 'IPython.nbconvert.preprocessors.SVG2PDFPreprocessor', 'IPython.nbconvert.preprocessors.ExtractOutputPreprocessor', 'IPython.nbconvert.preprocessors.CSSHTMLHeaderPreprocessor', 'IPython.nbconvert.preprocessors.RevealHelpPreprocessor', 'IPython.nbconvert.preprocessors.LatexPreprocessor', 'IPython.nbconvert.preprocessors.HighlightMagicsPreprocessor']
+
+# 
+# c.MarkdownExporter.template_path = ['.']
+
+# Extension of the file that should be written to disk
+# c.MarkdownExporter.file_extension = 'txt'
+
+# 
+# c.MarkdownExporter.jinja_comment_block_end = ''
+
+# Dictionary of filters, by name and namespace, to add to the Jinja environment.
+# c.MarkdownExporter.filters = {}
+
+# 
+# c.MarkdownExporter.jinja_comment_block_start = ''
+
+# 
+# c.MarkdownExporter.jinja_logic_block_end = ''
+
+# 
+# c.MarkdownExporter.jinja_logic_block_start = ''
+
+# 
+# c.MarkdownExporter.template_extension = '.tpl'
+
+# List of preprocessors, by name or namespace, to enable.
+# c.MarkdownExporter.preprocessors = []
+
+#------------------------------------------------------------------------------
+# PythonExporter configuration
+#------------------------------------------------------------------------------
