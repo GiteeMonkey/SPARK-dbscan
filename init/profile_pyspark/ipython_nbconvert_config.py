@@ -615,3 +615,126 @@ c = get_config()
 # c.LatexPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
 
 #------------------------------------------------------------------------------
+# Preprocessor configuration
+#------------------------------------------------------------------------------
+
+# A configurable preprocessor
+# 
+# Inherit from this class if you wish to have configurability for your
+# preprocessor.
+# 
+# Any configurable traitlets this class exposed will be configurable in profiles
+# using c.SubClassName.attribute = value
+# 
+# you can overwrite :meth:`preprocess_cell` to apply a transformation
+# independently on each cell or :meth:`preprocess` if you prefer your own logic.
+# See corresponding docstring for informations.
+# 
+# Disabled by default and can be enabled via the config by
+#     'c.YourPreprocessorName.enabled = True'
+
+# Preprocessor will inherit config from: NbConvertBase
+
+# default highlight language
+# c.Preprocessor.default_language = 'ipython'
+
+# 
+# c.Preprocessor.enabled = False
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.Preprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
+# RevealHelpPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# RevealHelpPreprocessor will inherit config from: Preprocessor, NbConvertBase
+
+# The URL prefix for reveal.js. This can be a a relative URL for a local copy of
+# reveal.js, or point to a CDN.
+# 
+# For speaker notes to work, a local reveal.js prefix must be used.
+# c.RevealHelpPreprocessor.url_prefix = 'reveal.js'
+
+# default highlight language
+# c.RevealHelpPreprocessor.default_language = 'ipython'
+
+# 
+# c.RevealHelpPreprocessor.enabled = False
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.RevealHelpPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+#------------------------------------------------------------------------------
+# SVG2PDFPreprocessor configuration
+#------------------------------------------------------------------------------
+
+# Converts all of the outputs in a notebook from SVG to PDF.
+
+# SVG2PDFPreprocessor will inherit config from: ConvertFiguresPreprocessor,
+# Preprocessor, NbConvertBase
+
+# Format the converter accepts
+# c.SVG2PDFPreprocessor.from_format = u''
+
+# default highlight language
+# c.SVG2PDFPreprocessor.default_language = 'ipython'
+
+# 
+# c.SVG2PDFPreprocessor.enabled = False
+
+# Format the converter writes
+# c.SVG2PDFPreprocessor.to_format = u''
+
+# The command to use for converting SVG to PDF
+# 
+# This string is a template, which will be formatted with the keys to_filename
+# and from_filename.
+# 
+# The conversion call must read the SVG from {from_flename}, and write a PDF to
+# {to_filename}.
+# c.SVG2PDFPreprocessor.command = u''
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.SVG2PDFPreprocessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# The path to Inkscape, if necessary
+# c.SVG2PDFPreprocessor.inkscape = u''
+
+#------------------------------------------------------------------------------
+# FilesWriter configuration
+#------------------------------------------------------------------------------
+
+# Consumes nbconvert output and produces files.
+
+# FilesWriter will inherit config from: WriterBase, NbConvertBase
+
+# List of the files that the notebook references.  Files will be  included with
+# written output.
+# c.FilesWriter.files = []
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.FilesWriter.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# default highlight language
+# c.FilesWriter.default_language = 'ipython'
+
+# Directory to write output to.  Leave blank to output to the current directory
+# c.FilesWriter.build_directory = ''
+
+#------------------------------------------------------------------------------
+# StdoutWriter configuration
+#------------------------------------------------------------------------------
+
+# Consumes output from nbconvert export...() methods and writes to the  stdout
+# stream.
+
+# StdoutWriter will inherit config from: WriterBase, NbConvertBase
+
+# List of the files that the notebook references.  Files will be  included with
+# written output.
+# c.StdoutWriter.files = []
