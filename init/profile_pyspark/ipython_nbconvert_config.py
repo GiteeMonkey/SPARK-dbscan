@@ -738,3 +738,108 @@ c = get_config()
 # List of the files that the notebook references.  Files will be  included with
 # written output.
 # c.StdoutWriter.files = []
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.StdoutWriter.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# default highlight language
+# c.StdoutWriter.default_language = 'ipython'
+
+#------------------------------------------------------------------------------
+# WriterBase configuration
+#------------------------------------------------------------------------------
+
+# Consumes output from nbconvert export...() methods and writes to a useful
+# location.
+
+# WriterBase will inherit config from: NbConvertBase
+
+# List of the files that the notebook references.  Files will be  included with
+# written output.
+# c.WriterBase.files = []
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.WriterBase.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# default highlight language
+# c.WriterBase.default_language = 'ipython'
+
+#------------------------------------------------------------------------------
+# PDFPostProcessor configuration
+#------------------------------------------------------------------------------
+
+# Writer designed to write to PDF files
+
+# PDFPostProcessor will inherit config from: PostProcessorBase, NbConvertBase
+
+# Filename extensions of temp files to remove after running.
+# c.PDFPostProcessor.temp_file_exts = ['.aux', '.bbl', '.blg', '.idx', '.log', '.out']
+
+# Whether or not to display the output of the compile call.
+# c.PDFPostProcessor.verbose = False
+
+# Shell command used to run bibtex.
+# c.PDFPostProcessor.bib_command = [u'bibtex', u'{filename}']
+
+# default highlight language
+# c.PDFPostProcessor.default_language = 'ipython'
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.PDFPostProcessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# How many times pdflatex will be called.
+# c.PDFPostProcessor.latex_count = 3
+
+# Whether or not to open the pdf after the compile call.
+# c.PDFPostProcessor.pdf_open = False
+
+# Shell command used to compile PDF.
+# c.PDFPostProcessor.latex_command = [u'pdflatex', u'{filename}']
+
+#------------------------------------------------------------------------------
+# PostProcessorBase configuration
+#------------------------------------------------------------------------------
+
+# PostProcessorBase will inherit config from: NbConvertBase
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.PostProcessorBase.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# default highlight language
+# c.PostProcessorBase.default_language = 'ipython'
+
+#------------------------------------------------------------------------------
+# ServePostProcessor configuration
+#------------------------------------------------------------------------------
+
+# Post processor designed to serve files
+# 
+# Proxies reveal.js requests to a CDN if no local reveal.js is present
+
+# ServePostProcessor will inherit config from: PostProcessorBase, NbConvertBase
+
+# The IP address to listen on.
+# c.ServePostProcessor.ip = '127.0.0.1'
+
+# URL prefix for reveal.js
+# c.ServePostProcessor.reveal_prefix = 'reveal.js'
+
+# default highlight language
+# c.ServePostProcessor.default_language = 'ipython'
+
+# port for the server to listen on.
+# c.ServePostProcessor.port = 8000
+
+# An ordered list of preferred output type, the first encountered will usually
+# be used when converting discarding the others.
+# c.ServePostProcessor.display_data_priority = ['html', 'application/pdf', 'svg', 'latex', 'png', 'jpg', 'jpeg', 'text']
+
+# Should the browser be opened automatically?
+# c.ServePostProcessor.open_in_browser = True
+
+# URL for reveal.js CDN.
+# c.ServePostProcessor.reveal_cdn = 'https://cdn.jsdelivr.net/reveal.js/2.5.0'
