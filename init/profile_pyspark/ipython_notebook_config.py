@@ -124,3 +124,120 @@ c.NotebookApp.port = 8889
 #
 #   from IPython.lib import passwd; passwd()
 #
+# The string should be of the form type:salt:hashed-password.
+# c.NotebookApp.password = u''
+
+# Set the Access-Control-Allow-Credentials: true header
+# c.NotebookApp.allow_credentials = False
+
+# Path to an extra config file to load.
+#
+# If specified, load this config file in addition to any other IPython config.
+# c.NotebookApp.extra_config_file = u''
+
+# Extra paths to search for serving static files.
+#
+# This allows adding javascript/css to be available from the notebook server
+# machine, or overriding individual files in the IPython
+# c.NotebookApp.extra_static_paths = []
+
+# Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-
+# For headerssent by the upstream reverse proxy. Necessary if the proxy handles
+# SSL
+# c.NotebookApp.trust_xheaders = False
+
+# Whether to install the default config files into the profile dir. If a new
+# profile is being created, and IPython contains config files for that profile,
+# then they will be staged into the new directory.  Otherwise, default config
+# files will be automatically generated.
+# c.NotebookApp.copy_config_files = False
+
+# The full path to a private key file for usage with SSL/TLS.
+# c.NotebookApp.keyfile = u''
+
+# Supply overrides for the tornado.web.Application that the IPython notebook
+# uses.
+# c.NotebookApp.webapp_settings = {}
+
+# Specify what command to use to invoke a web browser when opening the notebook.
+# If not specified, the default browser will be determined by the `webbrowser`
+# standard library module, which allows setting of the BROWSER environment
+# variable to override it.
+# c.NotebookApp.browser = u''
+
+#------------------------------------------------------------------------------
+# IPKernelApp configuration
+#------------------------------------------------------------------------------
+
+# IPython: an enhanced interactive Python shell.
+
+# IPKernelApp will inherit config from: BaseIPythonApplication, Application,
+# InteractiveShellApp
+
+# Run the file referenced by the PYTHONSTARTUP environment variable at IPython
+# startup.
+# c.IPKernelApp.exec_PYTHONSTARTUP = True
+
+# The importstring for the DisplayHook factory
+# c.IPKernelApp.displayhook_class = 'IPython.kernel.zmq.displayhook.ZMQDisplayHook'
+
+# Set the IP or interface on which the kernel will listen.
+# c.IPKernelApp.ip = u''
+
+# Pre-load matplotlib and numpy for interactive use, selecting a particular
+# matplotlib backend and loop integration.
+# c.IPKernelApp.pylab = None
+
+# Create a massive crash report when IPython encounters what may be an internal
+# error.  The default is to append a short message to the usual traceback
+# c.IPKernelApp.verbose_crash = False
+
+# The Kernel subclass to be used.
+#
+# This should allow easy re-use of the IPKernelApp entry point to configure and
+# launch kernels other than IPython's own.
+# c.IPKernelApp.kernel_class = 'IPython.kernel.zmq.ipkernel.Kernel'
+
+# Run the module as a script.
+# c.IPKernelApp.module_to_run = ''
+
+# The date format used by logging formatters for %(asctime)s
+# c.IPKernelApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+# set the shell (ROUTER) port [default: random]
+# c.IPKernelApp.shell_port = 0
+
+# set the control (ROUTER) port [default: random]
+# c.IPKernelApp.control_port = 0
+
+# Whether to overwrite existing config files when copying
+# c.IPKernelApp.overwrite = False
+
+# Execute the given command string.
+# c.IPKernelApp.code_to_run = ''
+
+# set the stdin (ROUTER) port [default: random]
+# c.IPKernelApp.stdin_port = 0
+
+# Set the log level by value or name.
+# c.IPKernelApp.log_level = 30
+
+# lines of code to run at IPython startup.
+# c.IPKernelApp.exec_lines = []
+
+# Path to an extra config file to load.
+#
+# If specified, load this config file in addition to any other IPython config.
+# c.IPKernelApp.extra_config_file = u''
+
+# The importstring for the OutStream factory
+# c.IPKernelApp.outstream_class = 'IPython.kernel.zmq.iostream.OutStream'
+
+# Whether to create profile dir if it doesn't exist
+# c.IPKernelApp.auto_create = False
+
+# set the heartbeat port [default: random]
+# c.IPKernelApp.hb_port = 0
+
+#
+# c.IPKernelApp.transport = 'tcp'
