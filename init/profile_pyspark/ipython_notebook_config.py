@@ -241,3 +241,125 @@ c.NotebookApp.port = 8889
 
 #
 # c.IPKernelApp.transport = 'tcp'
+
+# redirect stdout to the null device
+# c.IPKernelApp.no_stdout = False
+
+# Should variables loaded at startup (by startup files, exec_lines, etc.) be
+# hidden from tools like %who?
+# c.IPKernelApp.hide_initial_ns = True
+
+# dotted module name of an IPython extension to load.
+# c.IPKernelApp.extra_extension = ''
+
+# A file to be run
+# c.IPKernelApp.file_to_run = ''
+
+# The IPython profile to use.
+# c.IPKernelApp.profile = u'default'
+
+#
+# c.IPKernelApp.parent_appname = u''
+
+# kill this process if its parent dies.  On Windows, the argument specifies the
+# HANDLE of the parent process, otherwise it is simply boolean.
+# c.IPKernelApp.parent_handle = 0
+
+# JSON file in which to store connection info [default: kernel-<pid>.json]
+#
+# This file will contain the IP, ports, and authentication key needed to connect
+# clients to this kernel. By default, this file will be created in the security
+# dir of the current profile, but can be specified by absolute path.
+# c.IPKernelApp.connection_file = ''
+
+# If true, IPython will populate the user namespace with numpy, pylab, etc. and
+# an ``import *`` is done from numpy and pylab, when using pylab mode.
+#
+# When False, pylab mode should not import any names into the user namespace.
+# c.IPKernelApp.pylab_import_all = True
+
+# The name of the IPython directory. This directory is used for logging
+# configuration (through profiles), history storage, etc. The default is usually
+# $HOME/.ipython. This options can also be specified through the environment
+# variable IPYTHONDIR.
+# c.IPKernelApp.ipython_dir = u''
+
+# Configure matplotlib for interactive use with the default matplotlib backend.
+# c.IPKernelApp.matplotlib = None
+
+# ONLY USED ON WINDOWS Interrupt this process when the parent is signaled.
+# c.IPKernelApp.interrupt = 0
+
+# Whether to install the default config files into the profile dir. If a new
+# profile is being created, and IPython contains config files for that profile,
+# then they will be staged into the new directory.  Otherwise, default config
+# files will be automatically generated.
+# c.IPKernelApp.copy_config_files = False
+
+# List of files to run at IPython startup.
+# c.IPKernelApp.exec_files = []
+
+# Enable GUI event loop integration with any of ('glut', 'gtk', 'gtk3', 'none',
+# 'osx', 'pyglet', 'qt', 'qt4', 'tk', 'wx').
+# c.IPKernelApp.gui = None
+
+# A list of dotted module names of IPython extensions to load.
+# c.IPKernelApp.extensions = []
+
+# redirect stderr to the null device
+# c.IPKernelApp.no_stderr = False
+
+# The Logging format template
+# c.IPKernelApp.log_format = '[%(name)s]%(highlevel)s %(message)s'
+
+# set the iopub (PUB) port [default: random]
+# c.IPKernelApp.iopub_port = 0
+
+#------------------------------------------------------------------------------
+# ZMQInteractiveShell configuration
+#------------------------------------------------------------------------------
+
+# A subclass of InteractiveShell for ZMQ.
+
+# ZMQInteractiveShell will inherit config from: InteractiveShell
+
+# Use colors for displaying information about objects. Because this information
+# is passed through a pager (like 'less'), and some pagers get confused with
+# color codes, this capability can be turned off.
+# c.ZMQInteractiveShell.color_info = True
+
+# A list of ast.NodeTransformer subclass instances, which will be applied to
+# user input before code is run.
+# c.ZMQInteractiveShell.ast_transformers = []
+
+#
+# c.ZMQInteractiveShell.history_length = 10000
+
+# Don't call post-execute functions that have failed in the past.
+# c.ZMQInteractiveShell.disable_failing_post_execute = False
+
+# Show rewritten input, e.g. for autocall.
+# c.ZMQInteractiveShell.show_rewritten_input = True
+
+# Set the color scheme (NoColor, Linux, or LightBG).
+# c.ZMQInteractiveShell.colors = 'LightBG'
+
+#
+# c.ZMQInteractiveShell.separate_in = '\n'
+
+# Deprecated, use PromptManager.in2_template
+# c.ZMQInteractiveShell.prompt_in2 = '   .\\D.: '
+
+#
+# c.ZMQInteractiveShell.separate_out = ''
+
+# Deprecated, use PromptManager.in_template
+# c.ZMQInteractiveShell.prompt_in1 = 'In [\\#]: '
+
+# Enable deep (recursive) reloading by default. IPython can use the deep_reload
+# module which reloads changes in modules recursively (it replaces the reload()
+# function, so you don't need to change anything to use it). deep_reload()
+# forces a full reload of modules whose code may have changed, which the default
+# reload() function does not.  When deep_reload is off, IPython will use the
+# normal reload(), but deep_reload will still be available as dreload().
+# c.ZMQInteractiveShell.deep_reload = False
