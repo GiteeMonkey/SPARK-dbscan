@@ -166,3 +166,126 @@ c = get_config()
 
 # The pygments lexer class to use.
 # c.IPythonWidget.lexer_class = <IPython.utils.traitlets.Undefined object at 0x10258ded0>
+
+# 
+# c.IPythonWidget.output_sep2 = ''
+
+# Whether to automatically execute on syntactically complete input.
+# 
+# If False, Shift-Enter is required to submit each execution. Disabling this is
+# mainly useful for non-Python kernels, where the completion check would be
+# wrong.
+# c.IPythonWidget.execute_on_complete_input = True
+
+# The maximum number of lines of text before truncation. Specifying a non-
+# positive number disables text truncation (not recommended).
+# c.IPythonWidget.buffer_size = 500
+
+# 
+# c.IPythonWidget.history_lock = False
+
+# 
+# c.IPythonWidget.banner = u''
+
+# The type of underlying text widget to use. Valid values are 'plain', which
+# specifies a QPlainTextEdit, and 'rich', which specifies a QTextEdit.
+# c.IPythonWidget.kind = 'plain'
+
+# Whether to ask for user confirmation when restarting kernel
+# c.IPythonWidget.confirm_restart = True
+
+# The font size. If unconfigured, Qt will be entrusted with the size of the
+# font.
+# c.IPythonWidget.font_size = 0
+
+# The editor command to use when a specific line number is requested. The string
+# should contain two format specifiers: {line} and {filename}. If this parameter
+# is not specified, the line number option to the %edit magic will be ignored.
+# c.IPythonWidget.editor_line = u''
+
+# Whether to clear the console when the kernel is restarted
+# c.IPythonWidget.clear_on_kernel_restart = True
+
+# The type of paging to use. Valid values are:
+# 
+# 'inside'
+#    The widget pages like a traditional terminal.
+# 'hsplit'
+#    When paging is requested, the widget is split horizontally. The top
+#    pane contains the console, and the bottom pane contains the paged text.
+# 'vsplit'
+#    Similar to 'hsplit', except that a vertical splitter is used.
+# 'custom'
+#    No action is taken by the widget beyond emitting a
+#    'custom_page_requested(str)' signal.
+# 'none'
+#    The text is written directly to the console.
+# c.IPythonWidget.paging = 'inside'
+
+# 
+# c.IPythonWidget.output_sep = ''
+
+#------------------------------------------------------------------------------
+# IPKernelApp configuration
+#------------------------------------------------------------------------------
+
+# IPython: an enhanced interactive Python shell.
+
+# IPKernelApp will inherit config from: BaseIPythonApplication, Application,
+# InteractiveShellApp
+
+# Run the file referenced by the PYTHONSTARTUP environment variable at IPython
+# startup.
+# c.IPKernelApp.exec_PYTHONSTARTUP = True
+
+# The importstring for the DisplayHook factory
+# c.IPKernelApp.displayhook_class = 'IPython.kernel.zmq.displayhook.ZMQDisplayHook'
+
+# Set the IP or interface on which the kernel will listen.
+# c.IPKernelApp.ip = u''
+
+# Pre-load matplotlib and numpy for interactive use, selecting a particular
+# matplotlib backend and loop integration.
+# c.IPKernelApp.pylab = None
+
+# Create a massive crash report when IPython encounters what may be an internal
+# error.  The default is to append a short message to the usual traceback
+# c.IPKernelApp.verbose_crash = False
+
+# The Kernel subclass to be used.
+# 
+# This should allow easy re-use of the IPKernelApp entry point to configure and
+# launch kernels other than IPython's own.
+# c.IPKernelApp.kernel_class = 'IPython.kernel.zmq.ipkernel.Kernel'
+
+# Run the module as a script.
+# c.IPKernelApp.module_to_run = ''
+
+# The date format used by logging formatters for %(asctime)s
+# c.IPKernelApp.log_datefmt = '%Y-%m-%d %H:%M:%S'
+
+# set the shell (ROUTER) port [default: random]
+# c.IPKernelApp.shell_port = 0
+
+# set the control (ROUTER) port [default: random]
+# c.IPKernelApp.control_port = 0
+
+# Whether to overwrite existing config files when copying
+# c.IPKernelApp.overwrite = False
+
+# Execute the given command string.
+# c.IPKernelApp.code_to_run = ''
+
+# set the stdin (ROUTER) port [default: random]
+# c.IPKernelApp.stdin_port = 0
+
+# Set the log level by value or name.
+# c.IPKernelApp.log_level = 30
+
+# lines of code to run at IPython startup.
+# c.IPKernelApp.exec_lines = []
+
+# Path to an extra config file to load.
+# 
+# If specified, load this config file in addition to any other IPython config.
+# c.IPKernelApp.extra_config_file = u''
