@@ -602,3 +602,66 @@ c.NotebookApp.port = 8889
 
 # Subset of matplotlib rcParams that should be different for the inline backend.
 # c.InlineBackend.rc = {'font.size': 10, 'figure.figsize': (6.0, 4.0), 'figure.facecolor': (1, 1, 1, 0), 'savefig.dpi': 72, 'figure.subplot.bottom': 0.125, 'figure.edgecolor': (1, 1, 1, 0)}
+
+#------------------------------------------------------------------------------
+# MappingKernelManager configuration
+#------------------------------------------------------------------------------
+
+# A KernelManager that handles notebook mapping and HTTP error handling
+
+# MappingKernelManager will inherit config from: MultiKernelManager
+
+#
+# c.MappingKernelManager.root_dir = u'/Users/dmartin/Desktop/Dev/Vectorworks/Engineering/Nebula/Mainline/Servers/analytics/ipython-data-notebooks'
+
+# The kernel manager class.  This is configurable to allow subclassing of the
+# KernelManager for customized behavior.
+# c.MappingKernelManager.kernel_manager_class = 'IPython.kernel.ioloop.IOLoopKernelManager'
+
+#------------------------------------------------------------------------------
+# NotebookManager configuration
+#------------------------------------------------------------------------------
+
+# Glob patterns to hide in file and directory listings.
+# c.NotebookManager.hide_globs = [u'__pycache__']
+
+#------------------------------------------------------------------------------
+# FileNotebookManager configuration
+#------------------------------------------------------------------------------
+
+# FileNotebookManager will inherit config from: NotebookManager
+
+# The directory name in which to keep notebook checkpoints
+#
+# This is a path relative to the notebook's own directory.
+#
+# By default, it is .ipynb_checkpoints
+# c.FileNotebookManager.checkpoint_dir = '.ipynb_checkpoints'
+
+# Glob patterns to hide in file and directory listings.
+# c.FileNotebookManager.hide_globs = [u'__pycache__']
+
+# Automatically create a Python script when saving the notebook.
+#
+# For easier use of import, %run and %load across notebooks, a <notebook-
+# name>.py script will be created next to any <notebook-name>.ipynb on each
+# save.  This can also be set with the short `--script` flag.
+# c.FileNotebookManager.save_script = False
+
+#
+# c.FileNotebookManager.notebook_dir = u'/Users/dmartin/Desktop/Dev/Vectorworks/Engineering/Nebula/Mainline/Servers/analytics/ipython-data-notebooks'
+
+#------------------------------------------------------------------------------
+# NotebookNotary configuration
+#------------------------------------------------------------------------------
+
+# A class for computing and verifying notebook signatures.
+
+# The secret key with which notebooks are signed.
+# c.NotebookNotary.secret = ''
+
+# The file where the secret key is stored.
+# c.NotebookNotary.secret_file = u''
+
+# The hashing algorithm used to sign notebooks.
+# c.NotebookNotary.algorithm = 'sha256'
