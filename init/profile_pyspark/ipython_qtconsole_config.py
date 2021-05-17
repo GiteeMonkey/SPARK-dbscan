@@ -421,3 +421,108 @@ c = get_config()
 # function, so you don't need to change anything to use it). deep_reload()
 # forces a full reload of modules whose code may have changed, which the default
 # reload() function does not.  When deep_reload is off, IPython will use the
+# normal reload(), but deep_reload will still be available as dreload().
+# c.ZMQInteractiveShell.deep_reload = False
+
+# Make IPython automatically call any callable object even if you didn't type
+# explicit parentheses. For example, 'str 43' becomes 'str(43)' automatically.
+# The value can be '0' to disable the feature, '1' for 'smart' autocall, where
+# it is not applied if there are no more arguments on the line, and '2' for
+# 'full' autocall, where all callable objects are automatically called (even if
+# no arguments are present).
+# c.ZMQInteractiveShell.autocall = 0
+
+# 
+# c.ZMQInteractiveShell.separate_out2 = ''
+
+# Deprecated, use PromptManager.justify
+# c.ZMQInteractiveShell.prompts_pad_left = True
+
+# 
+# c.ZMQInteractiveShell.readline_parse_and_bind = ['tab: complete', '"\\C-l": clear-screen', 'set show-all-if-ambiguous on', '"\\C-o": tab-insert', '"\\C-r": reverse-search-history', '"\\C-s": forward-search-history', '"\\C-p": history-search-backward', '"\\C-n": history-search-forward', '"\\e[A": history-search-backward', '"\\e[B": history-search-forward', '"\\C-k": kill-line', '"\\C-u": unix-line-discard']
+
+# Enable magic commands to be called without the leading %.
+# c.ZMQInteractiveShell.automagic = True
+
+# 
+# c.ZMQInteractiveShell.debug = False
+
+# 
+# c.ZMQInteractiveShell.object_info_string_level = 0
+
+# 
+# c.ZMQInteractiveShell.ipython_dir = ''
+
+# 
+# c.ZMQInteractiveShell.readline_remove_delims = '-/~'
+
+# Start logging to the default log file.
+# c.ZMQInteractiveShell.logstart = False
+
+# The name of the logfile to use.
+# c.ZMQInteractiveShell.logfile = ''
+
+# 
+# c.ZMQInteractiveShell.wildcards_case_sensitive = True
+
+# Save multi-line entries as one entry in readline history
+# c.ZMQInteractiveShell.multiline_history = True
+
+# Start logging to the given file in append mode.
+# c.ZMQInteractiveShell.logappend = ''
+
+# 
+# c.ZMQInteractiveShell.xmode = 'Context'
+
+# 
+# c.ZMQInteractiveShell.quiet = False
+
+# Deprecated, use PromptManager.out_template
+# c.ZMQInteractiveShell.prompt_out = 'Out[\\#]: '
+
+# Set the size of the output cache.  The default is 1000, you can change it
+# permanently in your config file.  Setting it to 0 completely disables the
+# caching system, and the minimum value accepted is 20 (if you provide a value
+# less than 20, it is reset to 0 and a warning is issued).  This limit is
+# defined because otherwise you'll spend more time re-flushing a too small cache
+# than working
+# c.ZMQInteractiveShell.cache_size = 1000
+
+# 'all', 'last', 'last_expr' or 'none', specifying which nodes should be run
+# interactively (displaying output from expressions).
+# c.ZMQInteractiveShell.ast_node_interactivity = 'last_expr'
+
+# Automatically call the pdb debugger after every exception.
+# c.ZMQInteractiveShell.pdb = False
+
+#------------------------------------------------------------------------------
+# KernelManager configuration
+#------------------------------------------------------------------------------
+
+# Manages a single kernel in a subprocess on this host.
+# 
+# This version starts kernels with Popen.
+
+# KernelManager will inherit config from: ConnectionFileMixin
+
+# The Popen Command to launch the kernel. Override this if you have a custom
+# kernel. If kernel_cmd is specified in a configuration file, IPython does not
+# pass any arguments to the kernel, because it cannot make any assumptions about
+# the  arguments that the kernel understands. In particular, this means that the
+# kernel does not receive the option --debug if it given on the IPython command
+# line.
+# c.KernelManager.kernel_cmd = []
+
+# Set the kernel's IP address [default localhost]. If the IP address is
+# something other than localhost, then Consoles on other machines will be able
+# to connect to the Kernel, so be careful!
+# c.KernelManager.ip = u''
+
+# 
+# c.KernelManager.transport = 'tcp'
+
+# Should we autorestart the kernel if it dies.
+# c.KernelManager.autorestart = False
+
+#------------------------------------------------------------------------------
+# ProfileDir configuration
