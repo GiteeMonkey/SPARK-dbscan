@@ -526,3 +526,128 @@ c = get_config()
 
 #------------------------------------------------------------------------------
 # ProfileDir configuration
+#------------------------------------------------------------------------------
+
+# An object to manage the profile directory and its resources.
+# 
+# The profile directory is used by all IPython applications, to manage
+# configuration, logging and security.
+# 
+# This object knows how to find, create and manage these directories. This
+# should be used by any code that wants to handle profiles.
+
+# Set the profile location directly. This overrides the logic used by the
+# `profile` option.
+# c.ProfileDir.location = u''
+
+#------------------------------------------------------------------------------
+# Session configuration
+#------------------------------------------------------------------------------
+
+# Object for handling serialization and sending of messages.
+# 
+# The Session object handles building messages and sending them with ZMQ sockets
+# or ZMQStream objects.  Objects can communicate with each other over the
+# network via Session objects, and only need to work with the dict-based IPython
+# message spec. The Session will handle serialization/deserialization, security,
+# and metadata.
+# 
+# Sessions support configurable serialization via packer/unpacker traits, and
+# signing with HMAC digests via the key/keyfile traits.
+# 
+# Parameters ----------
+# 
+# debug : bool
+#     whether to trigger extra debugging statements
+# packer/unpacker : str : 'json', 'pickle' or import_string
+#     importstrings for methods to serialize message parts.  If just
+#     'json' or 'pickle', predefined JSON and pickle packers will be used.
+#     Otherwise, the entire importstring must be used.
+# 
+#     The functions must accept at least valid JSON input, and output *bytes*.
+# 
+#     For example, to use msgpack:
+#     packer = 'msgpack.packb', unpacker='msgpack.unpackb'
+# pack/unpack : callables
+#     You can also set the pack/unpack callables for serialization directly.
+# session : bytes
+#     the ID of this Session object.  The default is to generate a new UUID.
+# username : unicode
+#     username added to message headers.  The default is to ask the OS.
+# key : bytes
+#     The key used to initialize an HMAC signature.  If unset, messages
+#     will not be signed or checked.
+# keyfile : filepath
+#     The file containing a key.  If this is set, `key` will be initialized
+#     to the contents of the file.
+
+# Username for the Session. Default is your system username.
+# c.Session.username = u'dmartin'
+
+# The name of the unpacker for unserializing messages. Only used with custom
+# functions for `packer`.
+# c.Session.unpacker = 'json'
+
+# Threshold (in bytes) beyond which a buffer should be sent without copying.
+# c.Session.copy_threshold = 65536
+
+# The name of the packer for serializing messages. Should be one of 'json',
+# 'pickle', or an import name for a custom callable serializer.
+# c.Session.packer = 'json'
+
+# The maximum number of digests to remember.
+# 
+# The digest history will be culled when it exceeds this value.
+# c.Session.digest_history_size = 65536
+
+# The UUID identifying this session.
+# c.Session.session = u''
+
+# The digest scheme used to construct the message signatures. Must have the form
+# 'hmac-HASH'.
+# c.Session.signature_scheme = 'hmac-sha256'
+
+# execution key, for extra authentication.
+# c.Session.key = ''
+
+# Debug output in the Session
+# c.Session.debug = False
+
+# The maximum number of items for a container to be introspected for custom
+# serialization. Containers larger than this are pickled outright.
+# c.Session.item_threshold = 64
+
+# path to file containing execution key.
+# c.Session.keyfile = ''
+
+# Threshold (in bytes) beyond which an object's buffer should be extracted to
+# avoid pickling.
+# c.Session.buffer_threshold = 1024
+
+# Metadata dictionary, which serves as the default top-level metadata dict for
+# each message.
+# c.Session.metadata = {}
+
+#------------------------------------------------------------------------------
+# InlineBackend configuration
+#------------------------------------------------------------------------------
+
+# An object to store configuration of the inline backend.
+
+# The figure format to enable (deprecated use `figure_formats` instead)
+# c.InlineBackend.figure_format = u''
+
+# A set of figure formats to enable: 'png',  'retina', 'jpeg', 'svg', 'pdf'.
+# c.InlineBackend.figure_formats = set(['png'])
+
+# Extra kwargs to be passed to fig.canvas.print_figure.
+# 
+# Logical examples include: bbox_inches, quality (for jpeg figures), etc.
+# c.InlineBackend.print_figure_kwargs = {'bbox_inches': 'tight'}
+
+# Close all figures at the end of each cell.
+# 
+# When True, ensures that each cell starts with no active figures, but it also
+# means that one must keep track of references in order to edit or redraw
+# figures in subsequent cells. This mode is ideal for the notebook, where
+# residual plots from other cells might be surprising.
