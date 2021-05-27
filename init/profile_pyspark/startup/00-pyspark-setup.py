@@ -12,4 +12,4 @@ sys.path.insert(0, spark_home + "/libexec/python")
 sys.path.insert(0, os.path.join(spark_home, 'libexec/python/lib/py4j-0.8.2.1-src.zip'))
 
 # Initialize PySpark to predefine the SparkContext variable 'sc'
-execfile(os.path.join(spark_home, 'libexec/python/pyspark/shell.py
+execfile(os.path.join(spark_home, 'libexec/python/pyspark/shell.py'))
