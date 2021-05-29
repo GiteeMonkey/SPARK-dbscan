@@ -4,4 +4,7 @@
  *
  * Placeholder for custom user javascript
  * mainly to be overridden in profile/static/custom/custom.js
- * This will 
+ * This will always be an empty file in IPython
+ *
+ * User could add any javascript in the `profile/static/custom/custom.js` file
+ * (and sho
