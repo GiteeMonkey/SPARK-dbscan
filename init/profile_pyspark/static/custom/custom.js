@@ -10,4 +10,8 @@
  * (and should create it if it does not exist).
  * It will be executed by the ipython notebook at load time.
  *
- * Same 
+ * Same thing with `profile/static/custom/custom.css` to inject custom css into the notebook.
+ *
+ * Example :
+ *
+ * Create a custom butt
