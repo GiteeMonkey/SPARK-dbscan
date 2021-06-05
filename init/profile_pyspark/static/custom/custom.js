@@ -15,4 +15,7 @@
  * Example :
  *
  * Create a custom button in toolbar that execute `%qtconsole` in kernel
- * and hence open a qtconsole attached to the same kernel as the current noteb
+ * and hence open a qtconsole attached to the same kernel as the current notebook
+ *
+ *    $([IPython.events]).on('app_initialized.NotebookApp', function(){
+ *        IPython.toolbar.add_buttons_group(
