@@ -18,4 +18,7 @@
  * and hence open a qtconsole attached to the same kernel as the current notebook
  *
  *    $([IPython.events]).on('app_initialized.NotebookApp', function(){
- *        IPython.toolbar.add_buttons_group(
+ *        IPython.toolbar.add_buttons_group([
+ *            {
+ *                 'label'   : 'run qtconsole',
+ *                 'icon'    : 'icon-terminal', // select yo
