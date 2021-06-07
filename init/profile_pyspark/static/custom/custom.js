@@ -21,4 +21,6 @@
  *        IPython.toolbar.add_buttons_group([
  *            {
  *                 'label'   : 'run qtconsole',
- *                 'icon'    : 'icon-terminal', // select yo
+ *                 'icon'    : 'icon-terminal', // select your icon from http://fortawesome.github.io/Font-Awesome/icons
+ *                 'callback': function () {
+ *           
