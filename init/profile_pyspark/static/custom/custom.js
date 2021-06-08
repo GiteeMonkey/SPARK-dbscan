@@ -26,4 +26,10 @@
  *                     IPython.notebook.kernel.execute('%qtconsole')
  *                 }
  *            }
- *            // add mor
+ *            // add more button here if needed.
+ *            ]);
+ *    });
+ *
+ * Example :
+ *
+ *  Use `jQuery.getScript(url [, suc
