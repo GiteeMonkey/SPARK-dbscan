@@ -32,4 +32,7 @@
  *
  * Example :
  *
- *  Use `jQuery.getScript(url [, suc
+ *  Use `jQuery.getScript(url [, success(script, textStatus, jqXHR)] );`
+ *  to load custom script into the notebook.
+ *
+ *    // to load the metadata ui ex
