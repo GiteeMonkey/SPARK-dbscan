@@ -39,4 +39,10 @@
  *    $.getScript('/static/notebook/js/celltoolbarpresets/example.js');
  *    // or
  *    // to load the metadata ui extension to control slideshow mode / reveal js for nbconvert
- *    $.getScript('/static/notebook/js/ce
+ *    $.getScript('/static/notebook/js/celltoolbarpresets/slideshow.js');
+ *
+ *
+ * @module IPython
+ * @namespace IPython
+ * @class customjs
+ * 
