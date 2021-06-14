@@ -45,4 +45,5 @@
  * @module IPython
  * @namespace IPython
  * @class customjs
- * 
+ * @static
+ */
