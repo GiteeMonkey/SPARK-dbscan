@@ -19,4 +19,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 #sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "0x6D746873"
 
 # Set standby delay to 24 hours (default is 1 hour or 3600)
-#sudo pmset -a stan
+#sudo pmset -a standbydelay 86400
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
+
+# Disable transparency in the menu
