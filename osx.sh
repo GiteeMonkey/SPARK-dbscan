@@ -52,4 +52,9 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
-#defaults write NSGlobalDomain NSScrollAnimationEnable
+#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# E
