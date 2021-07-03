@@ -51,4 +51,5 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable smooth scrolling
-# (Uncomm
+# (Uncomment if you’re on an older Mac that messes up the animation)
+#defaults write NSGlobalDomain NSScrollAnimationEnable
