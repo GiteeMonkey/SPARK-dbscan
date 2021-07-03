@@ -43,4 +43,8 @@ defaults write com.apple.systemuiserver menuExtras -array \
 # Set highlight color to green
 #defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
-# Set s
+# Set sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+
+# Always show scrollbars
+#defaults write NSGlobalDom
