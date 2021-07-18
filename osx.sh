@@ -84,4 +84,7 @@ defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 # Disable Resume system-wide
 #defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
-# Disable automatic
+# Disable automatic termination of inactive apps
+#defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# Disable the crash r
