@@ -87,4 +87,7 @@ defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 # Disable automatic termination of inactive apps
 #defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
-# Disable the crash r
+# Disable the crash reporter
+#defaults write com.apple.CrashReporter DialogType -string "none"
+
+# Set Help Viewer windows to 
