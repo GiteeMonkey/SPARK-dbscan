@@ -95,4 +95,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 
 # Fix for the ancient UTF-8 bug in QuickLook (https://mths.be/bbo)
 # Commented out, as this is known to cause problems in various Adobe apps :(
-# See https://github.com/mat
+# See https://github.com/mathiasbynens/dotfiles/issues/237
+#echo "0x08000100:0" > ~/.CFUserTextEncoding
+
+# Reveal IP address, hostname, OS version, etc.
