@@ -90,4 +90,7 @@ defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 # Disable the crash reporter
 #defaults write com.apple.CrashReporter DialogType -string "none"
 
-# Set Help Viewer windows to 
+# Set Help Viewer windows to non-floating mode
+defaults write com.apple.helpviewer DevMode -bool true
+
+# Fix for the ancient UTF-8 bug in QuickLook (ht
