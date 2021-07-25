@@ -109,4 +109,7 @@ sudo systemsetup -setrestartfreeze on
 sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Set the computer to sleep after 60 minutes
-#sudo systemsetup -setcompu
+#sudo systemsetup -setcomputersleep 60
+
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUp
