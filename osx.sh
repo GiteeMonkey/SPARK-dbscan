@@ -112,4 +112,7 @@ sudo systemsetup -setcomputersleep Off > /dev/null
 #sudo systemsetup -setcomputersleep 60
 
 # Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUp
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable Notification Center and remove the menu bar icon
+launchctl unload -w /System/Libr
