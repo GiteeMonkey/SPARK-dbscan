@@ -130,4 +130,5 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
 ###############################################################################
-# SSD-specific tweaks                      
+# SSD-specific tweaks                                                         #
+# You might want to disable these if you are not running an SSD     
