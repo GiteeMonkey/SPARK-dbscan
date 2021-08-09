@@ -168,4 +168,7 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Increase sound 
+# Increase sound quality for Bluetooth headphones/headsets
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+#
