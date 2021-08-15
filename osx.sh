@@ -190,4 +190,5 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Set language and text formats
 #defaults write NSGlobalDomain AppleLanguages -array "en"
-#defaults
+#defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+#defaults write NSGlobalDomain AppleMeasurementUnits 
