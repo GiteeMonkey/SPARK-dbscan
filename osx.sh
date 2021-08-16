@@ -191,4 +191,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # Set language and text formats
 #defaults write NSGlobalDomain AppleLanguages -array "en"
 #defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
-#defaults write NSGlobalDomain AppleMeasurementUnits 
+#defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+#defaults write NSGlobalDomain AppleMetricUnits -bool false
+
+# Set the timezone; see `sudo systemsetup 
