@@ -194,4 +194,8 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 #defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
 #defaults write NSGlobalDomain AppleMetricUnits -bool false
 
-# Set the timezone; see `sudo systemsetup 
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+#sudo systemsetup -settimezone "America/New_York" > /dev/null
+
+# Disable auto-correct
+defaults
