@@ -198,4 +198,6 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 #sudo systemsetup -settimezone "America/New_York" > /dev/null
 
 # Disable auto-correct
-defaults
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Stop iTunes from responding to 
