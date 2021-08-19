@@ -204,4 +204,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 #launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
-# Screen                                                     
+# Screen                                                                      #
+###############################################################################
+
+# Require password immediately after sl
