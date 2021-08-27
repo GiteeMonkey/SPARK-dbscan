@@ -219,4 +219,7 @@ mkdir ${HOME}/Pictures/Screenshots
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-d
+defaults write com.apple.screencapture type -string "png"
+
+# Disable shadow in screenshots
+defaults write com
