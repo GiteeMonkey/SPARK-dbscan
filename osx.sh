@@ -222,4 +222,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screen
 defaults write com.apple.screencapture type -string "png"
 
 # Disable shadow in screenshots
-defaults write com
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Enable subpixel font rendering on non-Apple LCDs
+defaults write 
