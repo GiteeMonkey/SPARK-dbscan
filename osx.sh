@@ -232,4 +232,7 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
 
 ###############################################################################
 # Finder                                                                      #
-######################################
+###############################################################################
+
+# Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
+defaults writ
