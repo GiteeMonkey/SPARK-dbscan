@@ -270,4 +270,7 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # When performing a search, search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -str
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensi
