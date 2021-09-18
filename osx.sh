@@ -279,4 +279,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 
 # Tweak the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.del
+defaults write NSGlobalDomain com.apple.springing.delay -float .5
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNet
