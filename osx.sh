@@ -285,4 +285,6 @@ defaults write NSGlobalDomain com.apple.springing.delay -float .5
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable disk image verification
-#defaults write com.apple.frameworks.diskimages 
+#defaults write com.apple.frameworks.diskimages skip-verify -bool true
+#defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+#defaults write com.ap
