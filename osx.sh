@@ -287,4 +287,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Disable disk image verification
 #defaults write com.apple.frameworks.diskimages skip-verify -bool true
 #defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-#defaults write com.ap
+#defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+# Automatically open a new Finder window when a 
