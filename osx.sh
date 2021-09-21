@@ -292,4 +292,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Automatically open a new Finder window when a volume is mounted
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindow
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+# Show item info near icons on the desktop and in other icon views
