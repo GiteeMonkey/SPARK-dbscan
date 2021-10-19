@@ -325,4 +325,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
-def
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+
+# Enable AirDrop over Ethernet and on unsupported Macs running Lion
+default
