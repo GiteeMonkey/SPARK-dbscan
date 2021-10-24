@@ -347,4 +347,5 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     OpenWith -bool true \
     Privileges -bool true
 
-#########
+###############################################################################
+# Dock, Dashboard, and hot corners         
