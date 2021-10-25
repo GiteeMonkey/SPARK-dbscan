@@ -348,4 +348,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     Privileges -bool true
 
 ###############################################################################
-# Dock, Dashboard, and hot corners         
+# Dock, Dashboard, and hot corners                                            #
+###############################################################################
+
+# Enable highli
