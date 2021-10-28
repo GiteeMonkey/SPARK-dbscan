@@ -358,4 +358,9 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 defaults write com.apple.dock tilesize -int 36
 
 # Change minimize/maximize window effect
-defaults write com.apple.dock mineffect -string "scal
+defaults write com.apple.dock mineffect -string "scale"
+
+# Minimize windows into their application’s icon
+#defaults write com.apple.dock minimize-to-application -bool true
+
+# Enable spring loadi
