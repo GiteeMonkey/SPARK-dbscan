@@ -408,4 +408,7 @@ defaults write com.apple.dock autohide -bool true
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0
 
 # Reset Launchpad, but keep the desktop wallpaper intact
-find "${HOME}/Library
+find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
+
+# Add iOS Simulator to Launchpad
+sudo ln -sf "/Applications/Xcode.app
