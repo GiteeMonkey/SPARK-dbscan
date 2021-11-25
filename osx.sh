@@ -425,4 +425,9 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulat
 #  3: Show application windows
 #  4: Desktop
 #  5: Start screen saver
-#  6: Disable screen
+#  6: Disable screen saver
+#  7: Dashboard
+# 10: Put display to sleep
+# 11: Launchpad
+# 12: Notification Center
+# Top left screen corner → Mis
