@@ -462,4 +462,6 @@ defaults write com.apple.Safari HomePage -string "about:blank"
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
 # Allow hitting the Backspace key to go to the previous page in history
-#defaults write com.apple.Safari c
+#defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+
+# Hide Safari’s bookmarks bar b
