@@ -479,4 +479,7 @@ defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 # Make Safari’s search banners default to Contains instead of Starts With
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 
-# Remove useless icons from Safari’s bo
+# Remove useless icons from Safari’s bookmarks bar
+defaults write com.apple.Safari ProxiesInBookmarksBar "()"
+
+# Enable the Develop menu and the Web Ins
