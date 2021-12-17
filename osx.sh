@@ -482,4 +482,6 @@ defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
 # Remove useless icons from Safari’s bookmarks bar
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 
-# Enable the Develop menu and the Web Ins
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDev
