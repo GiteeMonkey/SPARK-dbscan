@@ -492,4 +492,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 ###############################################################################
 # Mail                                                                        #
-########################
+###############################################################################
+
+# Disable send and reply animations in Mail.app
+defaults w
