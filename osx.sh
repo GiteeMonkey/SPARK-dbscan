@@ -531,4 +531,7 @@ sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Vol
 #   MENU_CONVERSION
 #   MENU_EXPRESSION
 #   MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
-#   MENU_WEBSEARCH             (
+#   MENU_WEBSEARCH             (send search queries to Apple)
+#   MENU_OTHER
+defaults write com.apple.spotlight orderedItems -array \
+    '{"enabled" = 1;"name" =
