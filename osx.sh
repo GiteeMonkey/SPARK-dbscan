@@ -525,4 +525,8 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
-# Change indexing order and disable some s
+# Change indexing order and disable some search results
+# Yosemite-specific search results (remove them if your are using OS X 10.9 or older):
+#   MENU_DEFINITION
+#   MENU_CONVERSION
+#  
