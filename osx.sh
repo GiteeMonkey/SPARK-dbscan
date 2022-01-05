@@ -545,4 +545,7 @@ defaults write com.apple.spotlight orderedItems -array \
     '{"enabled" = 0;"name" = "EVENT_TODO";}' \
     '{"enabled" = 0;"name" = "IMAGES";}' \
     '{"enabled" = 0;"name" = "BOOKMARKS";}' \
-    '{"enabled" = 0;"name" = 
+    '{"enabled" = 0;"name" = "MUSIC";}' \
+    '{"enabled" = 0;"name" = "MOVIES";}' \
+    '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
+    '
