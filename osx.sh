@@ -540,4 +540,6 @@ defaults write com.apple.spotlight orderedItems -array \
     '{"enabled" = 1;"name" = "PDF";}' \
     '{"enabled" = 1;"name" = "FONTS";}' \
     '{"enabled" = 0;"name" = "DOCUMENTS";}' \
-    '{"e
+    '{"enabled" = 0;"name" = "MESSAGES";}' \
+    '{"enabled" = 0;"name" = "CONTACT";}' \
+    '{"enabled" = 0;"name" = "EVEN
