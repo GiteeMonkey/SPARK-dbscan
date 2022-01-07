@@ -550,4 +550,6 @@ defaults write com.apple.spotlight orderedItems -array \
     '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
     '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
     '{"enabled" = 0;"name" = "SOURCE";}' \
-    '{"enabled" = 0;"name" = "MEN
+    '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
+    '{"enabled" = 0;"name" = "MENU_OTHER";}' \
+    '{"enabled" = 0;"name" = "MENU_CO
