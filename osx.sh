@@ -548,4 +548,6 @@ defaults write com.apple.spotlight orderedItems -array \
     '{"enabled" = 0;"name" = "MUSIC";}' \
     '{"enabled" = 0;"name" = "MOVIES";}' \
     '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-    '
+    '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
+    '{"enabled" = 0;"name" = "SOURCE";}' \
+    '{"enabled" = 0;"name" = "MEN
