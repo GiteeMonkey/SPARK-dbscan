@@ -555,4 +555,6 @@ defaults write com.apple.spotlight orderedItems -array \
     '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
     '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
     '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-  
+    '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+# Load new settings before rebuilding the index
+killall mds > /dev/nu
