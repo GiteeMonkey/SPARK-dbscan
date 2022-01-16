@@ -580,4 +580,7 @@ tell application "Terminal"
     local windowID
     set themeName to "Solarized Dark xterm-256color"
 
-    (* Store the IDs of 
+    (* Store the IDs of all the open terminal windows. *)
+    set initialOpenedWindows to id of every window
+
+    (* Open the cust
