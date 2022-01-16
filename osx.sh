@@ -575,4 +575,9 @@ osascript <<EOD
 
 tell application "Terminal"
 
-    local allOpenedW
+    local allOpenedWindows
+    local initialOpenedWindows
+    local windowID
+    set themeName to "Solarized Dark xterm-256color"
+
+    (* Store the IDs of 
