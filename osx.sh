@@ -583,4 +583,5 @@ tell application "Terminal"
     (* Store the IDs of all the open terminal windows. *)
     set initialOpenedWindows to id of every window
 
-    (* Open the cust
+    (* Open the custom theme so that it gets added to the list
+       of available terminal themes (note: this will open two
