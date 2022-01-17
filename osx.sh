@@ -588,4 +588,7 @@ tell application "Terminal"
        additional terminal windows). *)
     do shell script "open '$HOME/init/" & themeName & ".terminal'"
 
-    (* 
+    (* Wait a little bit to ensure that the custom theme is added. *)
+    delay 1
+
+    (* Set the custom theme as the default terminal theme
