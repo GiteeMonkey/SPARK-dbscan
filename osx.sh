@@ -594,4 +594,7 @@ tell application "Terminal"
     (* Set the custom theme as the default terminal theme. *)
     set default settings to settings set themeName
 
-    (* Get the IDs of all the currently opened
+    (* Get the IDs of all the currently opened terminal windows. *)
+    set allOpenedWindows to id of every window
+
+    repeat with windowID in allOpened
