@@ -591,4 +591,7 @@ tell application "Terminal"
     (* Wait a little bit to ensure that the custom theme is added. *)
     delay 1
 
-    (* Set the custom theme as the default terminal theme
+    (* Set the custom theme as the default terminal theme. *)
+    set default settings to settings set themeName
+
+    (* Get the IDs of all the currently opened
