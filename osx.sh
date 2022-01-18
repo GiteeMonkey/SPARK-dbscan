@@ -597,4 +597,7 @@ tell application "Terminal"
     (* Get the IDs of all the currently opened terminal windows. *)
     set allOpenedWindows to id of every window
 
-    repeat with windowID in allOpened
+    repeat with windowID in allOpenedWindows
+
+        (* Close the additional windows that were opened in order
+           to add the custom them
