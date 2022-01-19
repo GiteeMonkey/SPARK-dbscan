@@ -608,3 +608,6 @@ tell application "Terminal"
            to remove the need to close them in order for the custom
            theme to be applied. *)
         else
+            set current settings of tabs of (every window whose id is windowID) to settings set themeName
+        end if
+
