@@ -600,4 +600,6 @@ tell application "Terminal"
     repeat with windowID in allOpenedWindows
 
         (* Close the additional windows that were opened in order
-           to add the custom them
+           to add the custom theme to the list of terminal themes. *)
+        if initialOpenedWindows does not contain windowID then
+            close (every window
