@@ -602,4 +602,7 @@ tell application "Terminal"
         (* Close the additional windows that were opened in order
            to add the custom theme to the list of terminal themes. *)
         if initialOpenedWindows does not contain windowID then
-            close (every window
+            close (every window whose id is windowID)
+
+        (* Change the theme for the initial opened terminal windows
+          
