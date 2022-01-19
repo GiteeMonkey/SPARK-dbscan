@@ -605,4 +605,6 @@ tell application "Terminal"
             close (every window whose id is windowID)
 
         (* Change the theme for the initial opened terminal windows
-          
+           to remove the need to close them in order for the custom
+           theme to be applied. *)
+        else
