@@ -619,4 +619,10 @@ EOD
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
-#defaults write com.apple.terminal FocusFollows
+#defaults write com.apple.terminal FocusFollowsMouse -bool true
+#defaults write org.x.X11 wm_ffm -bool true
+
+start_if_needed() {
+  local grep_name="[${1:0:1}]${1:1}"
+
+  if [[ -z
