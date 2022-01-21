@@ -611,3 +611,11 @@ tell application "Terminal"
             set current settings of tabs of (every window whose id is windowID) to settings set themeName
         end if
 
+    end repeat
+
+end tell
+
+EOD
+
+# Enable “focus follows mouse” for Terminal.app and all X11 apps
+# i.e. hover ove
