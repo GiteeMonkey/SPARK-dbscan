@@ -625,4 +625,6 @@ EOD
 start_if_needed() {
   local grep_name="[${1:0:1}]${1:1}"
 
-  if [[ -z
+  if [[ -z $(ps aux | grep -e "${grep_name}") ]]; then
+    if [ -e ~/Applications/$1.app ]; then
+      open ~/Applications/$1.app
