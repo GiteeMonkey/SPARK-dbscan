@@ -628,3 +628,11 @@ start_if_needed() {
   if [[ -z $(ps aux | grep -e "${grep_name}") ]]; then
     if [ -e ~/Applications/$1.app ]; then
       open ~/Applications/$1.app
+    else
+      if [ -e /Applications/$1.app ]; then
+        open /Applications/$1.app
+      fi
+    fi
+  fi
+
+  true
