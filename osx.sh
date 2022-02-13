@@ -636,3 +636,8 @@ start_if_needed() {
   fi
 
   true
+}
+
+# Install the Solarized Dark theme for iTerm
+start_if_needed iTerm
+open "${HOME}/init/Solarized Dark.itermcolors"
