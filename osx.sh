@@ -641,3 +641,6 @@ start_if_needed() {
 # Install the Solarized Dark theme for iTerm
 start_if_needed iTerm
 open "${HOME}/init/Solarized Dark.itermcolors"
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQu
