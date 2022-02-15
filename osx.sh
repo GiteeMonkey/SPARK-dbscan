@@ -647,4 +647,7 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #
-##############################################
+###############################################################################
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaul
