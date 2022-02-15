@@ -646,4 +646,5 @@ open "${HOME}/init/Solarized Dark.itermcolors"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
-# Time M
+# Time Machine                                                                #
+##############################################
