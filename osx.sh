@@ -657,4 +657,6 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 ###############################################################################
 # Activity Monitor                                                            #
-################
+###############################################################################
+
+# Show the main window when launching Activity Monitor
