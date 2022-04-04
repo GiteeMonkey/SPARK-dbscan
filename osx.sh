@@ -673,4 +673,5 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Address Book, Dashboard, iCal, Te
+# Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
+###########################################################################
