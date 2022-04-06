@@ -685,4 +685,6 @@ defaults write com.apple.dashboard devmode -bool true
 # Enable the debug menu in iCal (pre-10.8)
 defaults write com.apple.iCal IncludeDebugMenu -bool true
 
-# Use plai
+# Use plain text mode for new TextEdit documents
+defaults write com.apple.TextEdit RichText -int 0
+# Open an
