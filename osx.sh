@@ -697,4 +697,5 @@ defaults write com.apple.TextEdit "TabWidth" '4'
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
-#######################################
+###############################################################################
+# Mac App Store                                                         
