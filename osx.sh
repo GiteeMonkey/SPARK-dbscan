@@ -698,4 +698,7 @@ defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
 ###############################################################################
-# Mac App Store                                                         
+# Mac App Store                                                               #
+###############################################################################
+
+# Enable the WebKit D
