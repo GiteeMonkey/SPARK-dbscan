@@ -711,4 +711,5 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 # Messages                                                                    #
 ###############################################################################
 
-# Disable autom
+# Disable automatic emoji substitution (i.e. use plain text smileys)
+defaults write com.apple.messageshelper.MessageController SOInputLin
