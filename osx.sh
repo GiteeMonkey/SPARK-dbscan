@@ -722,4 +722,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
-######################################################################
+###############################################################################
+
+# Allow installing user scripts via GitHub Gist or Userscripts.org
+defaults write com.google.Chrome Extensio
