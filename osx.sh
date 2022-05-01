@@ -730,3 +730,6 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 
 # Disable the all too sensitive backswipe on trackpads
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
+
+# Disa
