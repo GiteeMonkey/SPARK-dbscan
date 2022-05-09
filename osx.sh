@@ -753,4 +753,7 @@ defaults write ~/Library/Preferences/org.gpgtools.gpgmail SignNewEmailsByDefault
 
 ###############################################################################
 # Opera & Opera Developer                                                     #
-#################################
+###############################################################################
+
+# Expand the print dialog by default
+defaults write com.operasoftware.Opera PMPrintingExpand
