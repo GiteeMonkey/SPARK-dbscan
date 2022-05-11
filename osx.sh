@@ -761,4 +761,7 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 
 ###############################################################################
 # SizeUp.app                                                                  #
-###################################
+###############################################################################
+
+# Start SizeUp at login
+defaults write com.irradiatedsoftware.SizeUp StartAtLogin 
