@@ -764,4 +764,7 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 ###############################################################################
 
 # Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin 
+defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
+
+# Don’t show the preferences window on next start
+defaults write com.irradiatedsoftware.SizeUp ShowPrefsOn
