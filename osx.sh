@@ -799,4 +799,5 @@ defaults write org.m0k.transmission WarningLegal -bool false
 # Twitter.app                                                                 #
 ###############################################################################
 
-# 
+# Disable smart quotes as it’s annoying for code tweets
+defaults write com.twitter.twitter-mac AutomaticQuoteSubst
