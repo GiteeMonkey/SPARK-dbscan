@@ -805,3 +805,5 @@ defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool f
 # Show the app window when clicking the menu bar icon
 defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
 
+# Enable the hidden ‘Develop’ menu
+defaults write com.twitter.twitter-mac ShowDevelopMenu
