@@ -822,4 +822,7 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
 # Spectacle.app                                                               #
-#########################################################
+###############################################################################
+
+# Set up my preferred keyboard shortcuts
+defaults write com.divisiblebyzero.Spectacle MakeLarger -data 62706c
