@@ -821,4 +821,5 @@ defaults write com.twitter.twitter-mac ShowFullNames -bool true
 defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
-# Spectacle.app       
+# Spectacle.app                                                               #
+#########################################################
