@@ -854,4 +854,8 @@ defaults write com.divisiblebyzero.Spectacle UndoLastMove -data 62706c6973743030
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
     "Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" \
-    "Opera" "Safari" "SizeUp" "Spectacle" "Syst
+    "Opera" "Safari" "SizeUp" "Spectacle" "SystemUIServer" \
+    "Transmission" "Twitter" "iCal"; do
+    killall "${app}" > /dev/null 2>&1
+done
+echo "Done. Note that some of t
