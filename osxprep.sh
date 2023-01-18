@@ -15,4 +15,6 @@ sudo softwareupdate -ia --verbose
 #sudo softwareupdate -ir --verbose
 
 echo "------------------------------"
-echo "Installing Xcode Command Line
+echo "Installing Xcode Command Line Tools."
+# Install Xcode command line tools
+xcode-select --install
