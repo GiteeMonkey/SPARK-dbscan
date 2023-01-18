@@ -6,4 +6,10 @@
 # This script might be run with .dots, which uses elevated privileges
 sudo -K
 
-echo "-------
+echo "------------------------------"
+echo "Setting up pip."
+
+# Install pip
+easy_install pip
+
+################################################
