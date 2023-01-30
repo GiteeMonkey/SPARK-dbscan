@@ -17,4 +17,7 @@ easy_install pip
 ###############################################################################
 
 echo "------------------------------"
-echo "S
+echo "Setting up virtual environments."
+
+# Install virtual environments globally
+# It fails to install virtualenv if PIP_REQUIRE_VIR
