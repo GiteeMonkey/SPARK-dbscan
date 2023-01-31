@@ -20,4 +20,9 @@ echo "------------------------------"
 echo "Setting up virtual environments."
 
 # Install virtual environments globally
-# It fails to install virtualenv if PIP_REQUIRE_VIR
+# It fails to install virtualenv if PIP_REQUIRE_VIRTUALENV was true
+export PIP_REQUIRE_VIRTUALENV=false
+pip install virtualenv
+pip install virtualenvwrapper
+
+echo
