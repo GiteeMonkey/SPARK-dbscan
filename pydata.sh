@@ -25,4 +25,9 @@ export PIP_REQUIRE_VIRTUALENV=false
 pip install virtualenv
 pip install virtualenvwrapper
 
-echo
+echo "------------------------------"
+echo "Source virtualenvwrapper from ~/.extra"
+
+EXTRA_PATH=~/.extra
+echo $EXTRA_PATH
+ech
