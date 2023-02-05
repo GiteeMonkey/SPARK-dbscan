@@ -30,4 +30,7 @@ echo "Source virtualenvwrapper from ~/.extra"
 
 EXTRA_PATH=~/.extra
 echo $EXTRA_PATH
-ech
+echo "" >> $EXTRA_PATH
+echo "" >> $EXTRA_PATH
+echo "# Source virtualenvwrapper, added by pydata.sh" >> $EXTRA_PATH
+echo "export
