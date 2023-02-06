@@ -45,4 +45,9 @@ source $EXTRA_PATH
 echo "------------------------------"
 echo "Setting up py2-data virtual environment."
 
-# 
+# Create a Python2 data environment
+mkvirtualenv py2-data
+workon py2-data
+
+# Install Python data modules
+pip install
