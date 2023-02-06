@@ -50,4 +50,10 @@ mkvirtualenv py2-data
 workon py2-data
 
 # Install Python data modules
-pip install
+pip install numpy
+pip install scipy
+pip install matplotlib
+pip install pandas
+pip install sympy
+pip install nose
+p
