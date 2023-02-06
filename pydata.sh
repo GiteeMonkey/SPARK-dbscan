@@ -56,4 +56,9 @@ pip install matplotlib
 pip install pandas
 pip install sympy
 pip install nose
-p
+pip install unittest2
+pip install seaborn
+pip install scikit-learn
+pip install "ipython[all]"
+pip install bokeh
+pip install Fl
