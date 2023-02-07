@@ -61,4 +61,8 @@ pip install seaborn
 pip install scikit-learn
 pip install "ipython[all]"
 pip install bokeh
-pip install Fl
+pip install Flask
+pip install sqlalchemy
+pip install mysql-python
+
+##########################################################
