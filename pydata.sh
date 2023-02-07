@@ -65,4 +65,6 @@ pip install Flask
 pip install sqlalchemy
 pip install mysql-python
 
-##########################################################
+###############################################################################
+# Python 3 Virtual Enviroment                                                 #
+#############
