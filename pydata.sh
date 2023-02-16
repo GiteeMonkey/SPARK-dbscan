@@ -79,4 +79,9 @@ workon py3-data
 # Install Python data modules
 pip install numpy
 pip install scipy
-pip inst
+pip install matplotlib
+pip install pandas
+pip install sympy
+pip install nose
+pip install unittest2
+pip install seaborn
