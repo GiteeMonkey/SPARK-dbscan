@@ -73,4 +73,10 @@ echo "------------------------------"
 echo "Setting up py3-data virtual environment."
 
 # Create a Python3 data environment
-mkvirtualenv --python=/usr/local/bin
+mkvirtualenv --python=/usr/local/bin/python3 py3-data
+workon py3-data
+
+# Install Python data modules
+pip install numpy
+pip install scipy
+pip inst
