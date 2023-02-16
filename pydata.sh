@@ -70,3 +70,7 @@ pip install mysql-python
 ###############################################################################
 
 echo "------------------------------"
+echo "Setting up py3-data virtual environment."
+
+# Create a Python3 data environment
+mkvirtualenv --python=/usr/local/bin
