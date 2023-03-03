@@ -15,4 +15,10 @@ if test ! $(which brew); then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Make 
+# Make sure we’re using the latest Homebrew.
+brew update
+
+brew install node
+
+# Remove outdated versions from the cellar.
+brew cle
